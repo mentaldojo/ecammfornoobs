@@ -31,7 +31,7 @@ export default function Home() {
         </p>
 
         <p className="supporting-text">
-          Learn Ecamm one feature at a time with quick practical tutorials.
+          Quick solutions for learning Ecamm.
         </p>
 
         <div className="hero-actions">
