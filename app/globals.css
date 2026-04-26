@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0c0c0c;
+  --foreground: #f4f2ee;
+  --accent-yellow: #ffe040;
+  --accent-orange: #ff4d1a;
+  --muted: #666666;
+  --border: #252525;
 }
 
 @theme inline {
@@ -12,15 +16,209 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.coming-soon-page {
+  width: min(1080px, 100% - 3rem);
+  margin: 0 auto;
+  padding: 4.5rem 0 3rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.mono-label {
+  margin: 0;
+  color: var(--muted);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.launching-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--accent-orange);
+  color: var(--accent-orange);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(3.2rem, 11vw, 7.6rem);
+  line-height: 0.93;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.hero-tagline {
+  margin: 0;
+  max-width: 26ch;
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  font-weight: 700;
+  color: var(--accent-yellow);
+}
+
+.supporting-text {
+  margin: 0;
+  max-width: 62ch;
+  color: #c8c4bc;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  font-weight: 700;
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+
+.btn:hover {
+  border-color: var(--accent-yellow);
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--accent-yellow);
+  color: #1a1a1a;
+  border-color: var(--accent-yellow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--foreground);
+}
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.stats-strip p {
+  margin: 0;
+  color: #d8d5cf;
+  font-size: 0.95rem;
+}
+
+.launch-list,
+.waitlist-placeholder {
+  border: 1px solid var(--border);
+  background: #161616;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.launch-list h2,
+.waitlist-placeholder h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.2rem;
+}
+
+.launch-list ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.waitlist-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.waitlist-form input,
+.waitlist-form button {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #101010;
+  color: var(--foreground);
+  padding: 0.7rem 0.9rem;
+}
+
+.waitlist-form input {
+  flex: 1 1 250px;
+}
+
+.waitlist-form input::placeholder {
+  color: var(--muted);
+}
+
+.waitlist-form button {
+  background: var(--accent-orange);
+  color: #fff;
+  border-color: var(--accent-orange);
+  font-weight: 700;
+}
+
+.disclosure-note {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  color: #b4b0a8;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 880px) {
+  .stats-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
