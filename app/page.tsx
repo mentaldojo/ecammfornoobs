@@ -32,7 +32,12 @@ export default function Home() {
           <button className="btn btn-primary" type="button">
             Coming Soon
           </button>
-          <a className="btn btn-secondary" href="#">
+          <a
+            className="btn btn-secondary"
+            href="https://www.youtube.com/channel/UCWkyh-bTFJeYnkUeFr7ya4Q"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             YouTube Channel
           </a>
         </div>
