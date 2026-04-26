@@ -1,11 +1,20 @@
+import { PhaseRoadmap } from "@/src/components/PhaseRoadmap";
+import { ToolsTeaser } from "@/src/components/ToolsTeaser";
+import { TutorialGrid } from "@/src/components/TutorialGrid";
+import { tutorials } from "@/src/data/tutorials";
+
 export default function Home() {
+  const startHere = tutorials.filter((tutorial) =>
+    ["01", "07", "08"].includes(tutorial.episode),
+  );
+
   return (
-    <main className="coming-soon-page">
+    <main className="home-page">
       <section className="hero">
-        <div className="label-row">
+        <div className="hero-label-row">
           <p className="mono-label">YOUTUBE SHORTS SERIES</p>
           <span className="launching-pill" aria-hidden>
-            Launching Soon
+            Homepage V1
           </span>
         </div>
 
@@ -16,70 +25,68 @@ export default function Home() {
         </h1>
 
         <p className="hero-tagline">
-          &ldquo;One feature.
+          One thing.
           <br />
-          One short.
-          <br />
-          Every answer you need.&rdquo;
+          Every time.
         </p>
 
         <p className="supporting-text">
-          A new beginner-friendly reference library for learning Ecamm, one
-          problem at a time.
+          Learn Ecamm one feature at a time with quick practical tutorials.
         </p>
 
         <div className="hero-actions">
-          <button className="btn btn-primary" type="button">
-            Coming Soon
-          </button>
+          <a className="btn btn-primary" href="#tutorial-library">
+            Start Learning
+          </a>
           <a
             className="btn btn-secondary"
             href="https://www.youtube.com/channel/UCWkyh-bTFJeYnkUeFr7ya4Q"
             target="_blank"
             rel="noopener noreferrer"
           >
-            YouTube Channel
+            Visit YouTube Channel
           </a>
         </div>
       </section>
 
-      <section className="stats-strip" aria-label="Launch stats">
-        <p>35+ Planned Shorts</p>
-        <p>4 Learning Phases</p>
-        <p>60 Seconds Max</p>
-        <p>Zero Fluff</p>
-      </section>
-
-      <section className="launch-list">
-        <h2>Launching With Tutorials On</h2>
-        <ul>
-          <li>Profiles vs Scenes</li>
-          <li>Where Did My Panel Go?</li>
-          <li>Global vs Scene Overlays</li>
-          <li>Preview vs Live</li>
-          <li>Stream Deck with Ecamm</li>
-        </ul>
-      </section>
-
-      <section className="waitlist-placeholder" aria-label="Email waitlist">
-        <h2>Get notified when we launch</h2>
-        <div className="waitlist-form">
-          <input type="email" placeholder="Enter your email" disabled />
-          <button type="button">Notify Me</button>
+      <section className="start-here-strip" aria-label="Start here tutorials">
+        <p className="start-here-title">New to Ecamm? Start here:</p>
+        <div className="start-here-links">
+          {startHere.map((item) => (
+            <a key={item.id} className="start-here-link-card" href="#tutorial-library">
+              {item.title}
+            </a>
+          ))}
         </div>
       </section>
+
+      <TutorialGrid items={tutorials} />
+
+      <PhaseRoadmap />
+
+      <ToolsTeaser />
 
       <aside className="disclosure-note">
         Independent tutorial site.
         <br />
         Not affiliated with Ecamm.
-        <br />
-        Affiliate-supported recommendations may be included.
       </aside>
 
       <footer className="site-footer">
+        <div className="footer-links">
+          <a href="/about">About</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/affiliate-disclosure">Affiliate Disclosure</a>
+          <a
+            href="https://www.youtube.com/channel/UCWkyh-bTFJeYnkUeFr7ya4Q"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
+        </div>
         <p>&copy; Ecamm for Noobs</p>
-        <p>Coming Soon</p>
       </footer>
     </main>
   );

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ecamm for Noobs | Coming Soon",
+  title: "Ecamm for Noobs | Quick Ecamm Tutorials",
   description:
     "Ecamm for Noobs is a beginner-friendly YouTube Shorts tutorial library for learning Ecamm one problem at a time.",
 };
