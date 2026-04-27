@@ -222,45 +222,18 @@ body {
   align-items: end;
 }
 
-.tutorial-thumb-inner {
-  margin: 0.7rem;
-  border: 1px solid #343434;
-  background: rgba(10, 10, 10, 0.7);
-  border-radius: 9px;
-  padding: 0.45rem 0.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 2rem;
-}
-
-.tutorial-thumb-inner span {
-  color: #c7c2b8;
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  line-height: 1;
-}
-
-.tutorial-thumb-inner strong {
-  font-size: 1rem;
-  color: var(--accent-yellow);
-  min-width: 2ch;
-  text-align: right;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
 .tutorial-meta {
   display: grid;
-  gap: 0.58rem;
+  gap: 0.65rem;
 }
 
 .tutorial-episode {
   margin: 0;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
+  font-family: var(--font-geist-mono), monospace;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
 }
 
 .tutorial-meta h3 {
@@ -275,50 +248,13 @@ body {
   font-size: 0.92rem;
 }
 
-.tutorial-tags,
-.tutorial-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.tutorial-tags span,
-.badge {
-  border-radius: 999px;
-  padding: 0.2rem 0.55rem;
-  border: 1px solid var(--border);
-  font-size: 0.72rem;
-}
-
-.tutorial-tags span {
-  color: #d0cbc2;
-  background: #1f1f1f;
-}
-
-.badge-popular {
-  border-color: #504422;
-  background: rgba(255, 224, 64, 0.15);
-  color: var(--accent-yellow);
-}
-
-.badge-coming {
-  border-color: #533222;
-  background: rgba(255, 77, 26, 0.14);
-  color: #ff9b80;
-}
-
-.badge-pro {
-  border-color: #18412d;
-  background: rgba(22, 163, 74, 0.15);
-  color: #8ce3af;
-}
-
 .tutorial-link {
   display: inline-flex;
   width: fit-content;
   color: var(--accent-yellow);
   text-decoration: none;
   font-weight: 700;
+  margin-top: 0.3rem;
 }
 
 .tutorial-link[aria-disabled="true"] {
