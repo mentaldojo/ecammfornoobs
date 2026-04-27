@@ -5,6 +5,7 @@ export type Tutorial = {
   episode: string;
   title: string;
   description: string;
+  imageSrc?: string;
   tags: string[];
   popular: boolean;
   status: TutorialStatus;
@@ -13,8 +14,20 @@ export type Tutorial = {
 
 export const tutorials: Tutorial[] = [
   {
-    id: "profiles-vs-scenes",
+    id: "black-screen-fix",
     episode: "01",
+    title: "Black Screen Fix",
+    description:
+      "Fix the black preview problem by checking the right camera source.",
+    imageSrc: "/images/solution-images/black-screen.png",
+    tags: ["Foundation", "Camera"],
+    popular: true,
+    status: "published",
+    youtubeUrl: "#",
+  },
+  {
+    id: "profiles-vs-scenes",
+    episode: "02",
     title: "Profiles vs Scenes",
     description: "Understand the difference so your setup stays organized.",
     tags: ["Foundation", "Beginner"],
@@ -24,9 +37,10 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "camera-source-setup",
-    episode: "02",
-    title: "Camera Source Setup",
-    description: "Pick the right camera source and avoid blank preview issues.",
+    episode: "03",
+    title: "Choose Your Camera Source",
+    description:
+      "Choose the right camera source so your setup is clear from the start.",
     tags: ["Foundation", "Camera"],
     popular: false,
     status: "published",
@@ -34,7 +48,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "mic-setup",
-    episode: "03",
+    episode: "04",
     title: "Mic Setup",
     description: "Get clean audio fast with the right input and level checks.",
     tags: ["Foundation", "Audio"],
@@ -44,7 +58,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "first-scene",
-    episode: "04",
+    episode: "05",
     title: "Creating Your First Scene",
     description: "Build a simple scene layout you can confidently reuse.",
     tags: ["Foundation", "Scenes"],

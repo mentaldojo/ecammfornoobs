@@ -6,10 +6,17 @@ type TutorialCardProps = {
 
 export function TutorialCard({ tutorial }: TutorialCardProps) {
   const isComingSoon = tutorial.status === "coming-soon";
+  const thumbStyle = tutorial.imageSrc
+    ? {
+        backgroundImage: `url("${tutorial.imageSrc}")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }
+    : undefined;
 
   return (
     <article className="tutorial-card">
-      <div className="tutorial-thumb" aria-hidden />
+      <div className="tutorial-thumb" aria-hidden style={thumbStyle} />
 
       <div className="tutorial-meta">
         <p className="tutorial-episode">Solution {tutorial.episode}</p>
