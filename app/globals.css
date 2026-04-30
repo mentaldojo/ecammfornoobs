@@ -16,17 +16,31 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
+  min-height: 100dvh;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button {
+  touch-action: manipulation;
 }
 
 .home-page {
   width: min(1080px, calc(100% - 3rem));
   margin: 0 auto;
-  padding: 4.5rem 0 4rem;
+  padding: calc(4.5rem + env(safe-area-inset-top)) 0 4rem;
   display: grid;
   gap: 2.2rem;
 }
@@ -51,18 +65,6 @@ body {
   text-transform: uppercase;
   font-size: 0.72rem;
   font-family: var(--font-geist-mono), monospace;
-}
-
-.launching-pill {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border: 1px solid var(--accent-orange);
-  color: var(--accent-orange);
-  border-radius: 999px;
-  padding: 0.25rem 0.65rem;
-  animation: pulse 2s ease-in-out infinite;
 }
 
 .hero-title {
@@ -98,6 +100,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 2.75rem;
   border-radius: 999px;
   padding: 0.7rem 1.2rem;
   border: 1px solid var(--border);
@@ -113,6 +116,8 @@ body {
 
 .btn:focus-visible,
 .tutorial-link:focus-visible,
+.tutorial-card:focus-visible,
+.tutorial-modal-close:focus-visible,
 .footer-links a:focus-visible,
 .start-here-links a:focus-visible {
   outline: 2px solid var(--accent-yellow);
@@ -191,7 +196,8 @@ body {
 .section-head h2 {
   margin: 0;
   font-size: clamp(1.45rem, 3vw, 2.2rem);
-  line-height: 1.1;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 .tutorial-grid {
@@ -207,13 +213,25 @@ body {
   padding: 0.9rem;
   display: grid;
   gap: 0.9rem;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.16);
+}
+
+.tutorial-card.is-clickable {
+  cursor: pointer;
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+
+.tutorial-card.is-clickable:hover {
+  border-color: #3a3a3a;
+  transform: translateY(-1px);
 }
 
 .tutorial-thumb {
   width: 100%;
-  height: clamp(175px, 24vw, 255px);
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
   border: 1px solid #2d2d2d;
+  background-color: #0f0f0f;
   background:
     radial-gradient(circle at 40% 20%, rgba(255, 224, 64, 0.22), transparent 38%),
     radial-gradient(circle at 80% 80%, rgba(255, 77, 26, 0.2), transparent 35%),
@@ -223,8 +241,10 @@ body {
 }
 
 .tutorial-meta {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.65rem;
+  min-height: 12.2rem;
 }
 
 .tutorial-episode {
@@ -240,12 +260,15 @@ body {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.2;
+  min-height: 2.5em;
 }
 
 .tutorial-description {
   margin: 0;
   color: #cbc7be;
   font-size: 0.92rem;
+  line-height: 1.45;
+  min-height: 4.3em;
 }
 
 .tutorial-link {
@@ -255,11 +278,62 @@ body {
   text-decoration: none;
   font-weight: 700;
   margin-top: 0.3rem;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  margin-top: auto;
 }
 
 .tutorial-link[aria-disabled="true"] {
   color: #d4866f;
   pointer-events: none;
+}
+
+.tutorial-modal-overlay {
+  position: fixed;
+  inset: 0;
+  height: 100dvh;
+  z-index: 60;
+  background: rgba(0, 0, 0, 0.82);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  overscroll-behavior: contain;
+}
+
+.tutorial-modal {
+  width: min(96vw, 520px);
+  max-height: calc(100svh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #111111;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  display: grid;
+  gap: 0.8rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tutorial-modal-close {
+  justify-self: end;
+  border: 1px solid #3a3a3a;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  background: #1b1b1b;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.tutorial-video-frame {
+  width: min(100%, 420px, calc((100svh - 9rem) * 9 / 16));
+  width: min(100%, 420px, calc((100dvh - 9rem) * 9 / 16));
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
 }
 
 .phase-grid,
@@ -312,6 +386,7 @@ body {
   color: #d2cec5;
   text-decoration: none;
   font-size: 0.9rem;
+  line-height: 1.3;
 }
 
 .footer-links a:hover {
@@ -320,16 +395,6 @@ body {
 
 .site-footer p {
   margin: 0;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
 }
 
 @media (min-width: 740px) {
@@ -358,5 +423,45 @@ body {
 
   .tools-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .home-page {
+    width: min(1080px, calc(100% - 1.5rem));
+    padding-top: calc(3.5rem + env(safe-area-inset-top));
+    gap: 1.8rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.35rem, 13vw, 3.2rem);
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+  }
+
+  .supporting-text {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .start-here-strip,
+  .tutorial-card,
+  .phase-card,
+  .tool-card {
+    border-radius: 12px;
+  }
+
+  .tutorial-meta {
+    min-height: 11.6rem;
   }
 }

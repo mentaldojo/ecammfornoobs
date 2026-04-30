@@ -13,9 +13,6 @@ export default function Home() {
       <section className="hero">
         <div className="hero-label-row">
           <p className="mono-label">YOUTUBE SHORTS SERIES</p>
-          <span className="launching-pill" aria-hidden>
-            Homepage V1
-          </span>
         </div>
 
         <h1 className="hero-title">
@@ -24,11 +21,7 @@ export default function Home() {
           for Noobs
         </h1>
 
-        <p className="hero-tagline">
-          One thing.
-          <br />
-          Every time.
-        </p>
+        <p className="hero-tagline">One solution every time.</p>
 
         <p className="supporting-text">
           Quick solutions for learning Ecamm.
