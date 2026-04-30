@@ -237,7 +237,25 @@ button {
     radial-gradient(circle at 80% 80%, rgba(255, 77, 26, 0.2), transparent 35%),
     linear-gradient(160deg, #202020, #131313);
   display: grid;
+  position: relative;
+  overflow: hidden;
   align-items: end;
+}
+
+.tutorial-thumb-coming-soon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 224, 64, 0.42);
+  color: var(--accent-yellow);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .tutorial-meta {

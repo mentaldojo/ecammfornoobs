@@ -38,7 +38,11 @@ export function TutorialCard({ tutorial, onOpen }: TutorialCardProps) {
       onKeyDown={handleCardKeyDown}
       aria-label={!isComingSoon ? `Watch ${tutorial.title}` : undefined}
     >
-      <div className="tutorial-thumb" aria-hidden style={thumbStyle} />
+      <div className="tutorial-thumb" aria-hidden style={thumbStyle}>
+        {!tutorial.imageSrc ? (
+          <span className="tutorial-thumb-coming-soon">Coming Soon</span>
+        ) : null}
+      </div>
 
       <div className="tutorial-meta">
         <p className="tutorial-episode">Solution {tutorial.episode}</p>

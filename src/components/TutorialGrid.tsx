@@ -10,6 +10,9 @@ type TutorialGridProps = {
 
 export function TutorialGrid({ items }: TutorialGridProps) {
   const [selectedTutorial, setSelectedTutorial] = useState<Tutorial | null>(null);
+  const orderedItems = [...items].sort(
+    (a, b) => Number(a.episode) - Number(b.episode),
+  );
 
   const closeModal = () => {
     setSelectedTutorial(null);
@@ -35,7 +38,7 @@ export function TutorialGrid({ items }: TutorialGridProps) {
         <h2>Quick answers for the exact Ecamm thing you are stuck on</h2>
       </div>
       <div className="tutorial-grid">
-        {items.map((tutorial) => (
+        {orderedItems.map((tutorial) => (
           <TutorialCard
             key={tutorial.id}
             tutorial={tutorial}

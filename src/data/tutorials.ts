@@ -65,7 +65,17 @@ export const tutorials: Tutorial[] = [
     description: "Build a simple scene layout you can confidently reuse.",
     tags: ["Foundation", "Scenes"],
     popular: true,
-    status: "published",
+    status: "coming-soon",
+    youtubeUrl: "#",
+  },
+  {
+    id: "solution-06-coming-soon",
+    episode: "06",
+    title: "Episode 06",
+    description: "This solution is on the way and will be added soon.",
+    tags: ["Foundation", "Beginner"],
+    popular: false,
+    status: "coming-soon",
     youtubeUrl: "#",
   },
   {
@@ -75,7 +85,7 @@ export const tutorials: Tutorial[] = [
     description: "Quick fixes when Ecamm panels disappear unexpectedly.",
     tags: ["Foundation", "Troubleshooting"],
     popular: true,
-    status: "published",
+    status: "coming-soon",
     youtubeUrl: "#",
   },
   {
@@ -85,7 +95,7 @@ export const tutorials: Tutorial[] = [
     description: "Learn when to stage in Preview and when to go Live.",
     tags: ["Foundation", "Workflow"],
     popular: false,
-    status: "published",
+    status: "coming-soon",
     youtubeUrl: "#",
   },
   {
@@ -95,7 +105,7 @@ export const tutorials: Tutorial[] = [
     description: "Choose the right overlay scope for cleaner production flow.",
     tags: ["Visuals", "Overlays"],
     popular: false,
-    status: "published",
+    status: "coming-soon",
     youtubeUrl: "#",
   },
   {
@@ -105,7 +115,7 @@ export const tutorials: Tutorial[] = [
     description: "Set up a pre-show timer to start streams with confidence.",
     tags: ["Visuals", "Overlays"],
     popular: false,
-    status: "published",
+    status: "coming-soon",
     youtubeUrl: "#",
   },
   {
@@ -115,7 +125,7 @@ export const tutorials: Tutorial[] = [
     description: "Bring audience comments on-screen without clutter.",
     tags: ["Audio & Content", "Engagement"],
     popular: false,
-    status: "published",
+    status: "coming-soon",
     youtubeUrl: "#",
   },
   {

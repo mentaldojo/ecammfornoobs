@@ -129,14 +129,14 @@ Homepage should include:
 2. Hero section
 3. Core positioning line
 4. CTA buttons:
-   - Start Learning
-   - Get Ecamm Free Trial
+  - Start Learning
+  - Get Ecamm Free Trial
 5. Featured Ecamm affiliate card
 6. Stats bar:
-   - 35+ videos
-   - 4 phases
-   - 60s max per video
-   - 0 filler
+  - 35+ videos
+  - 4 phases
+  - 60s max per video
+  - 0 filler
 7. Tutorial phase sections
 8. Video/tutorial cards
 9. Affiliate/recommended tools section
@@ -184,41 +184,41 @@ For making streams look better.
 
 Topics include:
 
-11. What Is an Overlay?
-12. Adding a Logo or Graphic Overlay
-13. Adding a Lower Third
-14. Global vs Scene-Specific Overlays
-15. Adding a Countdown Timer
-16. Adding a Scrolling Ticker
-17. Using Green Screen
-18. Zoom & Pan
-19. Adjusting Camera Picture Settings
-20. Picture-in-Picture
-21. Using the Camera Switcher
-22. Scene Transitions
+1. What Is an Overlay?
+2. Adding a Logo or Graphic Overlay
+3. Adding a Lower Third
+4. Global vs Scene-Specific Overlays
+5. Adding a Countdown Timer
+6. Adding a Scrolling Ticker
+7. Using Green Screen
+8. Zoom & Pan
+9. Adjusting Camera Picture Settings
+10. Picture-in-Picture
+11. Using the Camera Switcher
+12. Scene Transitions
 
 ### Phase 3 — Audio & Content
 
 Topics include:
 
-23. Adjusting Sound Levels
-24. Adding Background Music
-25. Using Sound Effects
-26. Playing a Pre-Recorded Video Clip
-27. Screen Share Mode
-28. Displaying Viewer Comments On-Screen
+1. Adjusting Sound Levels
+2. Adding Background Music
+3. Using Sound Effects
+4. Playing a Pre-Recorded Video Clip
+5. Screen Share Mode
+6. Displaying Viewer Comments On-Screen
 
 ### Phase 4 — Pro Features & Power Tips
 
 Topics include:
 
-29. Bringing On a Guest / Interview Mode
-30. Using Ecamm as a Virtual Camera
-31. Locking a Scene
-32. Duplicating a Scene
-33. Stream Deck Integration
-34. Multistreaming
-35. Scheduling a Broadcast
+1. Bringing On a Guest / Interview Mode
+2. Using Ecamm as a Virtual Camera
+3. Locking a Scene
+4. Duplicating a Scene
+5. Stream Deck Integration
+6. Multistreaming
+7. Scheduling a Broadcast
 
 ## Data Structure
 
