@@ -8,18 +8,24 @@ type FormState = {
   reason: string;
   message: string;
   website: string;
+  company: string;
+  startedAt: number;
 };
 
-const initialState: FormState = {
-  name: "",
-  email: "",
-  reason: "support",
-  message: "",
-  website: "",
-};
+function createInitialState(): FormState {
+  return {
+    name: "",
+    email: "",
+    reason: "support",
+    message: "",
+    website: "",
+    company: "",
+    startedAt: Date.now(),
+  };
+}
 
 export default function ContactPage() {
-  const [form, setForm] = useState<FormState>(initialState);
+  const [form, setForm] = useState<FormState>(createInitialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedback, setFeedback] = useState<string>("");
   const [isError, setIsError] = useState(false);
@@ -44,8 +50,11 @@ export default function ContactPage() {
         return;
       }
 
-      setForm(initialState);
+      setForm(createInitialState());
       setFeedback("Thanks. Your message has been sent.");
+      window.setTimeout(() => {
+        setFeedback("");
+      }, 8000);
     } catch {
       setIsError(true);
       setFeedback("Could not send your message right now. Please try again.");
@@ -81,6 +90,20 @@ export default function ContactPage() {
               }
             />
           </div>
+          <div className="contact-honeypot" aria-hidden>
+            <label htmlFor="company">Company</label>
+            <input
+              id="company"
+              name="company"
+              tabIndex={-1}
+              autoComplete="off"
+              value={form.company}
+              onChange={(event) =>
+                setForm((prev) => ({ ...prev, company: event.target.value }))
+              }
+            />
+          </div>
+          <input type="hidden" name="startedAt" value={String(form.startedAt)} />
 
           <label className="contact-label" htmlFor="name">
             Name

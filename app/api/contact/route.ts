@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
+const EMAIL_RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
+const EMAIL_RATE_LIMIT_MAX_REQUESTS = 3;
+const MIN_SUBMIT_TIME_MS = 2500;
 
 const reasonOptions = new Set([
   "support",
@@ -17,13 +21,18 @@ type RateEntry = {
 
 const globalRateLimitStore = globalThis as typeof globalThis & {
   __contactRateLimitStore?: Map<string, RateEntry>;
+  __contactEmailRateLimitStore?: Map<string, RateEntry>;
 };
 
 const rateLimitStore =
   globalRateLimitStore.__contactRateLimitStore ??
   new Map<string, RateEntry>();
+const emailRateLimitStore =
+  globalRateLimitStore.__contactEmailRateLimitStore ??
+  new Map<string, RateEntry>();
 
 globalRateLimitStore.__contactRateLimitStore = rateLimitStore;
+globalRateLimitStore.__contactEmailRateLimitStore = emailRateLimitStore;
 
 function getClientKey(request: NextRequest) {
   const forwardedFor = request.headers.get("x-forwarded-for");
@@ -32,21 +41,26 @@ function getClientKey(request: NextRequest) {
   return `${ip}:${userAgent.slice(0, 120)}`;
 }
 
-function isRateLimited(key: string) {
+function isRateLimited(
+  store: Map<string, RateEntry>,
+  key: string,
+  windowMs: number,
+  maxRequests: number,
+) {
   const now = Date.now();
-  const entry = rateLimitStore.get(key);
+  const entry = store.get(key);
   if (!entry || now > entry.resetAt) {
-    rateLimitStore.set(key, {
+    store.set(key, {
       count: 1,
-      resetAt: now + RATE_LIMIT_WINDOW_MS,
+      resetAt: now + windowMs,
     });
     return false;
   }
-  if (entry.count >= RATE_LIMIT_MAX_REQUESTS) {
+  if (entry.count >= maxRequests) {
     return true;
   }
   entry.count += 1;
-  rateLimitStore.set(key, entry);
+  store.set(key, entry);
   return false;
 }
 
@@ -59,6 +73,24 @@ function escapeHtml(input: string) {
     .replaceAll("'", "&#039;");
 }
 
+function countUrls(input: string) {
+  const matches = input.match(/https?:\/\/|www\./gi);
+  return matches ? matches.length : 0;
+}
+
+function looksLikeSpam(message: string) {
+  const lower = message.toLowerCase();
+  const spamPhrases = [
+    "crypto",
+    "guest post",
+    "seo service",
+    "backlink",
+    "casino",
+    "viagra",
+  ];
+  return spamPhrases.some((phrase) => lower.includes(phrase));
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -69,14 +101,30 @@ export async function POST(request: NextRequest) {
     const reason = String(body.reason ?? "").trim();
     const message = String(body.message ?? "").trim();
     const website = String(body.website ?? "").trim();
+    const company = String(body.company ?? "").trim();
+    const startedAt = Number(body.startedAt ?? 0);
 
     // Honeypot: silently accept to avoid tipping off bots.
-    if (website.length > 0) {
+    if (website.length > 0 || company.length > 0) {
+      return NextResponse.json({ ok: true });
+    }
+    if (
+      Number.isFinite(startedAt) &&
+      startedAt > 0 &&
+      Date.now() - startedAt < MIN_SUBMIT_TIME_MS
+    ) {
       return NextResponse.json({ ok: true });
     }
 
     const clientKey = getClientKey(request);
-    if (isRateLimited(clientKey)) {
+    if (
+      isRateLimited(
+        rateLimitStore,
+        clientKey,
+        RATE_LIMIT_WINDOW_MS,
+        RATE_LIMIT_MAX_REQUESTS,
+      )
+    ) {
       return NextResponse.json(
         { ok: false, error: "Too many requests. Please try again shortly." },
         { status: 429 },
@@ -117,6 +165,22 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { ok: false, error: "Message must be between 10 and 4000 characters." },
         { status: 400 },
+      );
+    }
+    if (countUrls(message) > 2 || looksLikeSpam(message)) {
+      return NextResponse.json({ ok: true });
+    }
+    if (
+      isRateLimited(
+        emailRateLimitStore,
+        email,
+        EMAIL_RATE_LIMIT_WINDOW_MS,
+        EMAIL_RATE_LIMIT_MAX_REQUESTS,
+      )
+    ) {
+      return NextResponse.json(
+        { ok: false, error: "Please wait before sending another message." },
+        { status: 429 },
       );
     }
 
