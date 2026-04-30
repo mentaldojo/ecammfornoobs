@@ -37,7 +37,9 @@ export default function AffiliateDisclosurePage() {
         <p>
           Recommendations are based on our own judgment and intended usefulness
           for beginners. Compensation may influence what we choose to review or
-          promote, but we aim to keep recommendations practical and honest.
+          promote, but we aim to keep recommendations practical and honest. In
+          many cases, the tools and equipment we recommend are the same tools we
+          use in our own productions and workflows.
         </p>
       </section>
 
