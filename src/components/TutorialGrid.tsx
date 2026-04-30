@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { Tutorial } from "@/src/data/tutorials";
+import { affiliateLinks } from "@/src/data/affiliateLinks";
 import { TutorialCard } from "@/src/components/TutorialCard";
 
 type TutorialGridProps = {
@@ -67,6 +68,14 @@ export function TutorialGrid({ items }: TutorialGridProps) {
                 allowFullScreen
               />
             </div>
+            <a
+              className="btn btn-secondary tutorial-modal-cta"
+              href={affiliateLinks.tutorialModal}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apply This In Ecamm
+            </a>
           </div>
         </div>
       ) : null}

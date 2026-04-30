@@ -1,7 +1,11 @@
+import { affiliateLinks } from "@/src/data/affiliateLinks";
+
 const tools = [
   {
     name: "Ecamm",
     detail: "The main live production tool this series teaches.",
+    href: affiliateLinks.toolsEcamm,
+    ctaLabel: "Try Ecamm Free",
   },
   {
     name: "Stream Deck",
@@ -26,6 +30,16 @@ export function ToolsTeaser() {
           <article key={tool.name} className="tool-card">
             <h3>{tool.name}</h3>
             <p>{tool.detail}</p>
+            {"href" in tool ? (
+              <a
+                className="tool-link"
+                href={tool.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {tool.ctaLabel}
+              </a>
+            ) : null}
           </article>
         ))}
       </div>

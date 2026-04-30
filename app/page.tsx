@@ -1,6 +1,7 @@
 import { PhaseRoadmap } from "@/src/components/PhaseRoadmap";
 import { ToolsTeaser } from "@/src/components/ToolsTeaser";
 import { TutorialGrid } from "@/src/components/TutorialGrid";
+import { affiliateLinks } from "@/src/data/affiliateLinks";
 import { tutorials } from "@/src/data/tutorials";
 
 export default function Home() {
@@ -33,11 +34,11 @@ export default function Home() {
           </a>
           <a
             className="btn btn-secondary"
-            href="https://www.youtube.com/channel/UCWkyh-bTFJeYnkUeFr7ya4Q"
+            href={affiliateLinks.heroCta}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit YouTube Channel
+            Try Ecamm Free
           </a>
         </div>
       </section>
@@ -71,6 +72,9 @@ export default function Home() {
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>
           <a href="/affiliate-disclosure">Affiliate Disclosure</a>
+          <a href={affiliateLinks.footerCta} target="_blank" rel="noopener noreferrer">
+            Ecamm Free Trial
+          </a>
           <a
             href="https://www.youtube.com/channel/UCWkyh-bTFJeYnkUeFr7ya4Q"
             target="_blank"

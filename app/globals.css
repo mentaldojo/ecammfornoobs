@@ -351,6 +351,10 @@ button {
   cursor: pointer;
 }
 
+.tutorial-modal-cta {
+  justify-self: center;
+}
+
 .tutorial-video-frame {
   width: min(100%, 420px, calc((100svh - 9rem) * 9 / 16));
   width: min(100%, 420px, calc((100dvh - 9rem) * 9 / 16));
@@ -382,6 +386,15 @@ button {
 .tool-card p {
   margin: 0;
   color: #c6c2b9;
+}
+
+.tool-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.8rem;
+  color: var(--accent-yellow);
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .disclosure-note {
