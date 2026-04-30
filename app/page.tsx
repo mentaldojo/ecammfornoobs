@@ -69,8 +69,11 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-links">
           <a href="/about">About</a>
+          <a href="/contact">Contact</a>
           <a href="/privacy">Privacy</a>
+          <a href="/gdpr">GDPR</a>
           <a href="/terms">Terms</a>
+          <a href="/refund-policy">Refund Policy</a>
           <a href="/affiliate-disclosure">Affiliate Disclosure</a>
           <a href={affiliateLinks.footerCta} target="_blank" rel="noopener noreferrer">
             Ecamm Free Trial
