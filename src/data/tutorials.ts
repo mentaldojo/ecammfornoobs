@@ -100,7 +100,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "global-vs-scene-overlays",
-    episode: "14",
+    episode: "09",
     title: "Global vs Scene Overlays",
     description: "Choose the right overlay scope for cleaner production flow.",
     tags: ["Visuals", "Overlays"],
@@ -110,7 +110,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "countdown-timer",
-    episode: "15",
+    episode: "10",
     title: "Adding a Countdown Timer",
     description: "Set up a pre-show timer to start streams with confidence.",
     tags: ["Visuals", "Overlays"],
@@ -120,7 +120,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "comments-on-screen",
-    episode: "28",
+    episode: "11",
     title: "Displaying Viewer Comments",
     description: "Bring audience comments on-screen without clutter.",
     tags: ["Audio & Content", "Engagement"],
@@ -130,7 +130,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "interview-mode",
-    episode: "29",
+    episode: "12",
     title: "Interview Mode",
     description: "Bring in guests cleanly for interviews and co-host streams.",
     tags: ["Power Tips", "Pro"],

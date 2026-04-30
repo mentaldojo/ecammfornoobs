@@ -247,6 +247,9 @@ button {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.72);
   border: 1px solid rgba(255, 224, 64, 0.42);
   color: var(--accent-yellow);
@@ -256,6 +259,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .tutorial-meta {
