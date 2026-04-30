@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PhaseRoadmap } from "@/src/components/PhaseRoadmap";
 import { ToolsTeaser } from "@/src/components/ToolsTeaser";
 import { TutorialGrid } from "@/src/components/TutorialGrid";
@@ -41,6 +42,25 @@ export default function Home() {
             Try Ecamm Free
           </a>
         </div>
+
+        <a
+          className="affiliate-badge-card"
+          href={affiliateLinks.heroCta}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="affiliate-badge-copy">
+            <p className="affiliate-badge-kicker">Official Ecamm Affiliate Link</p>
+            <p className="affiliate-badge-title">Try Ecamm with our partner link</p>
+          </div>
+          <Image
+            src="/images/asset-images/Orange_Ecamm_LogoCentered.png"
+            alt="Ecamm logo"
+            width={180}
+            height={134}
+            className="affiliate-badge-logo"
+          />
+        </a>
       </section>
 
       <section className="start-here-strip" aria-label="Start here tutorials">
