@@ -47,8 +47,9 @@ export default function AboutPage() {
         <p>
           Ecamm for Noobs is an independent educational site and is not owned by
           or officially affiliated with Ecamm. Some links on this site are
-          affiliate links. If you buy through those links, we may earn a
-          commission at no extra cost to you.
+          affiliate links, and we may earn a commission at no extra cost to you.
+          Other links may point to products we own (such as Spript), which are
+          promotional links and not affiliate links.
         </p>
         <p>
           See our full{" "}

@@ -112,7 +112,12 @@ export default function TermsPage() {
       <section className="legal-block">
         <h2>Third-party links and affiliate relationships</h2>
         <p>
-          This site may link to third-party websites, including affiliate links.
+          This site may link to third-party websites, including affiliate links
+          (for example, Ecamm and potentially other tools or marketplaces such as
+          Amazon as they are added). We may also include links to owned products,
+          including Spript, which are promotional links and not affiliate links.
+        </p>
+        <p>
           We are not responsible for third-party content, offers, terms, or
           privacy practices. Purchases made through third-party websites are
           governed by those third parties.

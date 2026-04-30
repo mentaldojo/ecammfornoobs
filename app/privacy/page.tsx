@@ -73,10 +73,15 @@ export default function PrivacyPage() {
       <section className="legal-block">
         <h2>Affiliate links and third-party sites</h2>
         <p>
-          We use affiliate links, including links to Ecamm and possibly other
-          tools in the future. When you click these links, third-party websites
-          may collect data under their own privacy policies. We do not control
-          third-party data practices.
+          We use affiliate links, including links to Ecamm and potentially other
+          relevant tools and gear over time (including marketplaces such as
+          Amazon). We also link to Spript, which is an owned product and not an
+          affiliate link.
+        </p>
+        <p>
+          When you click external links, third-party websites may collect data
+          under their own privacy policies. We do not control third-party data
+          practices.
         </p>
       </section>
 

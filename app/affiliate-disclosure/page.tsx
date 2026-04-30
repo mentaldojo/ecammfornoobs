@@ -44,9 +44,19 @@ export default function AffiliateDisclosurePage() {
       <section className="legal-block">
         <h2>Current affiliate relationships</h2>
         <p>
-          We currently include affiliate links related to Ecamm. Over time, we
-          may include other relevant tools, software, or equipment that support
-          live production workflows.
+          We currently include affiliate links related to Ecamm. We may also
+          include affiliate links for other creator tools and gear as they are
+          added and reviewed.
+        </p>
+        <p>
+          We also promote Spript, which is a product owned by this site&apos;s
+          owner. Spript links are not affiliate links, but they are promotional
+          links to an owned product.
+        </p>
+        <p>
+          We may add affiliate links from additional partner programs in the
+          future, including marketplaces such as Amazon, for relevant items like
+          streaming accessories, lighting, and related equipment.
         </p>
       </section>
 
