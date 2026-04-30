@@ -130,6 +130,10 @@ button {
   font-family: var(--font-geist-mono), monospace;
 }
 
+.affiliate-badge-brand {
+  color: var(--accent-orange);
+}
+
 .affiliate-badge-title {
   margin: 0;
   font-weight: 700;
@@ -440,6 +444,26 @@ button {
   color: var(--accent-yellow);
   font-weight: 700;
   text-decoration: none;
+  border: 1px solid #3a3a3a;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  background: #151515;
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+
+.tool-link:hover {
+  border-color: var(--accent-yellow);
+  transform: translateY(-1px);
+}
+
+.tool-link[data-variant="spript"] {
+  color: #f7f2ff;
+  border-color: #6b4dff;
+  background: linear-gradient(135deg, #5d3cff, #7b5bff);
+}
+
+.tool-link[data-variant="spript"]:hover {
+  border-color: #9f8bff;
 }
 
 .disclosure-note {

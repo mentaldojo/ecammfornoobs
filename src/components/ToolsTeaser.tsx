@@ -2,10 +2,18 @@ import { affiliateLinks } from "@/src/data/affiliateLinks";
 
 const tools = [
   {
+    name: "Spript",
+    detail: "Audience activation for your live events, launches, and webinars.",
+    href: affiliateLinks.spriptCta,
+    ctaLabel: "Try Spript",
+    ctaVariant: "spript",
+  },
+  {
     name: "Ecamm",
     detail: "The main live production tool this series teaches.",
     href: affiliateLinks.toolsEcamm,
     ctaLabel: "Try Ecamm Free",
+    ctaVariant: "ecamm",
   },
   {
     name: "Stream Deck",
@@ -36,6 +44,7 @@ export function ToolsTeaser() {
                 href={tool.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-variant={tool.ctaVariant}
               >
                 {tool.ctaLabel}
               </a>

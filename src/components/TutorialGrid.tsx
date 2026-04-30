@@ -35,7 +35,7 @@ export function TutorialGrid({ items }: TutorialGridProps) {
   return (
     <section id="tutorial-library" className="section-block">
       <div className="section-head">
-        <p className="section-kicker">Featured Tutorial Library</p>
+        <p className="section-kicker">Tutorial Library</p>
         <h2>Quick answers for the exact Ecamm thing you are stuck on</h2>
       </div>
       <div className="tutorial-grid">

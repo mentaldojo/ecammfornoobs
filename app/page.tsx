@@ -6,10 +6,6 @@ import { affiliateLinks } from "@/src/data/affiliateLinks";
 import { tutorials } from "@/src/data/tutorials";
 
 export default function Home() {
-  const startHere = tutorials.filter((tutorial) =>
-    ["01", "07", "08"].includes(tutorial.episode),
-  );
-
   return (
     <main className="home-page">
       <section className="hero">
@@ -50,8 +46,13 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <div className="affiliate-badge-copy">
-            <p className="affiliate-badge-kicker">Official Ecamm Affiliate Link</p>
-            <p className="affiliate-badge-title">Try Ecamm with our partner link</p>
+            <p className="affiliate-badge-kicker">
+              Official <span className="affiliate-badge-brand">Ecamm</span> Partner Link
+            </p>
+            <p className="affiliate-badge-title">
+              Try Ecamm free and support the production of more rapid Ecamm
+              solutions
+            </p>
           </div>
           <Image
             src="/images/asset-images/Orange_Ecamm_LogoCentered.png"
@@ -61,17 +62,6 @@ export default function Home() {
             className="affiliate-badge-logo"
           />
         </a>
-      </section>
-
-      <section className="start-here-strip" aria-label="Start here tutorials">
-        <p className="start-here-title">New to Ecamm? Start here:</p>
-        <div className="start-here-links">
-          {startHere.map((item) => (
-            <a key={item.id} className="start-here-link-card" href="#tutorial-library">
-              {item.title}
-            </a>
-          ))}
-        </div>
       </section>
 
       <TutorialGrid items={tutorials} />
