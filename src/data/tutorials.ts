@@ -86,10 +86,11 @@ export const tutorials: Tutorial[] = [
     episode: "07",
     title: "Where Did My Panel Go?",
     description: "Quick fixes when Ecamm panels disappear unexpectedly.",
+    imageSrc: "/images/solution-images/solution-07-missing-panels.png",
     tags: ["Foundation", "Troubleshooting"],
     popular: true,
-    status: "coming-soon",
-    youtubeUrl: "#",
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/B6WhshLsuhY",
   },
   {
     id: "preview-vs-live",
