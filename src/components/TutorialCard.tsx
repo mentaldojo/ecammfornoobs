@@ -40,7 +40,7 @@ export function TutorialCard({ tutorial, onOpen }: TutorialCardProps) {
     >
       <div className="tutorial-thumb" aria-hidden style={thumbStyle}>
         {!tutorial.imageSrc ? (
-          <span className="tutorial-thumb-coming-soon">Coming Soon</span>
+          <span className="tutorial-thumb-coming-soon">New videos added daily</span>
         ) : null}
       </div>
 
@@ -59,7 +59,7 @@ export function TutorialCard({ tutorial, onOpen }: TutorialCardProps) {
           aria-disabled={isComingSoon}
           disabled={isComingSoon}
         >
-          {isComingSoon ? "Coming Soon" : "View Solution ->"}
+          {isComingSoon ? "New videos added daily" : "View Solution ->"}
         </button>
       </div>
     </article>
