@@ -70,14 +70,16 @@ export const tutorials: Tutorial[] = [
     youtubeUrl: "https://www.youtube.com/embed/KETmDsg8wMc",
   },
   {
-    id: "solution-06-coming-soon",
+    id: "cant-see-overlay",
     episode: "06",
-    title: "Episode 06",
-    description: "This solution is on the way and will be added soon.",
-    tags: ["Foundation", "Beginner"],
+    title: "Why Can't I See My Overlay?",
+    description:
+      "Fix missing overlays by checking visibility, scene assignment, and source order.",
+    imageSrc: "/images/solution-images/solution-06a-cant-see-my-overlay.png",
+    tags: ["Visuals", "Overlays"],
     popular: false,
-    status: "coming-soon",
-    youtubeUrl: "#",
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/uEkb6O1FG2M",
   },
   {
     id: "panel-missing",
