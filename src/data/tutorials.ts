@@ -56,7 +56,7 @@ export const tutorials: Tutorial[] = [
     tags: ["Foundation", "Audio"],
     popular: false,
     status: "published",
-    youtubeUrl: "https://www.youtube.com/embed/BM7pa0LgaNw",
+    youtubeUrl: "https://www.youtube.com/embed/1S9O9l_mCHo",
   },
   {
     id: "first-scene",
