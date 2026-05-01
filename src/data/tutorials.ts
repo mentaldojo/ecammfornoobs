@@ -63,10 +63,11 @@ export const tutorials: Tutorial[] = [
     episode: "05",
     title: "Creating Your First Scene",
     description: "Build a simple scene layout you can confidently reuse.",
+    imageSrc: "/images/solution-images/solution-05-build-first-scene.png",
     tags: ["Foundation", "Scenes"],
     popular: true,
-    status: "coming-soon",
-    youtubeUrl: "#",
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/KETmDsg8wMc",
   },
   {
     id: "solution-06-coming-soon",
