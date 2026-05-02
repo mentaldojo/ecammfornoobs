@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = "G-KK0BVBSCT5";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ecammfornoobs.com";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Ecamm for Noobs | Quick Ecamm Tutorials",
   description:
     "Ecamm for Noobs is a beginner-friendly YouTube Shorts tutorial library for learning Ecamm one problem at a time.",

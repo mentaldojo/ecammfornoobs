@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecamm SEO & Marketing Intelligence Report</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1714;
+  --paper: #f5f0e8;
+  --cream: #ede8dc;
+  --accent: #c8421a;
+  --gold: #c49a3c;
+  --blue: #1e4480;
+  --green: #1a6644;
+  --muted: #7a7168;
+  --rule: #d4cfc5;
+  --white: #fff;
+  --card: #faf7f2;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Instrument Sans', sans-serif;
+  line-height: 1.65;
+}
+
+/* MASTHEAD */
+.masthead {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0;
+  border-bottom: 4px solid var(--accent);
+}
+
+.mast-top {
+  background: var(--accent);
+  padding: 8px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mast-top span {
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.mast-main {
+  padding: 48px 48px 40px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: end;
+  border-bottom: 1px solid #333;
+}
+
+.mast-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 1;
+  color: var(--paper);
+  font-weight: 400;
+}
+
+.mast-title em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.mast-sub {
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  color: #888;
+  margin-top: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.mast-sidebar {
+  background: #252220;
+  padding: 24px;
+  border: 1px solid #333;
+}
+
+.mast-sidebar h3 {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.verdict-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.verdict-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.verdict-item p {
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.mast-byline {
+  padding: 16px 48px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.byline-item {
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+.byline-item strong { color: var(--gold); }
+
+/* MAIN LAYOUT */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main-col {
+  border-right: 1px solid var(--rule);
+  padding: 0;
+}
+
+.sidebar-col {
+  padding: 40px 32px;
+  background: var(--card);
+}
+
+/* SECTIONS */
+.report-section {
+  padding: 48px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.3;
+}
+
+h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+
+h2 em { color: var(--accent); font-style: italic; }
+
+.lead {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #3a3530;
+  margin-bottom: 32px;
+  border-left: 3px solid var(--gold);
+  padding-left: 20px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #4a4540;
+  margin-bottom: 16px;
+}
+
+/* KEYWORD TABLE */
+.kw-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14px;
+}
+
+.kw-table th {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  text-align: left;
+}
+
+.kw-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.kw-table tr:nth-child(even) td { background: var(--cream); }
+
+.kw-table tr:hover td { background: #ede5d8; }
+
+.kw-keyword {
+  font-family: 'Courier Prime', monospace;
+  font-size: 13px;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.priority {
+  display: inline-block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.p-high { background: var(--accent); color: white; }
+.p-med { background: var(--gold); color: var(--ink); }
+.p-low { background: var(--rule); color: var(--muted); }
+
+.intent {
+  font-size: 11px;
+  font-family: 'Courier Prime', monospace;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+/* PERSONA CARDS */
+.personas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin: 24px 0;
+  background: var(--rule);
+}
+
+.persona-card {
+  background: var(--card);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.persona-card::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -8px;
+  right: 16px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 80px;
+  color: var(--rule);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.persona-type {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.persona-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.persona-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.persona-searches {
+  margin-top: 12px;
+}
+
+.persona-searches strong {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.search-pill {
+  display: inline-block;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  padding: 3px 8px;
+  margin: 2px 2px 2px 0;
+  color: var(--ink);
+}
+
+/* COMPETITION CHART */
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--rule);
+  margin: 24px 0;
+}
+
+.comp-card {
+  background: var(--card);
+  padding: 24px;
+}
+
+.comp-card.featured { background: var(--ink); color: var(--paper); }
+
+.comp-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.comp-card.featured .comp-name { color: var(--gold); }
+
+.comp-label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.comp-card.featured .comp-label { color: #888; }
+
+.comp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 12px;
+}
+
+.comp-card.featured .comp-row { border-color: #333; }
+
+.comp-row:last-child { border-bottom: none; }
+
+.comp-attr { color: var(--muted); font-size: 12px; }
+.comp-card.featured .comp-attr { color: #888; }
+
+.comp-val { font-weight: 600; font-size: 12px; }
+.comp-card.featured .comp-val { color: var(--paper); }
+
+.win { color: var(--green) !important; }
+.loss { color: var(--accent) !important; }
+
+/* SEO CONTENT STRATEGY */
+.content-types {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--rule);
+  margin: 24px 0;
+}
+
+.content-type {
+  background: var(--card);
+  padding: 24px;
+}
+
+.ct-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.ct-type {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.content-type h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.content-type p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.example-pages strong {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.example-pages li {
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: 16px;
+  margin-bottom: 2px;
+}
+
+/* PULLQUOTES */
+.pullquote {
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding: 28px 0;
+  margin: 32px 0;
+}
+
+.pullquote p {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink);
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.pullquote cite {
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 12px;
+  display: block;
+}
+
+/* SIDEBAR WIDGETS */
+.widget {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.widget h3 {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 10px;
+}
+
+.widget p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.kw-list {
+  list-style: none;
+}
+
+.kw-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--cream);
+  font-size: 13px;
+}
+
+.kw-list li:last-child { border-bottom: none; }
+
+.kw-list .term {
+  font-family: 'Courier Prime', monospace;
+  color: var(--blue);
+  font-size: 12px;
+}
+
+.kw-vol {
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.bar-wrap {
+  margin: 12px 0;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.bar-track {
+  background: var(--rule);
+  height: 6px;
+  width: 100%;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--accent);
+}
+
+.bar-fill.gold { background: var(--gold); }
+.bar-fill.blue { background: var(--blue); }
+.bar-fill.green { background: var(--green); }
+
+.action-list {
+  list-style: none;
+  counter-reset: actions;
+}
+
+.action-list li {
+  counter-increment: actions;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--cream);
+  font-size: 13px;
+  color: var(--muted);
+  align-items: start;
+}
+
+.action-list li:last-child { border-bottom: none; }
+
+.action-list li::before {
+  content: counter(actions);
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--cream);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* FINAL SUMMARY BOX */
+.summary-box {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 48px;
+  margin: 0;
+}
+
+.summary-box h2 {
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.sum-block h4 {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.sum-block p {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.sum-block strong { color: var(--paper); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar-col { border-top: 1px solid var(--rule); }
+  .mast-main { grid-template-columns: 1fr; }
+  .report-section { padding: 32px 24px; }
+  .personas, .comp-grid, .content-types { grid-template-columns: 1fr; }
+  .summary-grid { grid-template-columns: 1fr; }
+  .mast-top, .mast-byline { padding: 8px 24px; }
+  .masthead .mast-main { padding: 32px 24px 28px; }
+  .summary-box { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="mast-top">
+    <span>Intelligence Report — Ecamm SEO & Marketing</span>
+    <span>May 2026 · Confidential</span>
+  </div>
+  <div class="mast-main">
+    <div>
+      <div class="mast-title">Ecamm<br><em>Search & Market</em><br>Intelligence</div>
+      <p class="mast-sub">A research brief covering target audiences, high-value search keywords, competitive positioning, and content strategy for an Ecamm support and tutorial website. Compiled from G2, Capterra, Ecamm's own community data, and competitor analysis.</p>
+    </div>
+    <div class="mast-sidebar">
+      <h3>Key Findings at a Glance</h3>
+      <div class="verdict-item"><div class="verdict-dot"></div><p>Mac-exclusive niche = low competition, high intent audience</p></div>
+      <div class="verdict-item"><div class="verdict-dot"></div><p>"Ecamm Live" still outperforms "Ecamm" in search — use both</p></div>
+      <div class="verdict-item"><div class="verdict-dot"></div><p>Tutorial and how-to content dominates all Ecamm search intent</p></div>
+      <div class="verdict-item"><div class="verdict-dot"></div><p>Comparison searches ("Ecamm vs StreamYard") are high-traffic affiliate opportunities</p></div>
+      <div class="verdict-item"><div class="verdict-dot"></div><p>Podcasters + coaches = the two biggest buyer segments</p></div>
+    </div>
+  </div>
+  <div class="mast-byline">
+    <span class="byline-item">Prepared for <strong>Ecamm for Noobs</strong></span>
+    <span class="byline-item">Focus <strong>SEO + Affiliate</strong></span>
+    <span class="byline-item">Market <strong>Mac Creators, Global</strong></span>
+  </div>
+</div>
+
+<div class="layout">
+<div class="main-col">
+
+  <!-- SECTION 1: WHO SEARCHES -->
+  <div class="report-section">
+    <div class="section-label">Section 01</div>
+    <h2>Who Is Searching for <em>Ecamm?</em></h2>
+    <p class="lead">Ecamm's addressable market is defined by one hard constraint: macOS only. This narrows the field — but what's left is a highly motivated, self-selecting audience of creators actively looking to improve their production quality.</p>
+
+    <p>The research paints a consistent picture. <strong>Ecamm primarily serves solopreneurs and micro-businesses</strong> — solo operators through 10-person teams — across creative industries, digital coaching, media production, and education. These are people who have chosen Mac as their primary workflow, who already understand the value of live streaming or are about to launch it, and who are willing to pay for a tool that saves them time.</p>
+
+    <p>Purchase triggers are specific and identifiable: launching a coaching programme, starting a podcast, hosting their first webinar, or replacing a clunky existing tool like OBS. When those triggers fire, they search.</p>
+
+    <div class="pullquote">
+      <p>"The Mac-exclusive architecture isn't a limitation — it's the entire strategy. It delivers optimised performance and native interface design that cross-platform competitors simply can't replicate."</p>
+      <cite>— Market analysis, CheckThat.ai</cite>
+    </div>
+
+    <p>This is important for your site's SEO. You are not trying to rank for "live streaming software" against StreamYard, OBS, and Riverside. You are targeting the specific subset of that audience who are Mac users — and within that, the beginners and intermediate users who need help learning the software. That is a much tighter, more winnable niche.</p>
+
+    <div class="personas">
+      <div class="persona-card" data-num="01">
+        <div class="persona-type">Primary Audience</div>
+        <h3>The New Ecamm User</h3>
+        <p>Just downloaded the trial, slightly overwhelmed, looking for quick answers. Searches feature-specific how-to questions. Your #1 audience for the "for Noobs" content.</p>
+        <div class="persona-searches">
+          <strong>Their searches</strong>
+          <span class="search-pill">how to add overlay ecamm</span>
+          <span class="search-pill">ecamm scenes explained</span>
+          <span class="search-pill">ecamm tutorial beginner</span>
+          <span class="search-pill">ecamm live setup mac</span>
+        </div>
+      </div>
+      <div class="persona-card" data-num="02">
+        <div class="persona-type">Primary Audience</div>
+        <h3>The Podcaster Going Visual</h3>
+        <p>Existing audio podcaster moving to video. Knows their content, doesn't know the tools. High intent, will buy software. Strong affiliate conversion potential.</p>
+        <div class="persona-searches">
+          <strong>Their searches</strong>
+          <span class="search-pill">ecamm live podcast setup</span>
+          <span class="search-pill">video podcast mac software</span>
+          <span class="search-pill">ecamm interview mode</span>
+          <span class="search-pill">record podcast and stream simultaneously</span>
+        </div>
+      </div>
+      <div class="persona-card" data-num="03">
+        <div class="persona-type">Secondary Audience</div>
+        <h3>The Business Coach / Educator</h3>
+        <p>Runs webinars or online courses. Wants to look professional on Zoom and LinkedIn Live. Likely already paying for multiple tools and open to consolidating.</p>
+        <div class="persona-searches">
+          <strong>Their searches</strong>
+          <span class="search-pill">ecamm virtual camera zoom</span>
+          <span class="search-pill">linkedin live streaming mac</span>
+          <span class="search-pill">ecamm webinar setup</span>
+          <span class="search-pill">green screen ecamm live</span>
+        </div>
+      </div>
+      <div class="persona-card" data-num="04">
+        <div class="persona-type">Secondary Audience</div>
+        <h3>The OBS/StreamYard Switcher</h3>
+        <p>Currently on a competitor and considering Ecamm. High-value comparison searcher. Won't just want tutorials — wants to know if Ecamm is better for their specific use case.</p>
+        <div class="persona-searches">
+          <strong>Their searches</strong>
+          <span class="search-pill">ecamm vs streamyard</span>
+          <span class="search-pill">ecamm vs obs mac</span>
+          <span class="search-pill">best live streaming software mac 2026</span>
+          <span class="search-pill">streamyard alternative mac</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: KEYWORDS -->
+  <div class="report-section">
+    <div class="section-label">Section 02</div>
+    <h2>The <em>Keywords</em> Worth Targeting</h2>
+    <p class="lead">Ecamm is a niche product. Search volumes are lower than generic streaming terms — but the intent is extremely high and competition is light, especially in the tutorial space. Target these with precision rather than chasing volume.</p>
+
+    <p><strong>Critical note on brand name:</strong> The rebrand from "Ecamm Live" to "Ecamm" is recent. Search data still shows significant volume for "Ecamm Live" — users who've been using the software for years still search the old name. Your site should use <em>both terms freely</em> across pages, titles, and metadata to capture both audiences during the transition period.</p>
+
+    <h3 style="font-family:'DM Serif Display',serif; font-weight:400; font-size:22px; margin: 24px 0 16px; color:var(--ink);">Tier 1 — High Priority Keywords</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">These should appear in page titles, H1s, and meta descriptions across your site.</p>
+
+    <table class="kw-table">
+      <thead>
+        <tr>
+          <th>Keyword</th>
+          <th>Search Intent</th>
+          <th>Priority</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="kw-keyword">ecamm live tutorial</span></td>
+          <td><span class="intent">LEARN</span></td>
+          <td><span class="priority p-high">HIGH</span></td>
+          <td style="font-size:12px;color:var(--muted);">Highest volume Ecamm term. Your whole site is the answer.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">how to use ecamm live</span></td>
+          <td><span class="intent">LEARN</span></td>
+          <td><span class="priority p-high">HIGH</span></td>
+          <td style="font-size:12px;color:var(--muted);">Beginner intent. Great homepage/intro content target.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm live beginner</span></td>
+          <td><span class="intent">LEARN</span></td>
+          <td><span class="priority p-high">HIGH</span></td>
+          <td style="font-size:12px;color:var(--muted);">Directly matches "for Noobs" brand positioning.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm scenes</span></td>
+          <td><span class="intent">HELP</span></td>
+          <td><span class="priority p-high">HIGH</span></td>
+          <td style="font-size:12px;color:var(--muted);">Most searched individual feature term.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm overlays</span></td>
+          <td><span class="intent">HELP</span></td>
+          <td><span class="priority p-high">HIGH</span></td>
+          <td style="font-size:12px;color:var(--muted);">Second most searched feature. Lots of confusion here.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm live review 2026</span></td>
+          <td><span class="intent">BUY</span></td>
+          <td><span class="priority p-high">HIGH</span></td>
+          <td style="font-size:12px;color:var(--muted);">Pre-purchase. Strong affiliate conversion opportunity.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm vs streamyard</span></td>
+          <td><span class="intent">COMPARE</span></td>
+          <td><span class="priority p-high">HIGH</span></td>
+          <td style="font-size:12px;color:var(--muted);">Very searched. Significant traffic. Affiliate angle strong.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm vs obs</span></td>
+          <td><span class="intent">COMPARE</span></td>
+          <td><span class="priority p-high">HIGH</span></td>
+          <td style="font-size:12px;color:var(--muted);">OBS frustration drives Ecamm discovery. Capture this.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm interview mode</span></td>
+          <td><span class="intent">HELP</span></td>
+          <td><span class="priority p-med">MED</span></td>
+          <td style="font-size:12px;color:var(--muted);">Pro feature. Searched heavily by podcasters.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm green screen</span></td>
+          <td><span class="intent">HELP</span></td>
+          <td><span class="priority p-med">MED</span></td>
+          <td style="font-size:12px;color:var(--muted);">Visual feature, common question, good short/page topic.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm virtual camera</span></td>
+          <td><span class="intent">HELP</span></td>
+          <td><span class="priority p-med">MED</span></td>
+          <td style="font-size:12px;color:var(--muted);">Zoom/Meet users. Growing search segment.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm stream deck</span></td>
+          <td><span class="intent">HELP</span></td>
+          <td><span class="priority p-med">MED</span></td>
+          <td style="font-size:12px;color:var(--muted);">Hardware integration. Niche but very loyal audience.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm multistreaming</span></td>
+          <td><span class="intent">HELP</span></td>
+          <td><span class="priority p-med">MED</span></td>
+          <td style="font-size:12px;color:var(--muted);">Growing interest post Pro tier launch.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">best streaming software mac 2026</span></td>
+          <td><span class="intent">DISCOVER</span></td>
+          <td><span class="priority p-med">MED</span></td>
+          <td style="font-size:12px;color:var(--muted);">Broader, brings new traffic into the Ecamm funnel.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">live streaming for podcasters mac</span></td>
+          <td><span class="intent">DISCOVER</span></td>
+          <td><span class="priority p-med">MED</span></td>
+          <td style="font-size:12px;color:var(--muted);">Long-tail, high intent. Matches top buyer persona.</td>
+        </tr>
+        <tr>
+          <td><span class="kw-keyword">ecamm affiliate</span></td>
+          <td><span class="intent">TRANSACT</span></td>
+          <td><span class="priority p-low">LOW</span></td>
+          <td style="font-size:12px;color:var(--muted);">Low volume but direct — for other creators who want to earn.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pullquote">
+      <p>"Don't target 'live streaming software' — target 'how to add a lower third in Ecamm'. The first is a battle you can't win. The second is a battle you will always win."</p>
+      <cite>— SEO principle for niche software tutorial sites</cite>
+    </div>
+
+    <h3 style="font-family:'DM Serif Display',serif; font-weight:400; font-size:22px; margin: 24px 0 16px; color:var(--ink);">What NOT to Target</h3>
+    <p>These terms have volume but will not convert for your site and the competition is far too strong to rank against:</p>
+    <p><strong>Avoid:</strong> "live streaming software", "best streaming software", "how to live stream on YouTube", "OBS tutorial", "streaming for beginners" (without "Ecamm"), "Twitch streaming setup". These are dominated by OBS, StreamYard, and Twitch's own help content. You will not appear in the first three pages for any of them.</p>
+  </div>
+
+  <!-- SECTION 3: COMPETITIVE LANDSCAPE -->
+  <div class="report-section">
+    <div class="section-label">Section 03</div>
+    <h2>The <em>Competitive</em> Landscape</h2>
+    <p class="lead">Understanding Ecamm's competitors directly informs your SEO. Comparison content — "Ecamm vs X" — is one of the highest-converting page types for affiliate sites and gets strong search volume with relatively low competition.</p>
+
+    <div class="comp-grid">
+      <div class="comp-card featured">
+        <div class="comp-label">Your Focus</div>
+        <div class="comp-name">Ecamm</div>
+        <div class="comp-row"><span class="comp-attr">Platform</span><span class="comp-val win">Mac Only</span></div>
+        <div class="comp-row"><span class="comp-attr">Type</span><span class="comp-val">Desktop App</span></div>
+        <div class="comp-row"><span class="comp-attr">Price</span><span class="comp-val">$16–$32/mo</span></div>
+        <div class="comp-row"><span class="comp-attr">Strength</span><span class="comp-val win">Production Quality</span></div>
+        <div class="comp-row"><span class="comp-attr">Weakness</span><span class="comp-val loss">Mac-only</span></div>
+        <div class="comp-row"><span class="comp-attr">Best For</span><span class="comp-val win">Pro Mac creators</span></div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-label">Most Compared</div>
+        <div class="comp-name">StreamYard</div>
+        <div class="comp-row"><span class="comp-attr">Platform</span><span class="comp-val">Browser/All OS</span></div>
+        <div class="comp-row"><span class="comp-attr">Type</span><span class="comp-val">Cloud / Browser</span></div>
+        <div class="comp-row"><span class="comp-attr">Price</span><span class="comp-val">Free–$69/mo</span></div>
+        <div class="comp-row"><span class="comp-attr">Strength</span><span class="comp-val win">Ease of use</span></div>
+        <div class="comp-row"><span class="comp-attr">Weakness</span><span class="comp-val loss">Less control</span></div>
+        <div class="comp-row"><span class="comp-attr">Best For</span><span class="comp-val">Quick setups</span></div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-label">Most Common Migrant</div>
+        <div class="comp-name">OBS Studio</div>
+        <div class="comp-row"><span class="comp-attr">Platform</span><span class="comp-val">Win/Mac/Linux</span></div>
+        <div class="comp-row"><span class="comp-attr">Type</span><span class="comp-val">Desktop App</span></div>
+        <div class="comp-row"><span class="comp-attr">Price</span><span class="comp-val win">Free</span></div>
+        <div class="comp-row"><span class="comp-attr">Strength</span><span class="comp-val win">Customisable</span></div>
+        <div class="comp-row"><span class="comp-attr">Weakness</span><span class="comp-val loss">Steep learning curve</span></div>
+        <div class="comp-row"><span class="comp-attr">Best For</span><span class="comp-val">Power users</span></div>
+      </div>
+    </div>
+
+    <p>The "Ecamm vs StreamYard" comparison is the most commercially valuable page you could create for your site. It gets strong search volume, the intent is pre-purchase (meaning visitors are ready to click an affiliate link), and the answer legitimately favours Ecamm for the Mac user who wants production quality. Other comparison pages worth creating: <strong>Ecamm vs OBS</strong>, <strong>Ecamm vs Riverside</strong>, and <strong>Ecamm vs Restream</strong>.</p>
+  </div>
+
+  <!-- SECTION 4: CONTENT STRATEGY -->
+  <div class="report-section">
+    <div class="section-label">Section 04</div>
+    <h2>Content Strategy for <em>Maximum SEO</em></h2>
+    <p class="lead">Your site has a natural content architecture already — the video library. Building out supporting text content around each video is the highest-leverage SEO activity you can do. Each short becomes the seed for a page.</p>
+
+    <div class="content-types">
+      <div class="content-type">
+        <div class="ct-icon">🎬</div>
+        <div class="ct-type">Content Type 01</div>
+        <h3>Feature How-To Pages</h3>
+        <p>One page per feature, matching each Short. 300–500 words of text, embed the Short, add a step-by-step written summary. This is the backbone of your SEO.</p>
+        <div class="example-pages">
+          <strong>Example URLs</strong>
+          <ul>
+            <li>/how-to-add-overlay-ecamm</li>
+            <li>/ecamm-scenes-explained</li>
+            <li>/ecamm-interview-mode-setup</li>
+            <li>/ecamm-green-screen-tutorial</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-type">
+        <div class="ct-icon">⚖️</div>
+        <div class="ct-type">Content Type 02</div>
+        <h3>Comparison Pages</h3>
+        <p>High commercial intent. Visitors are pre-purchase. These pages convert to affiliate clicks better than any other content type. Write fairly — you gain trust.</p>
+        <div class="example-pages">
+          <strong>Example URLs</strong>
+          <ul>
+            <li>/ecamm-vs-streamyard</li>
+            <li>/ecamm-vs-obs-mac</li>
+            <li>/ecamm-vs-riverside</li>
+            <li>/best-live-streaming-software-mac</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-type">
+        <div class="ct-icon">🚀</div>
+        <div class="ct-type">Content Type 03</div>
+        <h3>Beginner Guide / Start Here</h3>
+        <p>A long-form "complete beginner's guide to Ecamm" page — 2000+ words, linking to all your individual feature pages. This is the page that ranks for "how to use Ecamm live" and keeps people on the site.</p>
+        <div class="example-pages">
+          <strong>Example URLs</strong>
+          <ul>
+            <li>/ecamm-beginner-guide</li>
+            <li>/start-here</li>
+            <li>/ecamm-live-complete-setup</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-type">
+        <div class="ct-icon">👥</div>
+        <div class="ct-type">Content Type 04</div>
+        <h3>Use Case Pages</h3>
+        <p>Pages targeting specific audience segments — podcasters, coaches, educators. These rank for longer-tail terms and speak directly to each buyer persona's specific needs.</p>
+        <div class="example-pages">
+          <strong>Example URLs</strong>
+          <ul>
+            <li>/ecamm-for-podcasters</li>
+            <li>/ecamm-for-coaches-webinars</li>
+            <li>/ecamm-for-educators</li>
+            <li>/ecamm-virtual-camera-zoom</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>Technical SEO fundamentals for your site:</strong> Every page needs a descriptive title tag containing the primary keyword (e.g. "How to Add an Overlay in Ecamm — Ecamm for Noobs"), a unique meta description of 150 characters, proper H1/H2 structure, and alt text on any screenshots. Fast loading is especially important — your target audience is Mac-savvy and expects speed. If you're on WordPress or a similar CMS, a plugin like RankMath handles the basics cleanly.</p>
+
+    <p><strong>The YouTube + website flywheel:</strong> Each Short on YouTube links to your website in the description. The website embeds the Short. People who find the Short on YouTube come to the site for the written version. People who find the site on Google watch the Short. Both sides reinforce each other's rankings. This is a compounding system — the more content you publish, the faster it all grows.</p>
+  </div>
+
+</div><!-- end main-col -->
+
+<!-- SIDEBAR -->
+<div class="sidebar-col">
+
+  <div class="widget">
+    <h3>Top Search Terms to Own</h3>
+    <ul class="kw-list">
+      <li><span class="term">ecamm live tutorial</span><span class="kw-vol">★★★★★</span></li>
+      <li><span class="term">ecamm vs streamyard</span><span class="kw-vol">★★★★★</span></li>
+      <li><span class="term">ecamm scenes</span><span class="kw-vol">★★★★☆</span></li>
+      <li><span class="term">ecamm overlays</span><span class="kw-vol">★★★★☆</span></li>
+      <li><span class="term">ecamm beginner guide</span><span class="kw-vol">★★★★☆</span></li>
+      <li><span class="term">ecamm vs obs mac</span><span class="kw-vol">★★★☆☆</span></li>
+      <li><span class="term">ecamm green screen</span><span class="kw-vol">★★★☆☆</span></li>
+      <li><span class="term">ecamm interview mode</span><span class="kw-vol">★★★☆☆</span></li>
+      <li><span class="term">ecamm virtual camera</span><span class="kw-vol">★★☆☆☆</span></li>
+      <li><span class="term">ecamm stream deck</span><span class="kw-vol">★★☆☆☆</span></li>
+    </ul>
+    <p style="font-size:11px;color:var(--muted);margin-top:12px;">★ ratings indicate relative search volume. Exact figures require a paid tool like Ahrefs or SEMrush.</p>
+  </div>
+
+  <div class="widget">
+    <h3>Audience by Segment</h3>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Podcasters / Video creators</span><span>38%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:38%"></div></div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Coaches / Consultants</span><span>25%</span></div>
+      <div class="bar-track"><div class="bar-fill gold" style="width:25%"></div></div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Educators / Webinar hosts</span><span>18%</span></div>
+      <div class="bar-track"><div class="bar-fill blue" style="width:18%"></div></div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Musicians / Creatives</span><span>12%</span></div>
+      <div class="bar-track"><div class="bar-fill green" style="width:12%"></div></div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Church / Community orgs</span><span>7%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:7%;background:var(--muted)"></div></div>
+    </div>
+    <p style="font-size:11px;color:var(--muted);margin-top:12px;">Based on Ecamm's own community description and G2/Capterra reviewer profiles. Approximate estimates.</p>
+  </div>
+
+  <div class="widget">
+    <h3>Immediate Action List</h3>
+    <ol class="action-list">
+      <li>Register <strong>ecammfornoobs.com</strong> today before traction builds</li>
+      <li>Create a separate YouTube channel: <strong>Ecamm for Noobs</strong></li>
+      <li>Email Ecamm to join the affiliate programme (30% recurring)</li>
+      <li>Build a "Start Here" beginner guide page — 2000+ words</li>
+      <li>Create an "Ecamm vs StreamYard" comparison page immediately — high traffic, high affiliate value</li>
+      <li>Add "Ecamm Live" and "Ecamm" as alternating terms across all page titles and descriptions</li>
+      <li>Use Google Search Console from day one — it's free and shows exactly what people search to find you</li>
+      <li>Set up Ahrefs or Ubersuggest (paid) once you have 10+ pages to track keyword rankings</li>
+    </ol>
+  </div>
+
+  <div class="widget">
+    <h3>Affiliate Revenue Estimate</h3>
+    <p>At 30% commission on Ecamm's $16/mo Standard plan, each converted subscriber is worth <strong>$4.80/month for up to 12 months = $57.60 per referral</strong>. Pro plan ($32/mo) = <strong>$9.60/mo = $115.20 per referral</strong>.</p>
+    <p>If your site converts just <strong>5 subscribers/month</strong> from tutorial traffic: ~$288–$576/year passively. At 20/month: ~$1,152–$2,304/year. This scales directly with your content volume.</p>
+  </div>
+
+  <div class="widget">
+    <h3>Tools to Use for SEO</h3>
+    <p><strong>Free:</strong> Google Search Console, Google Keyword Planner, AnswerThePublic (limited), Google Trends.</p>
+    <p><strong>Paid (when ready):</strong> Ahrefs ($99/mo), SEMrush ($120/mo), or Ubersuggest ($29/mo as a cheaper start). Ubersuggest is fine for a new site in a niche this specific.</p>
+    <p><strong>For YouTube keywords:</strong> TubeBuddy (free tier useful) or VidIQ — both show search volume for YouTube-specific terms around Ecamm.</p>
+  </div>
+
+</div>
+</div><!-- end layout -->
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <h2>The Opportunity in Summary</h2>
+  <div class="summary-grid">
+    <div class="sum-block">
+      <h4>The Audience</h4>
+      <p><strong>Mac-using content creators</strong> — podcasters, coaches, educators, and streamers — who've chosen Ecamm or are evaluating it. They are motivated, they spend money on software, and they have very specific questions your site will answer.</p>
+      <p>The two highest-value segments: <strong>podcasters going visual</strong> (biggest buyer group) and <strong>OBS/StreamYard migrants</strong> (pre-purchase, high affiliate conversion).</p>
+    </div>
+    <div class="sum-block">
+      <h4>The Keywords</h4>
+      <p>Own the <strong>tutorial + feature combination</strong>: "how to [X] in Ecamm" for every feature you cover. These are low-competition, high-intent, and directly map to your Shorts content.</p>
+      <p>Supplement with <strong>comparison pages</strong> (Ecamm vs StreamYard, Ecamm vs OBS) for affiliate traffic, and a <strong>long-form beginner guide</strong> for the broad "how to use Ecamm" searches.</p>
+    </div>
+    <div class="sum-block">
+      <h4>The Timing</h4>
+      <p>The rebrand from "Ecamm Live" to "Ecamm" is recent and still creating search confusion. <strong>This is a content gap — and a window.</strong> A site built now, during the transition, can rank for both brand names before any competitor spots it.</p>
+      <p>The "for Noobs" format is proven, the niche is underserved in Shorts specifically, and Ecamm's growing affiliate programme means the revenue model is already in place. <strong>The timing is as good as it gets.</strong></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

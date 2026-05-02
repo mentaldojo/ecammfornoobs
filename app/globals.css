@@ -165,6 +165,7 @@ button {
 
 .btn:focus-visible,
 .tutorial-link:focus-visible,
+.tutorial-card-shell:focus-visible,
 .tutorial-card:focus-visible,
 .tutorial-modal-close:focus-visible,
 .footer-links a:focus-visible,
@@ -265,6 +266,14 @@ button {
   box-shadow: 0 8px 26px rgba(0, 0, 0, 0.16);
 }
 
+.tutorial-card-shell {
+  display: grid;
+  gap: 0.9rem;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+}
+
 .tutorial-card.is-clickable {
   cursor: pointer;
   transition: border-color 120ms ease, transform 120ms ease;
@@ -362,6 +371,89 @@ button {
 .tutorial-link[aria-disabled="true"] {
   color: #d4866f;
   pointer-events: none;
+}
+
+.library-page,
+.tutorial-page {
+  width: min(1080px, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: calc(4rem + env(safe-area-inset-top)) 0 4rem;
+  display: grid;
+  gap: 1.8rem;
+}
+
+.library-head,
+.tutorial-head {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.library-head h1,
+.tutorial-head h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.08;
+}
+
+.library-head p,
+.tutorial-head p {
+  margin: 0;
+  color: #cbc7be;
+  max-width: 70ch;
+}
+
+.tutorial-video-block,
+.tutorial-copy-block,
+.tutorial-related-block {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #121212;
+  padding: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.tutorial-copy-block h2,
+.tutorial-related-block h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.tutorial-copy-block p {
+  margin: 0;
+}
+
+.tutorial-copy-block ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  color: #cbc7be;
+}
+
+.tutorial-detail-video-frame {
+  width: min(100%, 420px);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+}
+
+.tutorial-detail-cta {
+  justify-self: center;
+}
+
+.tutorial-related-links {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.tutorial-related-links a {
+  color: var(--accent-yellow);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.tutorial-related-links a:hover {
+  text-decoration: underline;
 }
 
 .tutorial-modal-overlay {

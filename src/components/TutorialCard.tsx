@@ -1,12 +1,11 @@
-import type { KeyboardEvent } from "react";
+import Link from "next/link";
 import type { Tutorial } from "@/src/data/tutorials";
 
 type TutorialCardProps = {
   tutorial: Tutorial;
-  onOpen: (tutorial: Tutorial) => void;
 };
 
-export function TutorialCard({ tutorial, onOpen }: TutorialCardProps) {
+export function TutorialCard({ tutorial }: TutorialCardProps) {
   const isComingSoon = tutorial.status === "coming-soon";
   const thumbStyle = tutorial.imageSrc
     ? {
@@ -16,52 +15,43 @@ export function TutorialCard({ tutorial, onOpen }: TutorialCardProps) {
         backgroundRepeat: "no-repeat",
       }
     : undefined;
-  const handleOpen = () => {
-    if (!isComingSoon) {
-      onOpen(tutorial);
-    }
-  };
-  const handleCardKeyDown = (event: KeyboardEvent<HTMLElement>) => {
-    if (isComingSoon) return;
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      handleOpen();
-    }
-  };
+  const tutorialHref = `/tutorials/${tutorial.slug}`;
 
   return (
-    <article
-      className={`tutorial-card ${!isComingSoon ? "is-clickable" : ""}`}
-      role={!isComingSoon ? "button" : undefined}
-      tabIndex={!isComingSoon ? 0 : undefined}
-      onClick={handleOpen}
-      onKeyDown={handleCardKeyDown}
-      aria-label={!isComingSoon ? `Watch ${tutorial.title}` : undefined}
-    >
-      <div className="tutorial-thumb" aria-hidden style={thumbStyle}>
-        {!tutorial.imageSrc ? (
-          <span className="tutorial-thumb-coming-soon">New videos added daily</span>
-        ) : null}
-      </div>
+    <article className={`tutorial-card ${!isComingSoon ? "is-clickable" : ""}`}>
+      {isComingSoon ? (
+        <div className="tutorial-card-shell">
+          <div className="tutorial-thumb" aria-hidden style={thumbStyle}>
+            {!tutorial.imageSrc ? (
+              <span className="tutorial-thumb-coming-soon">New videos added daily</span>
+            ) : null}
+          </div>
 
-      <div className="tutorial-meta">
-        <p className="tutorial-episode">Solution {tutorial.episode}</p>
-        <h3>{tutorial.title}</h3>
-        <p className="tutorial-description">{tutorial.description}</p>
-
-        <button
-          type="button"
-          className="tutorial-link"
-          onClick={(event) => {
-            event.stopPropagation();
-            handleOpen();
-          }}
-          aria-disabled={isComingSoon}
-          disabled={isComingSoon}
+          <div className="tutorial-meta">
+            <p className="tutorial-episode">Solution {tutorial.episode}</p>
+            <h3>{tutorial.title}</h3>
+            <p className="tutorial-description">{tutorial.description}</p>
+            <span className="tutorial-link" aria-disabled>
+              New videos added daily
+            </span>
+          </div>
+        </div>
+      ) : (
+        <Link
+          href={tutorialHref}
+          className="tutorial-card-shell"
+          aria-label={`Read and watch ${tutorial.title}`}
         >
-          {isComingSoon ? "New videos added daily" : "View Solution ->"}
-        </button>
-      </div>
+          <div className="tutorial-thumb" aria-hidden style={thumbStyle} />
+
+          <div className="tutorial-meta">
+            <p className="tutorial-episode">Solution {tutorial.episode}</p>
+            <h3>{tutorial.title}</h3>
+            <p className="tutorial-description">{tutorial.description}</p>
+            <span className="tutorial-link">View Solution -&gt;</span>
+          </div>
+        </Link>
+      )}
     </article>
   );
 }

@@ -2,6 +2,7 @@ export type TutorialStatus = "published" | "coming-soon";
 
 export type Tutorial = {
   id: string;
+  slug: string;
   episode: string;
   title: string;
   description: string;
@@ -15,6 +16,7 @@ export type Tutorial = {
 export const tutorials: Tutorial[] = [
   {
     id: "black-screen-fix",
+    slug: "black-screen-fix",
     episode: "01",
     title: "Black Screen Fix",
     description:
@@ -27,6 +29,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "profiles-vs-scenes",
+    slug: "profiles-vs-scenes",
     episode: "02",
     title: "Profiles vs Scenes",
     description: "Understand the difference so your setup stays organized.",
@@ -38,6 +41,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "camera-source-setup",
+    slug: "add-camera-to-scene",
     episode: "03",
     title: "Add a Camera to a Scene",
     description: "Add a camera to your scene so your setup is ready to use.",
@@ -49,6 +53,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "mic-setup",
+    slug: "mic-setup",
     episode: "04",
     title: "Mic Setup",
     description: "Get clean audio fast with the right input and level checks.",
@@ -60,6 +65,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "first-scene",
+    slug: "creating-your-first-scene",
     episode: "05",
     title: "Creating Your First Scene",
     description: "Build a simple scene layout you can confidently reuse.",
@@ -71,6 +77,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "cant-see-overlay",
+    slug: "why-cant-i-see-my-overlay",
     episode: "06",
     title: "Why Can't I See My Overlay?",
     description:
@@ -83,6 +90,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "panel-missing",
+    slug: "where-did-my-panel-go",
     episode: "07",
     title: "Where Did My Panel Go?",
     description: "Quick fixes when Ecamm panels disappear unexpectedly.",
@@ -94,6 +102,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "preview-vs-live",
+    slug: "preview-vs-live",
     episode: "08",
     title: "Preview vs Live",
     description: "Learn when to stage in Preview and when to go Live.",
@@ -105,6 +114,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "global-vs-scene-overlays",
+    slug: "global-vs-scene-overlays",
     episode: "09",
     title: "Global vs Scene Overlays",
     description: "Choose the right overlay scope for cleaner production flow.",
@@ -115,6 +125,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "countdown-timer",
+    slug: "adding-a-countdown-timer",
     episode: "10",
     title: "Adding a Countdown Timer",
     description: "Set up a pre-show timer to start streams with confidence.",
@@ -125,6 +136,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "comments-on-screen",
+    slug: "displaying-viewer-comments",
     episode: "11",
     title: "Displaying Viewer Comments",
     description: "Bring audience comments on-screen without clutter.",
@@ -135,6 +147,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     id: "interview-mode",
+    slug: "interview-mode",
     episode: "12",
     title: "Interview Mode",
     description: "Bring in guests cleanly for interviews and co-host streams.",
@@ -144,3 +157,11 @@ export const tutorials: Tutorial[] = [
     youtubeUrl: "#",
   },
 ];
+
+export const publishedTutorials = tutorials.filter(
+  (tutorial) => tutorial.status === "published",
+);
+
+export function getTutorialBySlug(slug: string) {
+  return tutorials.find((tutorial) => tutorial.slug === slug);
+}

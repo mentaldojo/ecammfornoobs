@@ -78,6 +78,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="footer-links">
+          <a href="/tutorials">Tutorials</a>
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
           <a href="/privacy">Privacy</a>
