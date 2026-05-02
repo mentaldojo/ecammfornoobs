@@ -3,9 +3,13 @@ import { PhaseRoadmap } from "@/src/components/PhaseRoadmap";
 import { ToolsTeaser } from "@/src/components/ToolsTeaser";
 import { TutorialGrid } from "@/src/components/TutorialGrid";
 import { affiliateLinks } from "@/src/data/affiliateLinks";
-import { tutorials } from "@/src/data/tutorials";
+import { publishedTutorials } from "@/src/data/tutorials";
 
 export default function Home() {
+  const featuredTutorials = [...publishedTutorials]
+    .sort((a, b) => Number(a.episode) - Number(b.episode))
+    .slice(0, 6);
+
   return (
     <main className="home-page">
       <section className="hero">
@@ -30,7 +34,7 @@ export default function Home() {
             Start Learning
           </a>
           <a
-            className="btn btn-secondary"
+            className="btn btn-orange"
             href={affiliateLinks.heroCta}
             target="_blank"
             rel="noopener noreferrer"
@@ -64,7 +68,15 @@ export default function Home() {
         </a>
       </section>
 
-      <TutorialGrid items={tutorials} />
+      <TutorialGrid
+        items={featuredTutorials}
+        kicker="Featured Tutorials"
+        heading="Quick answers for the exact Ecamm thing you are stuck on"
+        browseHref="/tutorials"
+        browseLabel="Browse Full Tutorial Library"
+        browseVariant="orange"
+        desktopColumns={3}
+      />
 
       <PhaseRoadmap />
 

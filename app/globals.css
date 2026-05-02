@@ -185,6 +185,16 @@ button {
   color: var(--foreground);
 }
 
+.btn-orange {
+  background: var(--accent-orange);
+  color: #fff;
+  border-color: var(--accent-orange);
+}
+
+.btn-orange:hover {
+  border-color: #ff744b;
+}
+
 .start-here-strip {
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -394,6 +404,13 @@ button {
   gap: 0.65rem;
 }
 
+.library-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.2rem;
+}
+
 .library-head h1,
 .tutorial-head h1 {
   margin: 0;
@@ -460,6 +477,48 @@ button {
 
 .tutorial-related-links a:hover {
   text-decoration: underline;
+}
+
+.tutorial-grid-browse {
+  justify-self: start;
+}
+
+.tutorial-affiliate-strip {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #121212;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.tutorial-affiliate-copy {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.tutorial-affiliate-strip .affiliate-badge-kicker {
+  font-size: 0.66rem;
+}
+
+.tutorial-affiliate-strip .affiliate-badge-title {
+  font-size: 0.95rem;
+}
+
+.tutorial-affiliate-cta {
+  width: auto;
+  min-height: 2.4rem;
+  padding: 0.55rem 1rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 740px) {
+  .tutorial-affiliate-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .tutorial-modal-overlay {
@@ -731,6 +790,10 @@ button {
 @media (min-width: 880px) {
   .tutorial-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .tutorial-grid.tutorial-grid-desktop-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .phase-grid {

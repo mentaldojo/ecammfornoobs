@@ -98,6 +98,26 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
         </a>
       </section>
 
+      <section className="tutorial-affiliate-strip">
+        <div className="tutorial-affiliate-copy">
+          <p className="affiliate-badge-kicker">
+            Official <span className="affiliate-badge-brand">Ecamm</span> Partner
+            Link
+          </p>
+          <p className="affiliate-badge-title">
+            Try Ecamm free to support more rapid Ecamm solutions.
+          </p>
+        </div>
+        <a
+          className="btn btn-orange tutorial-affiliate-cta"
+          href={affiliateLinks.heroCta}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Try Ecamm Free
+        </a>
+      </section>
+
       <section className="tutorial-copy-block">
         <h2>What this tutorial covers</h2>
         <p>
