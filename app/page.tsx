@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PhaseRoadmap } from "@/src/components/PhaseRoadmap";
 import { ToolsTeaser } from "@/src/components/ToolsTeaser";
 import { TutorialGrid } from "@/src/components/TutorialGrid";
@@ -90,14 +91,14 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="footer-links">
-          <a href="/tutorials">Tutorials</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-          <a href="/privacy">Privacy</a>
-          <a href="/gdpr">GDPR</a>
-          <a href="/terms">Terms</a>
-          <a href="/refund-policy">Refund Policy</a>
-          <a href="/affiliate-disclosure">Affiliate Disclosure</a>
+          <Link href="/tutorials">Tutorials</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/gdpr">GDPR</Link>
+          <Link href="/terms">Terms</Link>
+          <Link href="/refund-policy">Refund Policy</Link>
+          <Link href="/affiliate-disclosure">Affiliate Disclosure</Link>
           <a href={affiliateLinks.footerCta} target="_blank" rel="noopener noreferrer">
             Ecamm Free Trial
           </a>

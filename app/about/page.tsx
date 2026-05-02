@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About | Ecamm for Noobs",
@@ -53,7 +54,7 @@ export default function AboutPage() {
         </p>
         <p>
           See our full{" "}
-          <a href="/affiliate-disclosure">Affiliate Disclosure</a> for details.
+          <Link href="/affiliate-disclosure">Affiliate Disclosure</Link> for details.
         </p>
       </section>
 

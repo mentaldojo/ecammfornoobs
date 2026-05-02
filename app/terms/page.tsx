@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Use | Ecamm for Noobs",
@@ -74,7 +75,8 @@ export default function TermsPage() {
         <p>
           For eligible digital purchases made directly through Ecamm for Noobs,
           we offer a 7-day refund window unless otherwise stated on the specific
-          offer page. See the full <a href="/refund-policy">Refund Policy</a>.
+          offer page. See the full{" "}
+          <Link href="/refund-policy">Refund Policy</Link>.
         </p>
       </section>
 

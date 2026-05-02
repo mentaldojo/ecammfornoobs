@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "GDPR Notice | Ecamm for Noobs",
@@ -20,7 +21,7 @@ export default function GdprPage() {
         <p>
           This notice applies to visitors in the European Economic Area, United
           Kingdom, and other jurisdictions with similar privacy rights. It should
-          be read together with our <a href="/privacy">Privacy Policy</a>.
+          be read together with our <Link href="/privacy">Privacy Policy</Link>.
         </p>
       </section>
 
