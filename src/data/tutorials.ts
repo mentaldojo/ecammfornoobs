@@ -1,5 +1,24 @@
 export type TutorialStatus = "published" | "coming-soon";
 
+// Solution page content pattern:
+// 1. Use real beginner search language in the opening problem explanation.
+// 2. Explain what is actually happening in plain English.
+// 3. Provide a short numbered step list.
+// 4. Include a common mistake section.
+// 5. Add a short closing reassurance or next-step note.
+// 6. Link to related internal tutorials where relevant.
+export type TutorialDetailContent = {
+  problemHeading: string;
+  problemParagraphs: string[];
+  stepsHeading: string;
+  stepsIntro?: string;
+  steps: string[];
+  stepsFollowUpParagraphs: string[];
+  commonMistakeHeading: string;
+  commonMistakeParagraphs: string[];
+  closingNote?: string;
+};
+
 export type Tutorial = {
   id: string;
   slug: string;
@@ -7,6 +26,11 @@ export type Tutorial = {
   title: string;
   description: string;
   imageSrc?: string;
+  videoAspect?: "portrait" | "landscape";
+  seoTitle?: string;
+  seoDescription?: string;
+  relatedTutorialSlugs?: string[];
+  detailContent?: TutorialDetailContent;
   tags: string[];
   popular: boolean;
   status: TutorialStatus;
@@ -21,11 +45,47 @@ export const tutorials: Tutorial[] = [
     title: "Black Screen Fix",
     description:
       "Fix the black preview problem by checking the right camera source.",
-    imageSrc: "/images/solution-images/solution-01-black-screen.png",
+    imageSrc: "/images/solution-images/solution-01-w-black-screen.png",
+    videoAspect: "landscape",
+    seoTitle: "Ecamm Black Screen Fix (No Camera Showing? Do This)",
+    seoDescription:
+      "Fix the black screen issue in Ecamm by selecting the correct camera source. Simple step-by-step solution for when your camera isn’t showing.",
+    relatedTutorialSlugs: [
+      "profiles-vs-scenes",
+      "add-camera-to-scene",
+      "mic-setup",
+    ],
+    detailContent: {
+      problemHeading: "Fixing the Ecamm Black Screen Problem",
+      problemParagraphs: [
+        "If your camera is not showing in Ecamm and you’re stuck with a black screen, this is usually caused by the wrong camera source being selected.",
+        "It looks like nothing is working, but in most cases your camera is fine — Ecamm just isn’t pointing to it correctly.",
+        "Ecamm allows you to switch between different camera inputs, and if the wrong one is selected, your preview may appear black even though your camera is working correctly.",
+      ],
+      stepsHeading: "How to fix it",
+      stepsIntro: "Here’s the quickest way to fix it:",
+      steps: [
+        "Go to the Camera menu in Ecamm.",
+        "Look at the list of available camera sources.",
+        "Select the camera you want to use.",
+        "Check the preview window to confirm your video appears.",
+      ],
+      stepsFollowUpParagraphs: [
+        "If your camera feed appears, you’re ready to go.",
+        "If not, try switching between the available camera options until your video shows up.",
+      ],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "Many people think a black screen means their camera is not working.",
+        "In most cases, the camera is working — Ecamm is just set to a different input, or a camera that is no longer active.",
+      ],
+      closingNote:
+        "Once your camera is showing, you’re ready to go live or record without any issues.",
+    },
     tags: ["Foundation", "Camera"],
     popular: true,
     status: "published",
-    youtubeUrl: "https://www.youtube.com/embed/-UpVC6y84is",
+    youtubeUrl: "https://www.youtube.com/embed/0NAdYRZDo00",
   },
   {
     id: "profiles-vs-scenes",

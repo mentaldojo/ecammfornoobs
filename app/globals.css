@@ -439,7 +439,19 @@ button {
 .tutorial-copy-block h2,
 .tutorial-related-block h2 {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #f4f2ee;
+}
+
+.tutorial-copy-block h3 {
+  margin: 0.9rem 0 0.15rem;
+  font-size: 1.16rem;
+  font-weight: 750;
+  line-height: 1.25;
+  color: #f4f2ee;
 }
 
 .tutorial-copy-block p {
@@ -454,10 +466,23 @@ button {
   color: #cbc7be;
 }
 
+.tutorial-copy-block ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+  color: #cbc7be;
+}
+
 .tutorial-detail-video-frame {
   width: min(100%, 420px);
   aspect-ratio: 9 / 16;
   margin: 0 auto;
+}
+
+.tutorial-detail-video-frame-landscape {
+  width: min(100%, 860px);
+  aspect-ratio: 16 / 9;
 }
 
 .tutorial-detail-cta {

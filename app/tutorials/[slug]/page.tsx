@@ -31,12 +31,17 @@ export async function generateMetadata({
     };
   }
 
+  const metadataTitle = tutorial.seoTitle ?? `${tutorial.title} | Ecamm Tutorial`;
+  const metadataDescription =
+    tutorial.seoDescription ??
+    `${tutorial.description} Watch this Ecamm and Ecamm Live tutorial from Ecamm for Noobs.`;
+
   return {
-    title: `${tutorial.title} | Ecamm Tutorial`,
-    description: `${tutorial.description} Watch this Ecamm and Ecamm Live tutorial from Ecamm for Noobs.`,
+    title: metadataTitle,
+    description: metadataDescription,
     openGraph: {
-      title: `${tutorial.title} | Ecamm for Noobs`,
-      description: tutorial.description,
+      title: tutorial.seoTitle ?? `${tutorial.title} | Ecamm for Noobs`,
+      description: metadataDescription,
       url: `${SITE_URL}/tutorials/${tutorial.slug}`,
       images: tutorial.imageSrc ? [{ url: tutorial.imageSrc }] : undefined,
       type: "article",
@@ -52,14 +57,22 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
     notFound();
   }
 
-  const related = tutorials
-    .filter(
-      (item) =>
-        item.status === "published" &&
-        item.slug !== tutorial.slug &&
-        item.tags.some((tag) => tutorial.tags.includes(tag)),
-    )
-    .slice(0, 3);
+  const related =
+    tutorial.relatedTutorialSlugs && tutorial.relatedTutorialSlugs.length > 0
+      ? tutorial.relatedTutorialSlugs
+          .map((relatedSlug) => getTutorialBySlug(relatedSlug))
+          .filter((item): item is NonNullable<typeof item> => item !== undefined)
+          .filter(
+            (item) => item.status === "published" && item.slug !== tutorial.slug,
+          )
+      : tutorials
+          .filter(
+            (item) =>
+              item.status === "published" &&
+              item.slug !== tutorial.slug &&
+              item.tags.some((tag) => tutorial.tags.includes(tag)),
+          )
+          .slice(0, 3);
 
   return (
     <main className="tutorial-page">
@@ -79,7 +92,13 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
       </header>
 
       <section className="tutorial-video-block">
-        <div className="tutorial-detail-video-frame">
+        <div
+          className={`tutorial-detail-video-frame ${
+            tutorial.videoAspect === "landscape"
+              ? "tutorial-detail-video-frame-landscape"
+              : ""
+          }`}
+        >
           <iframe
             src={tutorial.youtubeUrl}
             title={tutorial.title}
@@ -119,16 +138,48 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
       </section>
 
       <section className="tutorial-copy-block">
-        <h2>What this tutorial covers</h2>
-        <p>
-          This short walkthrough explains a single Ecamm workflow clearly so you
-          can apply it immediately and move on with your stream setup.
-        </p>
-        <ul>
-          <li>Where this feature is found inside Ecamm</li>
-          <li>What to check first if something is not working</li>
-          <li>How to confirm the fix before you go live</li>
-        </ul>
+        {tutorial.detailContent ? (
+          <>
+            <h2>{tutorial.detailContent.problemHeading}</h2>
+            {tutorial.detailContent.problemParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+
+            <h3>{tutorial.detailContent.stepsHeading}</h3>
+            {tutorial.detailContent.stepsIntro ? (
+              <p>{tutorial.detailContent.stepsIntro}</p>
+            ) : null}
+            <ol>
+              {tutorial.detailContent.steps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+            {tutorial.detailContent.stepsFollowUpParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+
+            <h3>{tutorial.detailContent.commonMistakeHeading}</h3>
+            {tutorial.detailContent.commonMistakeParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            {tutorial.detailContent.closingNote ? (
+              <p>{tutorial.detailContent.closingNote}</p>
+            ) : null}
+          </>
+        ) : (
+          <>
+            <h2>What this tutorial covers</h2>
+            <p>
+              This short walkthrough explains a single Ecamm workflow clearly so
+              you can apply it immediately and move on with your stream setup.
+            </p>
+            <ul>
+              <li>Where this feature is found inside Ecamm</li>
+              <li>What to check first if something is not working</li>
+              <li>How to confirm the fix before you go live</li>
+            </ul>
+          </>
+        )}
       </section>
 
       {related.length > 0 ? (
