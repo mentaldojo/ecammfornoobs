@@ -97,10 +97,11 @@ export const tutorials: Tutorial[] = [
     episode: "08",
     title: "Preview vs Live",
     description: "Learn when to stage in Preview and when to go Live.",
+    imageSrc: "/images/solution-images/solution-08-preview-vs-live.png",
     tags: ["Foundation", "Workflow"],
     popular: false,
-    status: "coming-soon",
-    youtubeUrl: "#",
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/mbnQO3jVw5w",
   },
   {
     id: "global-vs-scene-overlays",
