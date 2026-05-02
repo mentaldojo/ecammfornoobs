@@ -382,6 +382,12 @@ button {
   gap: 1.8rem;
 }
 
+.tutorial-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
 .library-head,
 .tutorial-head {
   display: grid;

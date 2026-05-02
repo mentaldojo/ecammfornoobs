@@ -63,6 +63,15 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
 
   return (
     <main className="tutorial-page">
+      <nav className="tutorial-breadcrumbs" aria-label="Tutorial navigation">
+        <Link href="/tutorials" className="btn btn-secondary">
+          Back to Tutorials
+        </Link>
+        <Link href="/" className="btn btn-secondary">
+          Home
+        </Link>
+      </nav>
+
       <header className="tutorial-head">
         <p className="section-kicker">Solution {tutorial.episode}</p>
         <h1>{tutorial.title}</h1>
