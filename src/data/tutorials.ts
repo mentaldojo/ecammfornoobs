@@ -143,11 +143,50 @@ export const tutorials: Tutorial[] = [
     episode: "03",
     title: "Add a Camera to a Scene",
     description: "Add a camera to your scene so your setup is ready to use.",
-    imageSrc: "/images/solution-images/solution-03-choose-camera.png",
+    imageSrc: "/images/solution-images/solution-03-add-camera-to-scene-w.png",
+    videoAspect: "landscape",
+    seoTitle: "How to Add a Camera to a Scene in Ecamm",
+    seoDescription:
+      "Learn how to add a camera to a scene in Ecamm using the Overlays panel. Simple step-by-step guide to get your camera working correctly.",
+    relatedTutorialSlugs: [
+      "profiles-vs-scenes",
+      "mic-setup",
+      "creating-your-first-scene",
+    ],
+    detailContent: {
+      problemHeading: "Add a camera to a scene in Ecamm",
+      problemParagraphs: [
+        "If your camera is not showing in Ecamm, or you’re not sure how to add one to your scene, this usually comes down to where cameras are added in the interface.",
+        "Many beginners look in the Camera menu first, but adding a camera actually starts inside the scene itself.",
+        "In Ecamm, each scene contains its own elements — including your camera, screen share, and overlays.",
+        "Once you understand that cameras are added inside a scene, setting up your video becomes much simpler.",
+      ],
+      stepsHeading: "How to add a camera to a scene",
+      steps: [
+        "Go to the Scenes window in Ecamm",
+        "Create a new scene or select an existing one",
+        "Move down to the Overlays panel",
+        "Click the camera icon to add a camera source",
+        "Select the camera you want to use",
+        "Check the preview to confirm your camera appears",
+      ],
+      stepsFollowUpParagraphs: [
+        "Once your camera appears in the preview, it is now part of that scene and ready to use.",
+        "You can switch between scenes at any time, and each scene can have its own camera setup.",
+      ],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "A common mistake is trying to add or change the camera from the Camera menu before a camera has been added to the scene.",
+        "In Ecamm, the Camera menu is used to switch between cameras — not to add them in the first place.",
+        "Always start by adding the camera inside the scene using the Overlays panel.",
+      ],
+      closingNote:
+        "Once your camera is added to a scene, you’re ready to record or go live with confidence.",
+    },
     tags: ["Foundation", "Camera"],
     popular: false,
     status: "published",
-    youtubeUrl: "https://www.youtube.com/embed/6EiTp_VrRd4",
+    youtubeUrl: "https://www.youtube.com/embed/paRApNlF-Ss",
   },
   {
     id: "mic-setup",
