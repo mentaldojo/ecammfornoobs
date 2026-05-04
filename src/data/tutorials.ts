@@ -250,11 +250,54 @@ export const tutorials: Tutorial[] = [
     episode: "05",
     title: "Creating Your First Scene",
     description: "Build a simple scene layout you can confidently reuse.",
-    imageSrc: "/images/solution-images/solution-05-build-first-scene.png",
+    imageSrc: "/images/solution-images/solution-05-scenes.png",
+    videoAspect: "landscape",
+    seoTitle: "Create Your First Scene in Ecamm (Beginner Step-by-Step Guide)",
+    seoDescription:
+      "Learn how to create your first scene in Ecamm. Step-by-step guide to adding content, using overlays, and understanding what your audience sees.",
+    relatedTutorialSlugs: [
+      "add-camera-to-scene",
+      "mic-setup",
+      "profiles-vs-scenes",
+    ],
+    detailContent: {
+      problemHeading: "Creating Your First Scene in Ecamm",
+      problemParagraphs: [
+        "If you’re new to Ecamm, understanding scenes is one of the most important steps.",
+        "A scene is what your audience actually sees. Everything you add — your camera, screen share, text, and overlays — lives inside a scene.",
+        "Many beginners get stuck because they try to add things before creating a scene, or they don’t realise how scenes and overlays work together. Once you understand this relationship, your setup becomes much easier to manage.",
+      ],
+      stepsHeading: "How to create your first scene in Ecamm",
+      steps: [
+        "Open the Scenes window",
+        "Click the plus button to create a new scene",
+        "Rename the scene to something meaningful (for example, “Screen Share”)",
+        "Move down to the Overlays window",
+        "Add a screen share or camera",
+        "Add text or other elements as needed",
+        "Return to the Scenes window and select your scene",
+      ],
+      stepsFollowUpParagraphs: [
+        "What you see in that scene is exactly what your audience will see.",
+      ],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "A common mistake is thinking that scenes automatically contain content.",
+        "In reality, a scene starts empty — you need to add overlays like your camera, screen, or text to build what your audience sees.",
+      ],
+      nextStepsHeading: "What to do next",
+      nextStepsIntro:
+        "Now that you’ve created your first scene, you may want to:",
+      nextStepsTutorialSlugs: [
+        "add-camera-to-scene",
+        "mic-setup",
+        "profiles-vs-scenes",
+      ],
+    },
     tags: ["Foundation", "Scenes"],
     popular: true,
     status: "published",
-    youtubeUrl: "https://www.youtube.com/embed/KETmDsg8wMc",
+    youtubeUrl: "https://www.youtube.com/embed/B6--t4SJFxY",
   },
   {
     id: "cant-see-overlay",
