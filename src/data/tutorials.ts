@@ -16,6 +16,9 @@ export type TutorialDetailContent = {
   stepsFollowUpParagraphs: string[];
   commonMistakeHeading: string;
   commonMistakeParagraphs: string[];
+  nextStepsHeading?: string;
+  nextStepsIntro?: string;
+  nextStepsTutorialSlugs?: string[];
   closingNote?: string;
 };
 
@@ -194,11 +197,52 @@ export const tutorials: Tutorial[] = [
     episode: "04",
     title: "Mic Setup",
     description: "Get clean audio fast with the right input and level checks.",
-    imageSrc: "/images/solution-images/solution-04-mic-input-a.png",
+    imageSrc: "/images/solution-images/solution-04-amic-input-setup-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Ecamm Mic Setup (No Audio? Add Your Microphone Fast)",
+    seoDescription:
+      "Fix no audio issues in Ecamm by adding and selecting the correct microphone. Step-by-step guide to getting your mic working quickly.",
+    relatedTutorialSlugs: [
+      "profiles-vs-scenes",
+      "add-camera-to-scene",
+      "black-screen-fix",
+    ],
+    detailContent: {
+      problemHeading: "Mic Setup in Ecamm (Fixing No Audio Issues)",
+      problemParagraphs: [
+        "If you can’t hear any sound in Ecamm, the problem is usually simple.",
+        "In most cases, your microphone hasn’t been added or selected correctly inside Ecamm, even though it is connected and working on your system.",
+        "Ecamm requires you to explicitly add your microphone and confirm it in the Sound Levels window. Once that’s done, your audio will come through clearly.",
+      ],
+      stepsHeading: "How to add and check your microphone in Ecamm",
+      steps: [
+        "Open the Sound Levels window in Ecamm",
+        "Look for your available microphone inputs",
+        "Select the microphone you want to use",
+        "Speak and check that the audio levels are moving",
+        "Adjust the volume slider if needed",
+        "(Optional) Add a second microphone if you need multiple inputs",
+      ],
+      stepsFollowUpParagraphs: [
+        "If you can see the levels moving, your microphone is working correctly.",
+      ],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "Many beginners assume their microphone isn’t working when there is no sound.",
+        "In reality, the microphone often just hasn’t been added or selected inside Ecamm’s Sound Levels window.",
+      ],
+      nextStepsHeading: "What to do next",
+      nextStepsIntro: "Now that your audio is working, you may want to:",
+      nextStepsTutorialSlugs: [
+        "add-camera-to-scene",
+        "profiles-vs-scenes",
+        "black-screen-fix",
+      ],
+    },
     tags: ["Foundation", "Audio"],
     popular: false,
     status: "published",
-    youtubeUrl: "https://www.youtube.com/embed/1S9O9l_mCHo",
+    youtubeUrl: "https://www.youtube.com/embed/OkHTOA-B4_E",
   },
   {
     id: "first-scene",

@@ -162,6 +162,28 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
             {tutorial.detailContent.commonMistakeParagraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+            {tutorial.detailContent.nextStepsHeading ? (
+              <h3>{tutorial.detailContent.nextStepsHeading}</h3>
+            ) : null}
+            {tutorial.detailContent.nextStepsIntro ? (
+              <p>{tutorial.detailContent.nextStepsIntro}</p>
+            ) : null}
+            {tutorial.detailContent.nextStepsTutorialSlugs &&
+            tutorial.detailContent.nextStepsTutorialSlugs.length > 0 ? (
+              <ul>
+                {tutorial.detailContent.nextStepsTutorialSlugs
+                  .map((nextSlug) => getTutorialBySlug(nextSlug))
+                  .filter(
+                    (item): item is NonNullable<typeof item> =>
+                      item !== undefined && item.status === "published",
+                  )
+                  .map((item) => (
+                    <li key={item.slug}>
+                      <Link href={`/tutorials/${item.slug}`}>{item.title}</Link>
+                    </li>
+                  ))}
+              </ul>
+            ) : null}
             {tutorial.detailContent.closingNote ? (
               <p>{tutorial.detailContent.closingNote}</p>
             ) : null}
