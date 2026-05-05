@@ -484,6 +484,35 @@ button {
   margin-top: 0.35rem;
 }
 
+.tutorial-contextual-tools-grid {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.tutorial-contextual-tool-card {
+  border: 1px solid #232323;
+  border-radius: 10px;
+  background: #101010;
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.tutorial-contextual-tool-card h4 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.tutorial-contextual-tool-card p {
+  margin: 0;
+  color: #cbc7be;
+}
+
+.tutorial-contextual-tools-disclosure {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .tutorial-detail-video-frame {
   width: min(100%, 420px);
   aspect-ratio: 9 / 16;
@@ -612,6 +641,32 @@ button {
   grid-template-columns: 1fr;
 }
 
+.tools-category-block {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.tools-category-block + .tools-category-block {
+  margin-top: clamp(3rem, 6vw, 4rem);
+}
+
+.tools-category-heading {
+  margin: 0;
+  font-size: clamp(1.12rem, 2.1vw, 1.25rem);
+  color: #ebe7de;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tools-category-heading::after {
+  content: "";
+  display: block;
+  width: clamp(120px, 28vw, 200px);
+  height: 1px;
+  margin-top: 0.5rem;
+  background: rgba(244, 242, 238, 0.18);
+}
+
 .phase-card,
 .tool-card {
   border: 1px solid var(--border);
@@ -658,6 +713,12 @@ button {
 
 .tool-link[data-variant="spript"]:hover {
   border-color: #9f8bff;
+}
+
+.tools-disclosure {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .disclosure-note {

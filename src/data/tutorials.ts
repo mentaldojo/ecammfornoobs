@@ -7,6 +7,15 @@ export type TutorialStatus = "published" | "coming-soon";
 // 4. Include a common mistake section.
 // 5. Add a short closing reassurance or next-step note.
 // 6. Link to related internal tutorials where relevant.
+// Affiliate recommendations should only appear on tutorials where the product
+// directly helps with the exact problem being solved. Keep tutorial value
+// first and affiliate content secondary.
+export type TutorialAffiliateRecommendation = {
+  name: string;
+  description: string;
+  href: string;
+};
+
 export type TutorialDetailContent = {
   problemHeading: string;
   problemParagraphs: string[];
@@ -14,6 +23,10 @@ export type TutorialDetailContent = {
   stepsIntro?: string;
   steps: string[];
   stepsFollowUpParagraphs: string[];
+  affiliateRecommendationsHeading?: string;
+  affiliateRecommendationsIntroParagraphs?: string[];
+  affiliateRecommendations?: TutorialAffiliateRecommendation[];
+  affiliateDisclosure?: string;
   commonMistakeHeading: string;
   commonMistakeParagraphs: string[];
   nextStepsHeading?: string;
@@ -226,6 +239,32 @@ export const tutorials: Tutorial[] = [
       stepsFollowUpParagraphs: [
         "If you can see the levels moving, your microphone is working correctly.",
       ],
+      affiliateRecommendationsHeading: "Optional: Simple audio setup",
+      affiliateRecommendationsIntroParagraphs: [
+        "If you want cleaner, more reliable audio in Ecamm, this is the kind of setup I use.",
+        "You do not need this exact setup to follow the tutorial, but a good microphone, audio interface, and clean gain can make a big difference to how your voice sounds.",
+      ],
+      affiliateRecommendations: [
+        {
+          name: "Shure SM7B",
+          description: "Professional broadcast microphone with rich, warm sound.",
+          href: "https://amzn.to/3OW5VZB",
+        },
+        {
+          name: "Audient iD14 MKII",
+          description:
+            "High-quality audio interface to connect XLR microphones to your computer.",
+          href: "https://amzn.to/3OULQmp",
+        },
+        {
+          name: "Cloudlifter CL-2",
+          description:
+            "Clean gain booster to get the best performance from the SM7B.",
+          href: "https://amzn.to/4ukIacs",
+        },
+      ],
+      affiliateDisclosure:
+        "As an Amazon Associate, I earn from qualifying purchases. There’s no extra cost to you, and it helps support the creation of more tutorials like these.",
       commonMistakeHeading: "Common mistake",
       commonMistakeParagraphs: [
         "Many beginners assume their microphone isn’t working when there is no sound.",

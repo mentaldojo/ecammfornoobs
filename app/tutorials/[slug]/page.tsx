@@ -162,6 +162,36 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
             {tutorial.detailContent.commonMistakeParagraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+            {tutorial.detailContent.affiliateRecommendationsHeading ? (
+              <h3>{tutorial.detailContent.affiliateRecommendationsHeading}</h3>
+            ) : null}
+            {tutorial.detailContent.affiliateRecommendationsIntroParagraphs?.map(
+              (paragraph) => <p key={paragraph}>{paragraph}</p>,
+            )}
+            {tutorial.detailContent.affiliateRecommendations &&
+            tutorial.detailContent.affiliateRecommendations.length > 0 ? (
+              <div className="tutorial-contextual-tools-grid">
+                {tutorial.detailContent.affiliateRecommendations.map((item) => (
+                  <article key={item.name} className="tutorial-contextual-tool-card">
+                    <h4>{item.name}</h4>
+                    <p>{item.description}</p>
+                    <a
+                      className="tool-link"
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View on Amazon
+                    </a>
+                  </article>
+                ))}
+              </div>
+            ) : null}
+            {tutorial.detailContent.affiliateDisclosure ? (
+              <p className="tutorial-contextual-tools-disclosure">
+                {tutorial.detailContent.affiliateDisclosure}
+              </p>
+            ) : null}
             {tutorial.detailContent.nextStepsHeading ? (
               <h3>{tutorial.detailContent.nextStepsHeading}</h3>
             ) : null}
