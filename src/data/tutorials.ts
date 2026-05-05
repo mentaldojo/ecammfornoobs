@@ -345,11 +345,51 @@ export const tutorials: Tutorial[] = [
     title: "Why Can't I See My Overlay?",
     description:
       "Fix missing overlays by checking visibility, scene assignment, and source order.",
-    imageSrc: "/images/solution-images/solution-06a-cant-see-my-overlay.png",
+    imageSrc: "/images/solution-images/solution-06-overlays-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Ecamm Overlay Not Showing? Fix It Fast",
+    seoDescription:
+      "Fix overlays not showing in Ecamm by adjusting overlay order and visibility. Quick step-by-step guide to get your overlays working.",
+    relatedTutorialSlugs: [
+      "creating-your-first-scene",
+      "add-camera-to-scene",
+      "mic-setup",
+    ],
+    detailContent: {
+      problemHeading: "Why You Can’t See Your Overlay in Ecamm",
+      problemParagraphs: [
+        "If your overlay is not showing in Ecamm, it can be frustrating — especially when you know you’ve added it.",
+        "In most cases, nothing is broken. The issue usually comes down to how overlays are stacked or whether the overlay is turned on.",
+        "Ecamm layers overlays on top of each other, and if your overlay is hidden behind another element or disabled, it won’t be visible in your scene.",
+      ],
+      stepsHeading: "How to fix an overlay that isn’t showing in Ecamm",
+      steps: [
+        "Open the Overlays panel",
+        "Find the overlay you are trying to show",
+        "Drag the overlay to the top of the list",
+        "Check that the overlay is turned on (visibility enabled)",
+        "Look at the preview to confirm it is now visible",
+      ],
+      stepsFollowUpParagraphs: [
+        "If your overlay is still not visible, try moving it above other elements again to ensure it is not hidden behind them.",
+      ],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "Many beginners assume their overlay has been deleted or is not working.",
+        "In reality, the overlay is often still there — it is just behind another element or has been turned off in the Overlays panel.",
+      ],
+      nextStepsHeading: "What to do next",
+      nextStepsIntro: "Now that your overlay is visible, you may want to:",
+      nextStepsTutorialSlugs: [
+        "creating-your-first-scene",
+        "add-camera-to-scene",
+        "mic-setup",
+      ],
+    },
     tags: ["Visuals", "Overlays"],
     popular: false,
     status: "published",
-    youtubeUrl: "https://www.youtube.com/embed/uEkb6O1FG2M",
+    youtubeUrl: "https://www.youtube.com/embed/KUlIDPwpZTw",
   },
   {
     id: "panel-missing",
