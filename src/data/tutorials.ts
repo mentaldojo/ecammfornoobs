@@ -397,11 +397,51 @@ export const tutorials: Tutorial[] = [
     episode: "07",
     title: "Where Did My Panel Go?",
     description: "Quick fixes when Ecamm panels disappear unexpectedly.",
-    imageSrc: "/images/solution-images/solution-07-missing-panels.png",
+    imageSrc: "/images/solution-images/solution-07-missing-panel-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Ecamm Panel Missing? Get It Back Fast",
+    seoDescription:
+      "Fix missing panels in Ecamm by restoring them from the Window menu. Quick step-by-step guide to bring back scenes, overlays, and more.",
+    relatedTutorialSlugs: [
+      "creating-your-first-scene",
+      "add-camera-to-scene",
+      "why-cant-i-see-my-overlay",
+    ],
+    detailContent: {
+      problemHeading: "Where Did My Panel Go in Ecamm?",
+      problemParagraphs: [
+        "If a panel like Scenes, Overlays, or Sound Levels suddenly disappears in Ecamm, it can feel like something has gone wrong.",
+        "In most cases, nothing has been deleted. The panel is usually just hidden or turned off in the interface.",
+        "Ecamm allows you to show and hide panels, so if something disappears, it is almost always still there — just not currently visible.",
+      ],
+      stepsHeading: "How to bring a missing panel back in Ecamm",
+      steps: [
+        "Go to the Window menu at the top of Ecamm",
+        "Look through the list of available panels",
+        "Click the panel you are missing (for example, Scenes or Overlays)",
+        "Check your screen to confirm the panel has reappeared",
+        "If needed, drag or resize the panel so it is clearly visible",
+      ],
+      stepsFollowUpParagraphs: [
+        "If the panel still doesn’t appear where you expect it, check around the edges of the window — it may be collapsed or off-screen.",
+      ],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "Many beginners think a panel has been deleted when it disappears.",
+        "In reality, panels are almost always just hidden using the Window menu or accidentally moved out of view.",
+      ],
+      nextStepsHeading: "What to do next",
+      nextStepsIntro: "Now that your panels are back, you may want to:",
+      nextStepsTutorialSlugs: [
+        "creating-your-first-scene",
+        "add-camera-to-scene",
+        "why-cant-i-see-my-overlay",
+      ],
+    },
     tags: ["Foundation", "Troubleshooting"],
     popular: true,
     status: "published",
-    youtubeUrl: "https://www.youtube.com/embed/B6WhshLsuhY",
+    youtubeUrl: "https://www.youtube.com/embed/6m8MxeX0VJc",
   },
   {
     id: "preview-vs-live",
