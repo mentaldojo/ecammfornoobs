@@ -140,82 +140,122 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
       <section className="tutorial-copy-block">
         {tutorial.detailContent ? (
           <>
-            <h2>{tutorial.detailContent.problemHeading}</h2>
-            {tutorial.detailContent.problemParagraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-
-            <h3>{tutorial.detailContent.stepsHeading}</h3>
-            {tutorial.detailContent.stepsIntro ? (
-              <p>{tutorial.detailContent.stepsIntro}</p>
-            ) : null}
-            <ol>
-              {tutorial.detailContent.steps.map((step) => (
-                <li key={step}>{step}</li>
+            <section className="tutorial-article-section">
+              <h2>{tutorial.detailContent.problemHeading}</h2>
+              {tutorial.detailContent.problemParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
               ))}
-            </ol>
-            {tutorial.detailContent.stepsFollowUpParagraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-
-            <h3>{tutorial.detailContent.commonMistakeHeading}</h3>
-            {tutorial.detailContent.commonMistakeParagraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-            {tutorial.detailContent.affiliateRecommendationsHeading ? (
-              <h3>{tutorial.detailContent.affiliateRecommendationsHeading}</h3>
-            ) : null}
-            {tutorial.detailContent.affiliateRecommendationsIntroParagraphs?.map(
-              (paragraph) => <p key={paragraph}>{paragraph}</p>,
-            )}
-            {tutorial.detailContent.affiliateRecommendations &&
-            tutorial.detailContent.affiliateRecommendations.length > 0 ? (
-              <div className="tutorial-contextual-tools-grid">
-                {tutorial.detailContent.affiliateRecommendations.map((item) => (
-                  <article key={item.name} className="tutorial-contextual-tool-card">
-                    <h4>{item.name}</h4>
-                    <p>{item.description}</p>
-                    <a
-                      className="tool-link"
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View on Amazon
-                    </a>
-                  </article>
-                ))}
-              </div>
-            ) : null}
-            {tutorial.detailContent.affiliateDisclosure ? (
-              <p className="tutorial-contextual-tools-disclosure">
-                {tutorial.detailContent.affiliateDisclosure}
-              </p>
-            ) : null}
-            {tutorial.detailContent.nextStepsHeading ? (
-              <h3>{tutorial.detailContent.nextStepsHeading}</h3>
-            ) : null}
-            {tutorial.detailContent.nextStepsIntro ? (
-              <p>{tutorial.detailContent.nextStepsIntro}</p>
-            ) : null}
-            {tutorial.detailContent.nextStepsTutorialSlugs &&
-            tutorial.detailContent.nextStepsTutorialSlugs.length > 0 ? (
-              <ul>
-                {tutorial.detailContent.nextStepsTutorialSlugs
-                  .map((nextSlug) => getTutorialBySlug(nextSlug))
-                  .filter(
-                    (item): item is NonNullable<typeof item> =>
-                      item !== undefined && item.status === "published",
-                  )
-                  .map((item) => (
-                    <li key={item.slug}>
-                      <Link href={`/tutorials/${item.slug}`}>{item.title}</Link>
-                    </li>
+              {tutorial.detailContent.keyIdeaHeading &&
+              tutorial.detailContent.keyIdeaText ? (
+                <aside className="tutorial-key-idea">
+                  <h3>{tutorial.detailContent.keyIdeaHeading}</h3>
+                  <p>{tutorial.detailContent.keyIdeaText}</p>
+                </aside>
+              ) : null}
+              {tutorial.detailContent.explanationSections?.map((section) => (
+                <div key={section.heading} className="tutorial-explanation-section">
+                  <h4>{section.heading}</h4>
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
                   ))}
-              </ul>
+                </div>
+              ))}
+            </section>
+
+            <section className="tutorial-article-section">
+              <h3>{tutorial.detailContent.stepsHeading}</h3>
+              {tutorial.detailContent.stepsIntro ? (
+                <p>{tutorial.detailContent.stepsIntro}</p>
+              ) : null}
+              <ol>
+                {tutorial.detailContent.steps.map((step) => (
+                  <li key={step}>{step}</li>
+                ))}
+              </ol>
+              {tutorial.detailContent.stepsFollowUpParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </section>
+
+            <section className="tutorial-article-section">
+              <h3>{tutorial.detailContent.commonMistakeHeading}</h3>
+              {tutorial.detailContent.commonMistakeParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </section>
+            {tutorial.detailContent.affiliateRecommendationsHeading ||
+            tutorial.detailContent.affiliateRecommendationsIntroParagraphs
+              ?.length ||
+            tutorial.detailContent.affiliateRecommendations?.length ||
+            tutorial.detailContent.affiliateDisclosure ? (
+              <section className="tutorial-article-section">
+                {tutorial.detailContent.affiliateRecommendationsHeading ? (
+                  <h3>{tutorial.detailContent.affiliateRecommendationsHeading}</h3>
+                ) : null}
+                {tutorial.detailContent.affiliateRecommendationsIntroParagraphs?.map(
+                  (paragraph) => <p key={paragraph}>{paragraph}</p>,
+                )}
+                {tutorial.detailContent.affiliateRecommendations &&
+                tutorial.detailContent.affiliateRecommendations.length > 0 ? (
+                  <div className="tutorial-contextual-tools-grid">
+                    {tutorial.detailContent.affiliateRecommendations.map((item) => (
+                      <article
+                        key={item.name}
+                        className="tutorial-contextual-tool-card"
+                      >
+                        <h4>{item.name}</h4>
+                        <p>{item.description}</p>
+                        <a
+                          className="tool-link"
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View on Amazon
+                        </a>
+                      </article>
+                    ))}
+                  </div>
+                ) : null}
+                {tutorial.detailContent.affiliateDisclosure ? (
+                  <p className="tutorial-contextual-tools-disclosure">
+                    {tutorial.detailContent.affiliateDisclosure}
+                  </p>
+                ) : null}
+              </section>
+            ) : null}
+            {tutorial.detailContent.nextStepsHeading ||
+            tutorial.detailContent.nextStepsIntro ||
+            tutorial.detailContent.nextStepsTutorialSlugs?.length ? (
+              <section className="tutorial-article-section">
+                {tutorial.detailContent.nextStepsHeading ? (
+                  <h3>{tutorial.detailContent.nextStepsHeading}</h3>
+                ) : null}
+                {tutorial.detailContent.nextStepsIntro ? (
+                  <p>{tutorial.detailContent.nextStepsIntro}</p>
+                ) : null}
+                {tutorial.detailContent.nextStepsTutorialSlugs &&
+                tutorial.detailContent.nextStepsTutorialSlugs.length > 0 ? (
+                  <ul>
+                    {tutorial.detailContent.nextStepsTutorialSlugs
+                      .map((nextSlug) => getTutorialBySlug(nextSlug))
+                      .filter(
+                        (item): item is NonNullable<typeof item> =>
+                          item !== undefined && item.status === "published",
+                      )
+                      .map((item) => (
+                        <li key={item.slug}>
+                          <Link href={`/tutorials/${item.slug}`}>{item.title}</Link>
+                        </li>
+                      ))}
+                  </ul>
+                ) : null}
+              </section>
             ) : null}
             {tutorial.detailContent.closingNote ? (
-              <p>{tutorial.detailContent.closingNote}</p>
+              <section className="tutorial-article-section">
+                <p>{tutorial.detailContent.closingNote}</p>
+              </section>
             ) : null}
           </>
         ) : (

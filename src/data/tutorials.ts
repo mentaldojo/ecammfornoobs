@@ -16,9 +16,17 @@ export type TutorialAffiliateRecommendation = {
   href: string;
 };
 
+export type TutorialExplanationSection = {
+  heading: string;
+  paragraphs: string[];
+};
+
 export type TutorialDetailContent = {
   problemHeading: string;
   problemParagraphs: string[];
+  keyIdeaHeading?: string;
+  keyIdeaText?: string;
+  explanationSections?: TutorialExplanationSection[];
   stepsHeading: string;
   stepsIntro?: string;
   steps: string[];
@@ -449,11 +457,80 @@ export const tutorials: Tutorial[] = [
     episode: "08",
     title: "Preview vs Live",
     description: "Learn when to stage in Preview and when to go Live.",
-    imageSrc: "/images/solution-images/solution-08-preview-vs-live.png",
+    imageSrc: "/images/solution-images/solution-08-preview-vs-live-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Ecamm Preview vs Live Mode Explained (What Publish Actually Does)",
+    seoDescription:
+      "Learn how Preview Mode works in Ecamm, what the Program window means, and what actually happens when you click Publish during a livestream or recording.",
+    relatedTutorialSlugs: [
+      "creating-your-first-scene",
+      "why-cant-i-see-my-overlay",
+      "profiles-vs-scenes",
+    ],
+    detailContent: {
+      problemHeading: "Preview Mode vs Live Mode in Ecamm",
+      problemParagraphs: [
+        "If you are new to Ecamm, Preview Mode can feel confusing at first.",
+        "Many beginners click the Preview button accidentally and suddenly see a second Program window appear, a yellow border around the screen, and a Publish button they are unsure about.",
+        "The important thing to understand is this:",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Preview Mode lets you prepare changes before your audience sees them live. Program shows what is currently going out, and Publish sends your prepared change to the live output.",
+      explanationSections: [
+        {
+          heading: "What Preview Mode actually does",
+          paragraphs: [
+            "Preview Mode is designed to let you prepare changes before your audience sees them.",
+            "This becomes most useful when you are already live streaming or recording.",
+            "Instead of making changes directly in front of your viewers, Ecamm lets you build the next version of your scene safely inside the Preview window first.",
+            "The large yellow-bordered window becomes your Preview area.",
+          ],
+        },
+        {
+          heading: "What the Program window means",
+          paragraphs: [
+            "The smaller Program window shows what your audience is currently seeing live.",
+            "This means you can prepare overlays, scene changes, layouts, or media without immediately sending those changes to your stream.",
+          ],
+        },
+        {
+          heading: "What Publish actually does",
+          paragraphs: [
+            "Only when you click Publish do those prepared changes get sent to the live output.",
+            "This workflow is what makes Ecamm feel more like a professional live production system.",
+          ],
+        },
+      ],
+      stepsHeading: "How Preview Mode Works in Ecamm",
+      steps: [
+        "Click the Preview Mode button inside Ecamm.",
+        "Notice the yellow border appear around the large Preview window.",
+        "Look at the smaller Program window that appears below.",
+        "Make a change inside Preview, such as adding an overlay.",
+        "Confirm the change appears only in Preview.",
+        "Click Publish when you are ready for viewers to see the update.",
+        "Watch the Program window update to the new version.",
+      ],
+      stepsFollowUpParagraphs: [],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "Many beginners think the Publish button starts their livestream.",
+        "It does not.",
+        "Publish simply sends your prepared Preview changes to the live Program output.",
+        "If you are already live, your audience will see the update immediately after clicking Publish.",
+      ],
+      nextStepsHeading: "What to learn next",
+      nextStepsTutorialSlugs: [
+        "creating-your-first-scene",
+        "why-cant-i-see-my-overlay",
+        "profiles-vs-scenes",
+      ],
+    },
     tags: ["Foundation", "Workflow"],
     popular: false,
     status: "published",
-    youtubeUrl: "https://www.youtube.com/embed/mbnQO3jVw5w",
+    youtubeUrl: "https://www.youtube.com/embed/0poxoeqbdpQ",
   },
   {
     id: "global-vs-scene-overlays",
