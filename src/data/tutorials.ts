@@ -530,7 +530,7 @@ export const tutorials: Tutorial[] = [
     tags: ["Foundation", "Workflow"],
     popular: false,
     status: "published",
-    youtubeUrl: "https://www.youtube.com/embed/0poxoeqbdpQ",
+    youtubeUrl: "https://www.youtube.com/embed/k9jqVczTPIY",
   },
   {
     id: "global-vs-scene-overlays",
