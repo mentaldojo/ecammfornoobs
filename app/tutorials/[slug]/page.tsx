@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { affiliateLinks } from "@/src/data/affiliateLinks";
-import {
-  getTutorialBySlug,
-  publishedTutorials,
-  tutorials,
-} from "@/src/data/tutorials";
+import { getTutorialBySlug, tutorials } from "@/src/data/tutorials";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ecammfornoobs.com";
 
@@ -15,7 +11,7 @@ type TutorialPageProps = {
 };
 
 export async function generateStaticParams() {
-  return publishedTutorials.map((tutorial) => ({ slug: tutorial.slug }));
+  return tutorials.map((tutorial) => ({ slug: tutorial.slug }));
 }
 
 export async function generateMetadata({
@@ -53,9 +49,10 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
   const { slug } = await params;
   const tutorial = getTutorialBySlug(slug);
 
-  if (!tutorial || tutorial.status === "coming-soon") {
+  if (!tutorial) {
     notFound();
   }
+  const isComingSoon = tutorial.status === "coming-soon";
 
   const related =
     tutorial.relatedTutorialSlugs && tutorial.relatedTutorialSlugs.length > 0
@@ -92,53 +89,69 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
       </header>
 
       <section className="tutorial-video-block">
-        <div
-          className={`tutorial-detail-video-frame ${
-            tutorial.videoAspect === "landscape"
-              ? "tutorial-detail-video-frame-landscape"
-              : ""
-          }`}
-        >
-          <iframe
-            src={tutorial.youtubeUrl}
-            title={tutorial.title}
-            className="h-full w-full rounded-2xl"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
-        </div>
-        <a
-          className="btn btn-secondary tutorial-detail-cta"
-          href={affiliateLinks.tutorialModal}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Apply This In Ecamm
-        </a>
+        {isComingSoon ? (
+          <div className="tutorial-upcoming-notice" role="status" aria-live="polite">
+            <p className="tutorial-upcoming-notice-title">New videos added daily</p>
+            <p>This video will be uploaded shortly.</p>
+          </div>
+        ) : (
+          <>
+            <div
+              className={`tutorial-detail-video-frame ${
+                tutorial.videoAspect === "landscape"
+                  ? "tutorial-detail-video-frame-landscape"
+                  : ""
+              }`}
+            >
+              <iframe
+                src={tutorial.youtubeUrl}
+                title={tutorial.title}
+                className="h-full w-full rounded-2xl"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+            <a
+              className="btn btn-secondary tutorial-detail-cta"
+              href={affiliateLinks.tutorialModal}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apply This In Ecamm
+            </a>
+          </>
+        )}
       </section>
 
-      <section className="tutorial-affiliate-strip">
-        <div className="tutorial-affiliate-copy">
-          <p className="affiliate-badge-kicker">
-            Official <span className="affiliate-badge-brand">Ecamm</span> Partner
-            Link
-          </p>
-          <p className="affiliate-badge-title">
-            Try Ecamm free to support more rapid Ecamm solutions.
-          </p>
-        </div>
-        <a
-          className="btn btn-orange tutorial-affiliate-cta"
-          href={affiliateLinks.heroCta}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Try Ecamm Free
-        </a>
-      </section>
+      {!isComingSoon ? (
+        <section className="tutorial-affiliate-strip">
+          <div className="tutorial-affiliate-copy">
+            <p className="affiliate-badge-kicker">
+              Official <span className="affiliate-badge-brand">Ecamm</span> Partner
+              Link
+            </p>
+            <p className="affiliate-badge-title">
+              Try Ecamm free to support more rapid Ecamm solutions.
+            </p>
+          </div>
+          <a
+            className="btn btn-orange tutorial-affiliate-cta"
+            href={affiliateLinks.heroCta}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Try Ecamm Free
+          </a>
+        </section>
+      ) : null}
 
       <section className="tutorial-copy-block">
-        {tutorial.detailContent ? (
+        {isComingSoon ? (
+          <section className="tutorial-article-section">
+            <h2>New videos added daily</h2>
+            <p>This video will be uploaded shortly.</p>
+          </section>
+        ) : tutorial.detailContent ? (
           <>
             <section className="tutorial-article-section">
               <h2>{tutorial.detailContent.problemHeading}</h2>

@@ -630,10 +630,72 @@ export const tutorials: Tutorial[] = [
     episode: "10",
     title: "Adding a Countdown Timer",
     description: "Set up a pre-show timer to start streams with confidence.",
+    imageSrc: "/images/solution-images/solution-10-adding-countdown-timer-w.png",
+    videoAspect: "landscape",
+    seoTitle: "How to Add a Countdown Timer in Ecamm (Simple Pre-Show Setup)",
+    seoDescription:
+      "Learn how to add and customize a countdown timer in Ecamm so your livestream starts smoothly with a clear pre-show flow.",
+    relatedTutorialSlugs: [
+      "creating-your-first-scene",
+      "preview-vs-live",
+      "global-vs-scene-overlays",
+    ],
+    detailContent: {
+      problemHeading: "Adding a countdown timer in Ecamm",
+      problemParagraphs: [
+        "A countdown timer helps you start your stream with a clear pre-show flow instead of going live abruptly.",
+        "Many beginners know they want a timer but are not sure where to add it or how to keep it visible in the right scene.",
+        "Once your timer is set up correctly, your audience gets a clean, professional lead-in before your content begins.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Build your countdown in a dedicated pre-show scene so you can control exactly when to switch into your main live scene.",
+      explanationSections: [
+        {
+          heading: "Why a pre-show countdown helps",
+          paragraphs: [
+            "A countdown sets expectations and gives people time to join before you start speaking.",
+            "It also gives you a calm final minute to check audio, camera framing, and overlays.",
+          ],
+        },
+        {
+          heading: "Where to place the timer",
+          paragraphs: [
+            "Most creators place the timer in a dedicated pre-show scene rather than inside every scene.",
+            "That keeps your workflow cleaner and prevents the timer from appearing where it is not needed.",
+          ],
+        },
+      ],
+      stepsHeading: "How to add a countdown timer in Ecamm",
+      steps: [
+        "Create or open the scene you want to use for your pre-show.",
+        "Add your timer overlay from the overlays controls.",
+        "Set the countdown duration to match your start plan.",
+        "Style the timer so it is readable over your background.",
+        "Run a quick preview to confirm the timer is visible and legible.",
+        "When the countdown finishes, switch to your main live scene.",
+      ],
+      stepsFollowUpParagraphs: [
+        "Doing one rehearsal pass helps you catch placement or readability issues before you are live.",
+      ],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "A common mistake is placing the timer in a scene that also contains your main show layout, then forgetting to remove it.",
+        "Keeping countdown content in its own scene makes transitions more predictable.",
+      ],
+      nextStepsHeading: "What to learn next",
+      nextStepsTutorialSlugs: [
+        "preview-vs-live",
+        "creating-your-first-scene",
+        "global-vs-scene-overlays",
+      ],
+      closingNote:
+        "A simple countdown scene makes your stream start feel intentional, calm, and more professional.",
+    },
     tags: ["Visuals", "Overlays"],
     popular: false,
-    status: "coming-soon",
-    youtubeUrl: "#",
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/iwv-VyInWvc",
   },
   {
     id: "comments-on-screen",

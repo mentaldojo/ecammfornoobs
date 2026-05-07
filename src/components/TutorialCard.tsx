@@ -18,40 +18,31 @@ export function TutorialCard({ tutorial }: TutorialCardProps) {
   const tutorialHref = `/tutorials/${tutorial.slug}`;
 
   return (
-    <article className={`tutorial-card ${!isComingSoon ? "is-clickable" : ""}`}>
-      {isComingSoon ? (
-        <div className="tutorial-card-shell">
-          <div className="tutorial-thumb" aria-hidden style={thumbStyle}>
-            {!tutorial.imageSrc ? (
-              <span className="tutorial-thumb-coming-soon">New videos added daily</span>
-            ) : null}
-          </div>
-
-          <div className="tutorial-meta">
-            <p className="tutorial-episode">Solution {tutorial.episode}</p>
-            <h3>{tutorial.title}</h3>
-            <p className="tutorial-description">{tutorial.description}</p>
-            <span className="tutorial-link" aria-disabled>
-              New videos added daily
-            </span>
-          </div>
+    <article className="tutorial-card is-clickable">
+      <Link
+        href={tutorialHref}
+        className="tutorial-card-shell"
+        aria-label={
+          isComingSoon
+            ? `Open ${tutorial.title} tutorial preview page`
+            : `Read and watch ${tutorial.title}`
+        }
+      >
+        <div className="tutorial-thumb" aria-hidden style={thumbStyle}>
+          {isComingSoon && !tutorial.imageSrc ? (
+            <span className="tutorial-thumb-coming-soon">New videos added daily</span>
+          ) : null}
         </div>
-      ) : (
-        <Link
-          href={tutorialHref}
-          className="tutorial-card-shell"
-          aria-label={`Read and watch ${tutorial.title}`}
-        >
-          <div className="tutorial-thumb" aria-hidden style={thumbStyle} />
 
-          <div className="tutorial-meta">
-            <p className="tutorial-episode">Solution {tutorial.episode}</p>
-            <h3>{tutorial.title}</h3>
-            <p className="tutorial-description">{tutorial.description}</p>
-            <span className="tutorial-link">View Solution -&gt;</span>
-          </div>
-        </Link>
-      )}
+        <div className="tutorial-meta">
+          <p className="tutorial-episode">Solution {tutorial.episode}</p>
+          <h3>{tutorial.title}</h3>
+          <p className="tutorial-description">{tutorial.description}</p>
+          <span className="tutorial-link">
+            {isComingSoon ? "New videos added daily" : "View Solution ->"}
+          </span>
+        </div>
+      </Link>
     </article>
   );
 }
