@@ -538,10 +538,91 @@ export const tutorials: Tutorial[] = [
     episode: "09",
     title: "Global vs Scene Overlays",
     description: "Choose the right overlay scope for cleaner production flow.",
+    imageSrc: "/images/solution-images/solution-09-global-vs-scene-overlays-w.png",
+    videoAspect: "landscape",
+    seoTitle:
+      "Ecamm Overlays Explained (Global, Scene & Background Overlays)",
+    seoDescription:
+      "Learn the difference between global overlays, scene overlays, and background overlays in Ecamm, including why Source to Blank can reveal a hidden background.",
+    relatedTutorialSlugs: [
+      "why-cant-i-see-my-overlay",
+      "creating-your-first-scene",
+      "preview-vs-live",
+    ],
+    detailContent: {
+      problemHeading: "Global vs Scene Overlays in Ecamm",
+      problemParagraphs: [
+        "Overlays in Ecamm can feel confusing at first because they do not all behave the same way.",
+        "Some overlays appear across every scene, some only appear in the current scene, and background overlays can seem invisible if the main camera source is covering them.",
+        "Once you understand the difference between global overlays, scene overlays, and background overlays, it becomes much easier to build clean layouts and avoid wondering why something has disappeared.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Show in all scenes means the overlay appears everywhere. Show in current scene means it only appears in that scene. Show in background places the item underneath your overlay layout, but it may be hidden if your base source is still filling the frame.",
+      explanationSections: [
+        {
+          heading: "What “Show in all scenes” means",
+          paragraphs: [
+            "Show in all scenes is for overlays you want to appear across your whole production.",
+            "This is useful for things like logos, watermarks, persistent branding, or any item that should follow you as you move between scenes.",
+            "If you add an overlay here and then switch scenes, that overlay should stay visible because it is global.",
+          ],
+        },
+        {
+          heading: "What “Show in current scene” means",
+          paragraphs: [
+            "Show in current scene is for overlays that only belong in one specific scene.",
+            "This is useful for labels, temporary graphics, topic titles, instructions, or anything that should only appear in one layout.",
+            "If you switch to another scene and the overlay disappears, that does not mean it has been deleted. It simply belongs to the previous scene.",
+          ],
+        },
+        {
+          heading: "What “Show in background” means",
+          paragraphs: [
+            "Show in background is for items that should sit underneath your main overlay layout, such as a background image, texture, or branded backdrop.",
+            "This is where many beginners get stuck. You can drag an image into Show in background and still not see it if your full-frame camera source is covering the canvas.",
+            "The background image is there, but it is hidden behind the active base source.",
+          ],
+        },
+        {
+          heading: "Why Source to Blank matters",
+          paragraphs: [
+            "If your camera is being used as the full-frame base source, it fills the entire canvas and covers anything placed behind it.",
+            "To reveal a background overlay, go to the Source menu at the top of Ecamm and choose Blank.",
+            "Blank removes the full-frame base source, leaving your background visible. Then you can add your camera as an overlay, resize it, and position it over the background.",
+          ],
+        },
+      ],
+      stepsHeading: "How to reveal a background overlay in Ecamm",
+      steps: [
+        "Drag your background image into Show in background in the Overlays panel.",
+        "Add your camera as an overlay using the camera overlay button.",
+        "Go to the Source menu in the Mac menu bar.",
+        "Choose Blank.",
+        "Check that the background image is now visible.",
+        "Click your camera overlay in the preview window.",
+        "Resize and reposition the camera overlay as needed.",
+      ],
+      stepsFollowUpParagraphs: [
+        "The important point is that the base source and overlays are separate layers. If the base source is still active and filling the frame, it can hide the background underneath.",
+      ],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "A common mistake is trying to resize the full-frame camera directly in the preview window.",
+        "That camera is usually the base source, not an overlay, so it will not behave like a movable object with resize handles.",
+        "To build a background layout, switch the Source menu to Blank and use a camera overlay instead.",
+      ],
+      nextStepsHeading: "What to learn next",
+      nextStepsTutorialSlugs: [
+        "why-cant-i-see-my-overlay",
+        "creating-your-first-scene",
+        "preview-vs-live",
+      ],
+    },
     tags: ["Visuals", "Overlays"],
     popular: false,
-    status: "coming-soon",
-    youtubeUrl: "#",
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/daV-fwMaLHY",
   },
   {
     id: "countdown-timer",
