@@ -52,7 +52,7 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
   if (!tutorial) {
     notFound();
   }
-  const isComingSoon = tutorial.status === "coming-soon";
+  const isComingSoon = tutorial.status === "comingSoon";
 
   const related =
     tutorial.relatedTutorialSlugs && tutorial.relatedTutorialSlugs.length > 0
@@ -91,8 +91,8 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
       <section className="tutorial-video-block">
         {isComingSoon ? (
           <div className="tutorial-upcoming-notice" role="status" aria-live="polite">
-            <p className="tutorial-upcoming-notice-title">New videos added daily</p>
-            <p>This video will be uploaded shortly.</p>
+            <p className="tutorial-upcoming-notice-title">Currently in production</p>
+            <p>New tutorial coming soon.</p>
           </div>
         ) : (
           <>
@@ -104,7 +104,7 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
               }`}
             >
               <iframe
-                src={tutorial.youtubeUrl}
+                src={tutorial.youtubeUrl ?? ""}
                 title={tutorial.title}
                 className="h-full w-full rounded-2xl"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -148,8 +148,8 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
       <section className="tutorial-copy-block">
         {isComingSoon ? (
           <section className="tutorial-article-section">
-            <h2>New videos added daily</h2>
-            <p>This video will be uploaded shortly.</p>
+            <h2>Currently in production</h2>
+            <p>This tutorial is being prepared and will be published soon.</p>
           </section>
         ) : tutorial.detailContent ? (
           <>

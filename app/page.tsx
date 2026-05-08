@@ -8,7 +8,11 @@ import { publishedTutorials } from "@/src/data/tutorials";
 
 export default function Home() {
   const featuredTutorials = [...publishedTutorials]
-    .sort((a, b) => Number(a.episode) - Number(b.episode))
+    .sort(
+      (a, b) =>
+        Number(a.solutionNumber ?? a.episode) -
+        Number(b.solutionNumber ?? b.episode),
+    )
     .slice(0, 6);
 
   return (

@@ -21,7 +21,8 @@ export function TutorialGrid({
   desktopColumns = 4,
 }: TutorialGridProps) {
   const orderedItems = [...items].sort(
-    (a, b) => Number(a.episode) - Number(b.episode),
+    (a, b) =>
+      Number(a.solutionNumber ?? a.episode) - Number(b.solutionNumber ?? b.episode),
   );
 
   return (

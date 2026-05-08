@@ -6,7 +6,7 @@ type TutorialCardProps = {
 };
 
 export function TutorialCard({ tutorial }: TutorialCardProps) {
-  const isComingSoon = tutorial.status === "coming-soon";
+  const isComingSoon = tutorial.status === "comingSoon";
   const thumbStyle = tutorial.imageSrc
     ? {
         backgroundImage: `url("${tutorial.imageSrc}")`,
@@ -30,7 +30,7 @@ export function TutorialCard({ tutorial }: TutorialCardProps) {
       >
         <div className="tutorial-thumb" aria-hidden style={thumbStyle}>
           {isComingSoon && !tutorial.imageSrc ? (
-            <span className="tutorial-thumb-coming-soon">New videos added daily</span>
+            <span className="tutorial-thumb-coming-soon">Coming Soon</span>
           ) : null}
         </div>
 
@@ -39,7 +39,7 @@ export function TutorialCard({ tutorial }: TutorialCardProps) {
           <h3>{tutorial.title}</h3>
           <p className="tutorial-description">{tutorial.description}</p>
           <span className="tutorial-link">
-            {isComingSoon ? "New videos added daily" : "View Solution ->"}
+            {isComingSoon ? "In Production ->" : "View Solution ->"}
           </span>
         </div>
       </Link>

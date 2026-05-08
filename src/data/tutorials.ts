@@ -1,4 +1,4 @@
-export type TutorialStatus = "published" | "coming-soon";
+export type TutorialStatus = "published" | "comingSoon";
 
 // Solution page content pattern:
 // 1. Use real beginner search language in the opening problem explanation.
@@ -47,9 +47,13 @@ export type Tutorial = {
   id: string;
   slug: string;
   episode: string;
+  solutionNumber?: string;
   title: string;
   description: string;
+  shortDescription?: string;
+  category?: string;
   imageSrc?: string;
+  thumbnail?: string;
   videoAspect?: "portrait" | "landscape";
   seoTitle?: string;
   seoDescription?: string;
@@ -58,10 +62,11 @@ export type Tutorial = {
   tags: string[];
   popular: boolean;
   status: TutorialStatus;
-  youtubeUrl: string;
+  articleReady?: boolean;
+  youtubeUrl?: string | null;
 };
 
-export const tutorials: Tutorial[] = [
+const rawTutorials: Tutorial[] = [
   {
     id: "black-screen-fix",
     slug: "black-screen-fix",
@@ -846,14 +851,398 @@ export const tutorials: Tutorial[] = [
     id: "interview-mode",
     slug: "interview-mode",
     episode: "12",
+    solutionNumber: "12",
     title: "Interview Mode",
-    description: "Bring in guests cleanly for interviews and co-host streams.",
-    tags: ["Power Tips", "Pro"],
+    description:
+      "Bring guests into Ecamm safely using invite links, the green room, and clear on-screen control before they go live.",
+    shortDescription:
+      "Bring guests into Ecamm safely using invite links, the green room, and clear on-screen control before they go live.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Guests"],
     popular: false,
-    status: "coming-soon",
-    youtubeUrl: "#",
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "go-live-to-youtube",
+    slug: "how-to-go-live-to-youtube",
+    episode: "13",
+    solutionNumber: "13",
+    title: "How to Go Live to YouTube",
+    description: "Set up a reliable YouTube live destination and go live with confidence.",
+    shortDescription:
+      "Set up a reliable YouTube live destination and go live with confidence.",
+    category: "Going Live",
+    tags: ["Going Live", "YouTube"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "persistent-stream-keys-explained",
+    slug: "persistent-stream-keys-explained",
+    episode: "14",
+    solutionNumber: "14",
+    title: "Persistent Stream Keys Explained",
+    description: "Understand persistent keys so recurring livestream setups stay stable.",
+    shortDescription:
+      "Understand persistent keys so recurring livestream setups stay stable.",
+    category: "Going Live",
+    tags: ["Going Live", "YouTube"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "multistreaming-explained",
+    slug: "multistreaming-explained",
+    episode: "15",
+    solutionNumber: "15",
+    title: "Multistreaming Explained",
+    description: "Learn how multistream workflows work and when they are worth using.",
+    shortDescription:
+      "Learn how multistream workflows work and when they are worth using.",
+    category: "Going Live",
+    tags: ["Going Live", "Workflow"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "screen-sharing-in-ecamm",
+    slug: "screen-sharing-in-ecamm",
+    episode: "16",
+    solutionNumber: "16",
+    title: "Screen Sharing in Ecamm",
+    description: "Share your screen cleanly while keeping your scene layout readable.",
+    shortDescription:
+      "Share your screen cleanly while keeping your scene layout readable.",
+    category: "Going Live",
+    tags: ["Going Live", "Screenshare"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "picture-in-picture-explained",
+    slug: "picture-in-picture-explained",
+    episode: "17",
+    solutionNumber: "17",
+    title: "Picture in Picture Explained",
+    description: "Build practical camera-over-content layouts for teaching and demos.",
+    shortDescription:
+      "Build practical camera-over-content layouts for teaching and demos.",
+    category: "Going Live",
+    tags: ["Going Live", "Layouts"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "recording-vs-live-streaming",
+    slug: "recording-vs-live-streaming",
+    episode: "18",
+    solutionNumber: "18",
+    title: "Recording vs Live Streaming",
+    description: "Choose the right mode for practice sessions, content, and live events.",
+    shortDescription:
+      "Choose the right mode for practice sessions, content, and live events.",
+    category: "Going Live",
+    tags: ["Going Live", "Workflow"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "recording-in-ecamm",
+    slug: "recording-in-ecamm",
+    episode: "19",
+    solutionNumber: "19",
+    title: "Recording in Ecamm",
+    description: "Record local sessions with a clean setup before you stream publicly.",
+    shortDescription:
+      "Record local sessions with a clean setup before you stream publicly.",
+    category: "Going Live",
+    tags: ["Going Live", "Recording"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "invite-guest-to-ecamm",
+    slug: "how-to-invite-a-guest-to-ecamm",
+    episode: "20",
+    solutionNumber: "20",
+    title: "How to Invite a Guest to Ecamm",
+    description:
+      "Send the right invite link, help guests join smoothly, and avoid common camera, mic, and browser issues.",
+    shortDescription:
+      "Send the right invite link, help guests join smoothly, and avoid common camera, mic, and browser issues.",
+    category: "Going Live",
+    tags: ["Going Live", "Guests"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "adding-lower-thirds",
+    slug: "adding-lower-thirds",
+    episode: "21",
+    solutionNumber: "21",
+    title: "Adding Lower Thirds",
+    description: "Add clean name and topic labels that support your on-screen flow.",
+    shortDescription:
+      "Add clean name and topic labels that support your on-screen flow.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Overlays"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "creating-branded-overlays",
+    slug: "creating-branded-overlays",
+    episode: "22",
+    solutionNumber: "22",
+    title: "Creating Branded Overlays",
+    description: "Build reusable brand overlays that stay consistent across scenes.",
+    shortDescription:
+      "Build reusable brand overlays that stay consistent across scenes.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Overlays"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "using-animated-overlays",
+    slug: "using-animated-overlays",
+    episode: "23",
+    solutionNumber: "23",
+    title: "Using Animated Overlays",
+    description: "Use motion overlays without making scenes feel cluttered or distracting.",
+    shortDescription:
+      "Use motion overlays without making scenes feel cluttered or distracting.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Overlays"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "how-scene-switching-works",
+    slug: "how-scene-switching-works",
+    episode: "24",
+    solutionNumber: "24",
+    title: "How Scene Switching Works",
+    description: "Understand scene transitions so your show changes look intentional.",
+    shortDescription:
+      "Understand scene transitions so your show changes look intentional.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Scenes"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "building-a-simple-show-layout",
+    slug: "building-a-simple-show-layout",
+    episode: "25",
+    solutionNumber: "25",
+    title: "Building a Simple Show Layout",
+    description: "Create a repeatable scene structure for interviews, teaching, or demos.",
+    shortDescription:
+      "Create a repeatable scene structure for interviews, teaching, or demos.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Layouts"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "guest-placeholders-explained",
+    slug: "guest-placeholders-explained",
+    episode: "26",
+    solutionNumber: "26",
+    title: "Guest Placeholders Explained",
+    description: "Use placeholders to keep guest layouts stable before people join live.",
+    shortDescription:
+      "Use placeholders to keep guest layouts stable before people join live.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Guests"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "showing-comments-on-screen-properly",
+    slug: "showing-comments-on-screen-properly",
+    episode: "27",
+    solutionNumber: "27",
+    title: "Showing Comments On Screen Properly",
+    description: "Display comments in a clean, readable way that supports conversation.",
+    shortDescription:
+      "Display comments in a clean, readable way that supports conversation.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Engagement"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "audio-monitoring-and-avoiding-echo",
+    slug: "audio-monitoring-and-avoiding-echo",
+    episode: "28",
+    solutionNumber: "28",
+    title: "Audio Monitoring & Avoiding Echo",
+    description: "Monitor audio correctly and prevent feedback loops during live sessions.",
+    shortDescription:
+      "Monitor audio correctly and prevent feedback loops during live sessions.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Audio"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "audio-filters-explained",
+    slug: "audio-filters-explained",
+    episode: "29",
+    solutionNumber: "29",
+    title: "Audio Filters Explained",
+    description: "Understand filter basics to improve clarity and consistency in your voice.",
+    shortDescription:
+      "Understand filter basics to improve clarity and consistency in your voice.",
+    category: "Production Basics",
+    tags: ["Production Basics", "Audio"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "stream-deck-basics-with-ecamm",
+    slug: "stream-deck-basics-with-ecamm",
+    episode: "30",
+    solutionNumber: "30",
+    title: "Stream Deck Basics with Ecamm",
+    description: "Use simple button workflows to speed up scene and overlay control.",
+    shortDescription:
+      "Use simple button workflows to speed up scene and overlay control.",
+    category: "Workflow & Efficiency",
+    tags: ["Workflow & Efficiency", "Automation"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "reusing-scenes-and-templates",
+    slug: "reusing-scenes-and-templates",
+    episode: "31",
+    solutionNumber: "31",
+    title: "Reusing Scenes & Templates",
+    description: "Reuse layouts across shows so setup time gets faster every week.",
+    shortDescription:
+      "Reuse layouts across shows so setup time gets faster every week.",
+    category: "Workflow & Efficiency",
+    tags: ["Workflow & Efficiency", "Scenes"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "organizing-profiles-properly",
+    slug: "organizing-profiles-properly",
+    episode: "32",
+    solutionNumber: "32",
+    title: "Organizing Profiles Properly",
+    description: "Keep profile structure clean so scenes and assets stay predictable.",
+    shortDescription:
+      "Keep profile structure clean so scenes and assets stay predictable.",
+    category: "Workflow & Efficiency",
+    tags: ["Workflow & Efficiency", "Profiles"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "repeatable-livestream-workflow",
+    slug: "creating-a-repeatable-livestream-workflow",
+    episode: "33",
+    solutionNumber: "33",
+    title: "Creating a Repeatable Livestream Workflow",
+    description: "Build a practical pre-show checklist you can run for every stream.",
+    shortDescription:
+      "Build a practical pre-show checklist you can run for every stream.",
+    category: "Workflow & Efficiency",
+    tags: ["Workflow & Efficiency", "Workflow"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "test-stream-before-going-live",
+    slug: "how-to-test-your-stream-before-going-live",
+    episode: "34",
+    solutionNumber: "34",
+    title: "How to Test Your Stream Before Going Live",
+    description: "Run quick preflight tests so you catch issues before your audience does.",
+    shortDescription:
+      "Run quick preflight tests so you catch issues before your audience does.",
+    category: "Workflow & Efficiency",
+    tags: ["Workflow & Efficiency", "Testing"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
+  },
+  {
+    id: "common-beginner-mistakes",
+    slug: "common-beginner-mistakes-in-ecamm",
+    episode: "35",
+    solutionNumber: "35",
+    title: "Common Beginner Mistakes in Ecamm",
+    description: "Avoid frequent setup mistakes that make new livestreams feel harder.",
+    shortDescription:
+      "Avoid frequent setup mistakes that make new livestreams feel harder.",
+    category: "Workflow & Efficiency",
+    tags: ["Workflow & Efficiency", "Troubleshooting"],
+    popular: false,
+    status: "comingSoon",
+    articleReady: false,
+    youtubeUrl: null,
   },
 ];
+
+export const tutorials: Tutorial[] = rawTutorials.map((tutorial) => ({
+  ...tutorial,
+  solutionNumber: tutorial.solutionNumber ?? tutorial.episode,
+  shortDescription: tutorial.shortDescription ?? tutorial.description,
+  category: tutorial.category ?? tutorial.tags[0] ?? "Getting Started",
+  thumbnail: tutorial.thumbnail ?? tutorial.imageSrc,
+  articleReady: tutorial.articleReady ?? tutorial.status === "published",
+}));
 
 export const publishedTutorials = tutorials.filter(
   (tutorial) => tutorial.status === "published",
