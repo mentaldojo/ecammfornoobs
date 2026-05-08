@@ -744,12 +744,103 @@ export const tutorials: Tutorial[] = [
     id: "comments-on-screen",
     slug: "displaying-viewer-comments",
     episode: "11",
-    title: "Displaying Viewer Comments",
-    description: "Bring audience comments on-screen without clutter.",
+    title: "Displaying Viewer Comments In Ecamm Live",
+    description:
+      "Learn how to show live YouTube comments on screen in Ecamm Live using comment overlays, placeholder styles, and auto-hide settings.",
+    imageSrc: "/images/solution-images/solution-11-display-comments-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Displaying Viewer Comments In Ecamm Live",
+    seoDescription:
+      "Learn how to show live YouTube comments on screen in Ecamm Live using comment overlays, placeholder styles, and auto-hide settings.",
+    relatedTutorialSlugs: [
+      "creating-your-first-scene",
+      "global-vs-scene-overlays",
+      "preview-vs-live",
+      "adding-a-countdown-timer",
+    ],
+    detailContent: {
+      problemHeading: "Displaying Viewer Comments In Ecamm Live",
+      problemParagraphs: [
+        "One of the things that makes livestreaming feel alive is seeing real audience interaction appear on screen.",
+        "When viewer comments appear during a livestream, the stream immediately feels more personal, more responsive, and more engaging.",
+        "But when most beginners first try to use comments inside Ecamm Live, things often become confusing very quickly.",
+        "Comments may not appear correctly. The formatting can feel inconsistent. Sometimes comments stay on screen too long. And many people accidentally connect YouTube the wrong way, which prevents comments from working properly altogether.",
+        "The good news is that once you understand the basic workflow, Ecamm’s comment system is actually very straightforward and extremely powerful.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Comments work best when you treat them as part of your livestream layout - not as random popups. Once you create a clean placeholder style, every comment automatically feels consistent, readable, and professional.",
+      explanationSections: [
+        {
+          heading: "Why comment overlays matter",
+          paragraphs: [
+            "Displaying viewer comments changes the feeling of a livestream.",
+            "Instead of the audience watching passively, the stream begins to feel interactive.",
+            "This is especially useful for teaching streams, podcasts, interviews, Q&A sessions, and live demonstrations.",
+            "Even simple comments on screen make viewers feel acknowledged and involved.",
+          ],
+        },
+        {
+          heading: "Why YouTube connection method matters",
+          paragraphs: [
+            "One of the biggest misunderstandings is how Ecamm connects to YouTube.",
+            "Many beginners use a raw RTMP stream key because the stream itself works correctly.",
+            "But while the video may stream successfully, comments and reactions often fail to connect properly in that setup.",
+            "Ecamm works much better when connected directly through the built-in YouTube destination integration. This allows Ecamm to properly access live chat, reactions, viewer interaction, and comment overlays.",
+          ],
+        },
+        {
+          heading: "Creating a reusable comment style",
+          paragraphs: [
+            "Ecamm allows you to create placeholder comment overlays, and this is one of the easiest ways to make your livestream feel more polished.",
+            "Inside Ecamm, go to Overlays and add a Placeholder Comment Overlay. This creates a sample comment box that you can fully design and position.",
+            "You can adjust size, colors, fonts, placement, animation, transparency, and rounded corners.",
+            "Once styled, future comments automatically appear using that same visual style. This keeps the livestream visually consistent instead of every comment appearing differently.",
+          ],
+        },
+        {
+          heading: "Why auto-hide comments helps",
+          paragraphs: [
+            "If comments remain on screen too long, the stream can quickly start to feel cluttered.",
+            "Ecamm allows comments to automatically disappear after a chosen number of seconds.",
+            "Most creators use around 6, 8, or 10 seconds depending on how large the comment is.",
+            "This creates a much cleaner viewing experience during livestreams.",
+          ],
+        },
+      ],
+      stepsHeading: "How to display comments in Ecamm",
+      steps: [
+        "Connect Ecamm using the built-in YouTube destination.",
+        "Start a livestream.",
+        "Open the Comments window.",
+        "Click any viewer comment to display it on screen.",
+        "Position and style the comment overlay.",
+        "Create a placeholder comment overlay for consistency.",
+        "Enable auto-hide comments if desired.",
+      ],
+      stepsFollowUpParagraphs: [
+        "A short rehearsal stream is one of the best ways to test your layout before going live publicly.",
+      ],
+      commonMistakeHeading: "Common mistake",
+      commonMistakeParagraphs: [
+        "One of the most common mistakes is connecting YouTube using only a manual stream key.",
+        "While the stream itself may work, comments and reactions often do not connect correctly inside Ecamm.",
+        "Using Ecamm’s native YouTube integration is usually the cleaner and more reliable workflow.",
+      ],
+      nextStepsHeading: "What to learn next",
+      nextStepsTutorialSlugs: [
+        "creating-your-first-scene",
+        "global-vs-scene-overlays",
+        "preview-vs-live",
+        "adding-a-countdown-timer",
+      ],
+      closingNote:
+        "Displaying comments properly is one of the simplest ways to make a livestream feel more human, interactive, and professional.",
+    },
     tags: ["Audio & Content", "Engagement"],
     popular: false,
-    status: "coming-soon",
-    youtubeUrl: "#",
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/1NMa5mrIUhY",
   },
   {
     id: "interview-mode",
