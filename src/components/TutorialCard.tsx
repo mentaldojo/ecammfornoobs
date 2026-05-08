@@ -30,7 +30,9 @@ export function TutorialCard({ tutorial }: TutorialCardProps) {
       >
         <div className="tutorial-thumb" aria-hidden style={thumbStyle}>
           {isComingSoon && !tutorial.imageSrc ? (
-            <span className="tutorial-thumb-coming-soon">Coming Soon</span>
+            <span className="tutorial-thumb-coming-soon">
+              New videos uploaded daily
+            </span>
           ) : null}
         </div>
 
