@@ -59,6 +59,18 @@ const toolCategories: ToolCategory[] = [
           "Clean gain booster to get the best performance from the SM7B.",
         href: "https://amzn.to/4ukIacs",
       },
+      {
+        name: "Rode Wireless Pro",
+        detail:
+          "Compact wireless mic system for travel and on-the-go recording when a full studio mic is not practical.",
+        href: "https://amzn.to/3RaAsDx",
+      },
+      {
+        name: "USB/XLR Travel Microphone",
+        detail:
+          "Flexible travel microphone with both USB and XLR output, so you can plug in fast or run through an audio interface.",
+        href: "https://amzn.to/4d1L7cs",
+      },
     ],
   },
   {
@@ -75,6 +87,12 @@ const toolCategories: ToolCategory[] = [
         detail: "Softens and spreads light for a more natural look on camera.",
         href: "https://amzn.to/4nd9lUr",
       },
+      {
+        name: "ULANZI VL120 RGB Video Light",
+        detail:
+          "Pocket-sized travel light with full RGB control and built-in battery for quick on-location setups.",
+        href: "https://amzn.to/49ljuZo",
+      },
     ],
   },
   {
@@ -85,6 +103,12 @@ const toolCategories: ToolCategory[] = [
         detail:
           "Fast scene switching and control for smoother live production.",
         href: "https://amzn.to/48EltYx",
+      },
+      {
+        name: "Elgato Prompter",
+        detail:
+          "Keeps scripts and notes in your eyeline for smoother on-camera delivery.",
+        href: "https://amzn.to/4nj6GIE",
       },
     ],
   },
