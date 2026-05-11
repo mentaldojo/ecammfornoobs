@@ -858,11 +858,115 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Bring guests into Ecamm safely using invite links, the green room, and clear on-screen control before they go live.",
     category: "Production Basics",
+    imageSrc: "/images/solution-images/solution-12-interview-mode-beginers-w.png",
+    thumbnail: "/images/solution-images/solution-12-interview-mode-beginers-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Ecamm Interview Mode for Beginners (Calm Guest Workflow)",
+    seoDescription:
+      "Learn Ecamm Interview Mode with a calm, beginner-safe workflow: scene prep, green room, guest visibility, broadcast vs host camera, and echo cancellation.",
+    relatedTutorialSlugs: [
+      "creating-your-first-scene",
+      "preview-vs-live",
+      "global-vs-scene-overlays",
+    ],
+    detailContent: {
+      problemHeading: "Interview Mode in Ecamm without the panic",
+      problemParagraphs: [
+        "Interview Mode is exciting, but it can also feel like a lot the first time. You are not just turning on your camera. You are managing a guest, your own audio, scene layout, and what viewers can currently see.",
+        "Most beginner stress comes from one fear: accidentally showing the wrong thing live. That fear is normal, and the good news is Ecamm gives you a very clear workflow to stay in control.",
+        "This tutorial walks through that workflow in plain English, so your first guest interview feels calm and predictable instead of rushed.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Prepare your scene first, invite your guest second, and only bring them on screen when you are ready. In Ecamm, scenes control visibility, and that is what keeps your interview flow safe.",
+      explanationSections: [
+        {
+          heading: "What Interview Mode actually is",
+          paragraphs: [
+            "Interview Mode is Ecamm's built-in guest system. Instead of requiring guests to install complicated software, you send an invite link and they join from their browser.",
+            "Think of it as a controlled waiting-and-staging workflow. Guests join your session first, then you decide when they appear in the live scene.",
+          ],
+        },
+        {
+          heading: "Why preparing your scene first matters",
+          paragraphs: [
+            "Before sending the invite link, set up the scene you want to use for the interview. Add your layout, placeholders, name graphics, and any overlays you need.",
+            "If you prepare this first, you are not making visual decisions under pressure while your guest is waiting. You already know what viewers will see.",
+          ],
+        },
+        {
+          heading: "The Green Room, explained simply",
+          paragraphs: [
+            "The Green Room is where your guest waits before they are shown to your audience.",
+            "This is your safety buffer. You can confirm their camera, check their mic, and make sure they feel ready without exposing that setup moment live.",
+          ],
+        },
+        {
+          heading: "Bringing the guest into the scene",
+          paragraphs: [
+            "When your guest is ready, you add them into the scene intentionally. They do not have to appear instantly just because they joined.",
+            "That one decision point is important. It gives you control over timing, framing, and confidence.",
+          ],
+        },
+        {
+          heading: "Broadcast vs Host Camera (beginner version)",
+          paragraphs: [
+            "A simple way to think about this: Host Camera is what you are working with privately in your production view, while Broadcast is what your audience can currently see.",
+            "If those two states differ, that is normal and useful. It means you can prepare your next move before viewers see it.",
+          ],
+        },
+        {
+          heading: "Echo cancellation and cleaner guest audio",
+          paragraphs: [
+            "Echo usually happens when guest audio leaks back through speakers and gets picked up by a microphone again.",
+            "Using headphones and checking echo cancellation settings early prevents the most common interview audio issue. A quick check in the Green Room saves a lot of stress later.",
+          ],
+        },
+        {
+          heading: "Why scenes are the real interview workflow",
+          paragraphs: [
+            "In Ecamm, scenes are not just decoration. They are your visibility control system.",
+            "If a guest is not in the active scene, viewers do not see them. If an overlay is not in that scene, viewers do not see that either. Once this clicks, interviews feel much safer to run.",
+          ],
+        },
+      ],
+      stepsHeading: "A beginner-safe guest workflow",
+      stepsIntro:
+        "Use this sequence each time and your interviews will feel far more predictable:",
+      steps: [
+        "Create or select your interview scene first.",
+        "Add and position the elements you want viewers to see.",
+        "Start Interview Mode and copy your guest invite link.",
+        "Let the guest join and wait in the Green Room.",
+        "Check guest camera, microphone, and overall readiness.",
+        "Confirm your own audio routing and echo cancellation before bringing them in.",
+        "Add the guest to the scene when you are ready.",
+        "Begin the interview knowing your scene controls what is visible.",
+      ],
+      stepsFollowUpParagraphs: [
+        "When you repeat this same sequence each time, livestream anxiety drops quickly because your process becomes familiar.",
+      ],
+      commonMistakeHeading: "Common beginner confusion",
+      commonMistakeParagraphs: [
+        "A common mistake is inviting the guest first and building the scene later. That usually creates pressure, messy transitions, and uncertainty about what viewers are seeing.",
+        "Another common issue is assuming that joining the interview link automatically means the guest is fully live on screen. In practice, your scene and visibility controls decide that.",
+        "If something feels chaotic, slow down and return to the sequence: scene first, Green Room check, then intentional on-screen placement.",
+      ],
+      nextStepsHeading: "What to learn next",
+      nextStepsIntro:
+        "After Interview Mode feels comfortable, these tutorials will help you tighten your workflow:",
+      nextStepsTutorialSlugs: [
+        "creating-your-first-scene",
+        "preview-vs-live",
+        "global-vs-scene-overlays",
+      ],
+      closingNote:
+        "Your first successful guest interview does not need to be perfect. It just needs to be controlled, clear, and calm. With scene-first preparation, you will feel more confident every time you run one.",
+    },
     tags: ["Production Basics", "Guests"],
     popular: false,
-    status: "comingSoon",
-    articleReady: false,
-    youtubeUrl: null,
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/RsuSmUfIvUo",
   },
   {
     id: "go-live-to-youtube",
