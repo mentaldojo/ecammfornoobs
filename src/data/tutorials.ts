@@ -973,16 +973,133 @@ const rawTutorials: Tutorial[] = [
     slug: "how-to-go-live-to-youtube",
     episode: "13",
     solutionNumber: "13",
-    title: "How to Go Live to YouTube",
+    title: "How to Go Live in Ecamm",
     description: "Set up a reliable YouTube live destination and go live with confidence.",
     shortDescription:
       "Set up a reliable YouTube live destination and go live with confidence.",
     category: "Going Live",
+    imageSrc: "/images/solution-images/solution-13-goliveinecamm-w.png",
+    thumbnail: "/images/solution-images/solution-13-goliveinecamm-w.png",
+    videoAspect: "landscape",
+    seoTitle: "How to Go Live in Ecamm (Beginner-Safe YouTube Workflow)",
+    seoDescription:
+      "Learn how to go live in Ecamm with a calm, beginner-safe workflow: connect YouTube, choose privacy settings, use Preview Mode, build scenes safely, and publish with confidence.",
+    relatedTutorialSlugs: [
+      "preview-vs-live",
+      "adding-a-countdown-timer",
+      "creating-your-first-scene",
+    ],
+    detailContent: {
+      problemHeading: "Going live for the first time can feel intense",
+      problemParagraphs: [
+        "Most beginners are not stuck on one button. They are stuck on the uncertainty. You can have everything open and still feel nervous about what happens the second you click Go Live.",
+        "That is normal. Livestreaming can feel high pressure because it is public, and people worry about showing the wrong scene, using the wrong channel, or going live too early.",
+        "This walkthrough gives you a simple, calm sequence you can follow so your first stream feels more under control.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Ecamm is your live production room. YouTube is your destination platform. When you prepare scenes privately first and only publish when ready, livestreaming becomes much less stressful.",
+      explanationSections: [
+        {
+          heading: "Ecamm vs YouTube, explained simply",
+          paragraphs: [
+            "Ecamm is where you build the show: your scenes, overlays, camera layout, and transitions.",
+            "YouTube is where the stream is delivered to viewers. Ecamm controls the production. YouTube handles audience access, chat, and replay.",
+          ],
+        },
+        {
+          heading: "Connecting YouTube safely",
+          paragraphs: [
+            "Start by connecting your YouTube destination inside Ecamm, then pause and confirm the account and channel details before streaming.",
+            "If you manage multiple channels, this quick check matters. One extra minute here can save you from a very common first-stream mistake.",
+          ],
+        },
+        {
+          heading: "Public, Unlisted, and Private",
+          paragraphs: [
+            "Public means anyone can find and watch your stream.",
+            "Unlisted means only people with the link can watch. For most first tests, this is the safest choice.",
+            "Private is locked to specific accounts and can limit who can join your test, so use it only when that restriction is intentional.",
+          ],
+        },
+        {
+          heading: "Why Preview Mode changes everything",
+          paragraphs: [
+            "Preview Mode lets you build and check changes before viewers see them.",
+            "That means you can line up your camera, adjust overlays, and verify your scene calmly without broadcasting every adjustment.",
+          ],
+        },
+        {
+          heading: "Why Studio Mode reduces stress",
+          paragraphs: [
+            "Studio Mode gives you a clear separation between what you are preparing and what is currently live.",
+            "It takes the panic down because you are not making every change in front of viewers. You can set things up first, then push it live when you are ready.",
+          ],
+        },
+        {
+          heading: "Build a safe Starting Soon scene first",
+          paragraphs: [
+            "Create a simple Starting Soon scene before anything else. It can be as basic as text, a background, and optional music.",
+            "This gives you breathing room at the beginning of the stream so you are not rushed into your main content immediately.",
+          ],
+        },
+        {
+          heading: "Building scenes privately before viewers see them",
+          paragraphs: [
+            "After your Starting Soon scene is ready, prepare your teaching or interview scenes in Preview.",
+            "In Ecamm, scenes control visibility. If it is not in the active live scene, viewers do not see it yet. That is your safety net.",
+          ],
+        },
+        {
+          heading: "Transitioning from Preview to Live calmly",
+          paragraphs: [
+            "Once the scene looks right in Preview, then you push it live.",
+            "A calm rhythm helps: prepare, check, then publish. That keeps your stream clean and keeps you feeling in control.",
+          ],
+        },
+        {
+          heading: "What viewers actually see",
+          paragraphs: [
+            "Viewers only see what is in your current live output, not every behind-the-scenes adjustment.",
+            "Remembering this helps a lot with nerves. You still have time to think, check, and adjust before each publish action.",
+          ],
+        },
+        {
+          heading: "Ending streams properly",
+          paragraphs: [
+            "When you are finished, close with a clear final message, then end the stream from Ecamm and confirm it has ended on YouTube.",
+            "This avoids accidental extra live time and gives your audience a clean ending.",
+          ],
+        },
+      ],
+      stepsHeading: "A calm first-livestream workflow",
+      stepsIntro: "Use this sequence for your first streams:",
+      steps: [
+        "Connect your YouTube destination in Ecamm and verify the correct channel.",
+        "Set stream privacy to Unlisted for a safe first test.",
+        "Create a simple Starting Soon scene.",
+        "Prepare your main scenes in Preview Mode.",
+        "Check audio, camera framing, and overlays before publishing.",
+        "Go live and keep the Starting Soon scene up while you settle in.",
+        "Transition scenes from Preview to Live only when ready.",
+        "Close clearly and end the stream properly in Ecamm and YouTube.",
+      ],
+      stepsFollowUpParagraphs: [
+        "The more you repeat this same sequence, the easier and calmer your livestream process gets.",
+      ],
+      commonMistakeHeading: "Common beginner fears and confusion",
+      commonMistakeParagraphs: [
+        "Many beginners think every setup adjustment is visible to viewers. In reality, Preview and scene control are there to protect you.",
+        "Another common fear is choosing the wrong privacy setting or channel. A quick destination and privacy check before going live prevents most early mistakes.",
+        "If you feel pressure rising, return to the workflow: Starting Soon scene, private preparation, then intentional publish.",
+      ],
+      closingNote:
+        "Your first livestream does not need to be perfect. It just needs to feel safe and controlled. With a calm workflow, each stream gets easier.",
+    },
     tags: ["Going Live", "YouTube"],
     popular: false,
-    status: "comingSoon",
-    articleReady: false,
-    youtubeUrl: null,
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/HVfynGG7N28",
   },
   {
     id: "persistent-stream-keys-explained",
