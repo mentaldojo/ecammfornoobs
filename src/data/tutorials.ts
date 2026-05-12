@@ -1104,12 +1104,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "persistent-stream-keys-explained",
     slug: "persistent-stream-keys-explained",
-    episode: "14",
-    solutionNumber: "14",
+    episode: "33",
+    solutionNumber: "33",
     title: "Persistent Stream Keys Explained",
-    description: "Understand persistent keys so recurring livestream setups stay stable.",
+    description:
+      "Understand persistent stream keys and reusable streaming destinations.",
     shortDescription:
-      "Understand persistent keys so recurring livestream setups stay stable.",
+      "Understand persistent stream keys and reusable streaming destinations.",
     category: "Going Live",
     tags: ["Going Live", "YouTube"],
     popular: false,
@@ -1120,12 +1121,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "multistreaming-explained",
     slug: "multistreaming-explained",
-    episode: "15",
-    solutionNumber: "15",
+    episode: "34",
+    solutionNumber: "34",
     title: "Multistreaming Explained",
-    description: "Learn how multistream workflows work and when they are worth using.",
+    description:
+      "Understand when multistreaming helps and when it adds unnecessary complexity.",
     shortDescription:
-      "Learn how multistream workflows work and when they are worth using.",
+      "Understand when multistreaming helps and when it adds unnecessary complexity.",
     category: "Going Live",
     tags: ["Going Live", "Workflow"],
     popular: false,
@@ -1136,8 +1138,8 @@ const rawTutorials: Tutorial[] = [
   {
     id: "screen-sharing-in-ecamm",
     slug: "screen-sharing-in-ecamm",
-    episode: "16",
-    solutionNumber: "16",
+    episode: "14",
+    solutionNumber: "14",
     title: "Screen Sharing in Ecamm",
     description: "Share your screen cleanly while keeping your scene layout readable.",
     shortDescription:
@@ -1152,8 +1154,8 @@ const rawTutorials: Tutorial[] = [
   {
     id: "picture-in-picture-explained",
     slug: "picture-in-picture-explained",
-    episode: "17",
-    solutionNumber: "17",
+    episode: "15",
+    solutionNumber: "15",
     title: "Picture in Picture Explained",
     description: "Build practical camera-over-content layouts for teaching and demos.",
     shortDescription:
@@ -1168,12 +1170,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "recording-vs-live-streaming",
     slug: "recording-vs-live-streaming",
-    episode: "18",
-    solutionNumber: "18",
+    episode: "17",
+    solutionNumber: "17",
     title: "Recording vs Live Streaming",
-    description: "Choose the right mode for practice sessions, content, and live events.",
+    description:
+      "Understand when to record privately and when livestreaming makes sense.",
     shortDescription:
-      "Choose the right mode for practice sessions, content, and live events.",
+      "Understand when to record privately and when livestreaming makes sense.",
     category: "Going Live",
     tags: ["Going Live", "Workflow"],
     popular: false,
@@ -1184,12 +1187,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "recording-in-ecamm",
     slug: "recording-in-ecamm",
-    episode: "19",
-    solutionNumber: "19",
-    title: "Recording in Ecamm",
-    description: "Record local sessions with a clean setup before you stream publicly.",
+    episode: "16",
+    solutionNumber: "16",
+    title: "Recording in Ecamm for Beginners",
+    description:
+      "Record locally in Ecamm so you can practice and create content without livestream pressure.",
     shortDescription:
-      "Record local sessions with a clean setup before you stream publicly.",
+      "Record locally in Ecamm so you can practice and create content without livestream pressure.",
     category: "Going Live",
     tags: ["Going Live", "Recording"],
     popular: false,
@@ -1198,27 +1202,10 @@ const rawTutorials: Tutorial[] = [
     youtubeUrl: null,
   },
   {
-    id: "invite-guest-to-ecamm",
-    slug: "how-to-invite-a-guest-to-ecamm",
-    episode: "20",
-    solutionNumber: "20",
-    title: "How to Invite a Guest to Ecamm",
-    description:
-      "Send the right invite link, help guests join smoothly, and avoid common camera, mic, and browser issues.",
-    shortDescription:
-      "Send the right invite link, help guests join smoothly, and avoid common camera, mic, and browser issues.",
-    category: "Going Live",
-    tags: ["Going Live", "Guests"],
-    popular: false,
-    status: "comingSoon",
-    articleReady: false,
-    youtubeUrl: null,
-  },
-  {
     id: "adding-lower-thirds",
     slug: "adding-lower-thirds",
-    episode: "21",
-    solutionNumber: "21",
+    episode: "18",
+    solutionNumber: "18",
     title: "Adding Lower Thirds",
     description: "Add clean name and topic labels that support your on-screen flow.",
     shortDescription:
@@ -1233,12 +1220,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "creating-branded-overlays",
     slug: "creating-branded-overlays",
-    episode: "22",
-    solutionNumber: "22",
+    episode: "19",
+    solutionNumber: "19",
     title: "Creating Branded Overlays",
-    description: "Build reusable brand overlays that stay consistent across scenes.",
+    description:
+      "Build reusable overlays that keep your streams visually consistent.",
     shortDescription:
-      "Build reusable brand overlays that stay consistent across scenes.",
+      "Build reusable overlays that keep your streams visually consistent.",
     category: "Production Basics",
     tags: ["Production Basics", "Overlays"],
     popular: false,
@@ -1249,8 +1237,8 @@ const rawTutorials: Tutorial[] = [
   {
     id: "using-animated-overlays",
     slug: "using-animated-overlays",
-    episode: "23",
-    solutionNumber: "23",
+    episode: "20",
+    solutionNumber: "20",
     title: "Using Animated Overlays",
     description: "Use motion overlays without making scenes feel cluttered or distracting.",
     shortDescription:
@@ -1265,12 +1253,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "how-scene-switching-works",
     slug: "how-scene-switching-works",
-    episode: "24",
-    solutionNumber: "24",
+    episode: "21",
+    solutionNumber: "21",
     title: "How Scene Switching Works",
-    description: "Understand scene transitions so your show changes look intentional.",
+    description:
+      "Understand how transitions and scene changes shape your livestream flow.",
     shortDescription:
-      "Understand scene transitions so your show changes look intentional.",
+      "Understand how transitions and scene changes shape your livestream flow.",
     category: "Production Basics",
     tags: ["Production Basics", "Scenes"],
     popular: false,
@@ -1281,8 +1270,8 @@ const rawTutorials: Tutorial[] = [
   {
     id: "building-a-simple-show-layout",
     slug: "building-a-simple-show-layout",
-    episode: "25",
-    solutionNumber: "25",
+    episode: "22",
+    solutionNumber: "22",
     title: "Building a Simple Show Layout",
     description: "Create a repeatable scene structure for interviews, teaching, or demos.",
     shortDescription:
@@ -1297,12 +1286,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "guest-placeholders-explained",
     slug: "guest-placeholders-explained",
-    episode: "26",
-    solutionNumber: "26",
+    episode: "23",
+    solutionNumber: "23",
     title: "Guest Placeholders Explained",
-    description: "Use placeholders to keep guest layouts stable before people join live.",
+    description:
+      "Use placeholders to prepare guest layouts before people join live.",
     shortDescription:
-      "Use placeholders to keep guest layouts stable before people join live.",
+      "Use placeholders to prepare guest layouts before people join live.",
     category: "Production Basics",
     tags: ["Production Basics", "Guests"],
     popular: false,
@@ -1313,12 +1303,12 @@ const rawTutorials: Tutorial[] = [
   {
     id: "showing-comments-on-screen-properly",
     slug: "showing-comments-on-screen-properly",
-    episode: "27",
-    solutionNumber: "27",
+    episode: "24",
+    solutionNumber: "24",
     title: "Showing Comments On Screen Properly",
-    description: "Display comments in a clean, readable way that supports conversation.",
+    description: "Display comments cleanly without overwhelming your layout.",
     shortDescription:
-      "Display comments in a clean, readable way that supports conversation.",
+      "Display comments cleanly without overwhelming your layout.",
     category: "Production Basics",
     tags: ["Production Basics", "Engagement"],
     popular: false,
@@ -1329,12 +1319,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "audio-monitoring-and-avoiding-echo",
     slug: "audio-monitoring-and-avoiding-echo",
-    episode: "28",
-    solutionNumber: "28",
+    episode: "25",
+    solutionNumber: "25",
     title: "Audio Monitoring & Avoiding Echo",
-    description: "Monitor audio correctly and prevent feedback loops during live sessions.",
+    description:
+      "Prevent echo and monitor audio properly during livestreams and interviews.",
     shortDescription:
-      "Monitor audio correctly and prevent feedback loops during live sessions.",
+      "Prevent echo and monitor audio properly during livestreams and interviews.",
     category: "Production Basics",
     tags: ["Production Basics", "Audio"],
     popular: false,
@@ -1345,12 +1336,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "audio-filters-explained",
     slug: "audio-filters-explained",
-    episode: "29",
-    solutionNumber: "29",
+    episode: "26",
+    solutionNumber: "26",
     title: "Audio Filters Explained",
-    description: "Understand filter basics to improve clarity and consistency in your voice.",
+    description:
+      "Improve clarity and reduce distracting room sound using Ecamm audio filters.",
     shortDescription:
-      "Understand filter basics to improve clarity and consistency in your voice.",
+      "Improve clarity and reduce distracting room sound using Ecamm audio filters.",
     category: "Production Basics",
     tags: ["Production Basics", "Audio"],
     popular: false,
@@ -1361,12 +1353,12 @@ const rawTutorials: Tutorial[] = [
   {
     id: "stream-deck-basics-with-ecamm",
     slug: "stream-deck-basics-with-ecamm",
-    episode: "30",
-    solutionNumber: "30",
+    episode: "27",
+    solutionNumber: "27",
     title: "Stream Deck Basics with Ecamm",
-    description: "Use simple button workflows to speed up scene and overlay control.",
+    description: "Speed up scene switching and production flow using Stream Deck.",
     shortDescription:
-      "Use simple button workflows to speed up scene and overlay control.",
+      "Speed up scene switching and production flow using Stream Deck.",
     category: "Workflow & Efficiency",
     tags: ["Workflow & Efficiency", "Automation"],
     popular: false,
@@ -1377,12 +1369,12 @@ const rawTutorials: Tutorial[] = [
   {
     id: "reusing-scenes-and-templates",
     slug: "reusing-scenes-and-templates",
-    episode: "31",
-    solutionNumber: "31",
+    episode: "28",
+    solutionNumber: "28",
     title: "Reusing Scenes & Templates",
-    description: "Reuse layouts across shows so setup time gets faster every week.",
+    description: "Reuse layouts and overlays across multiple streams efficiently.",
     shortDescription:
-      "Reuse layouts across shows so setup time gets faster every week.",
+      "Reuse layouts and overlays across multiple streams efficiently.",
     category: "Workflow & Efficiency",
     tags: ["Workflow & Efficiency", "Scenes"],
     popular: false,
@@ -1393,8 +1385,8 @@ const rawTutorials: Tutorial[] = [
   {
     id: "organizing-profiles-properly",
     slug: "organizing-profiles-properly",
-    episode: "32",
-    solutionNumber: "32",
+    episode: "29",
+    solutionNumber: "29",
     title: "Organizing Profiles Properly",
     description: "Keep profile structure clean so scenes and assets stay predictable.",
     shortDescription:
@@ -1409,12 +1401,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "repeatable-livestream-workflow",
     slug: "creating-a-repeatable-livestream-workflow",
-    episode: "33",
-    solutionNumber: "33",
+    episode: "30",
+    solutionNumber: "30",
     title: "Creating a Repeatable Livestream Workflow",
-    description: "Build a practical pre-show checklist you can run for every stream.",
+    description:
+      "Build a calm repeatable pre-stream process before every livestream.",
     shortDescription:
-      "Build a practical pre-show checklist you can run for every stream.",
+      "Build a calm repeatable pre-stream process before every livestream.",
     category: "Workflow & Efficiency",
     tags: ["Workflow & Efficiency", "Workflow"],
     popular: false,
@@ -1425,12 +1418,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "test-stream-before-going-live",
     slug: "how-to-test-your-stream-before-going-live",
-    episode: "34",
-    solutionNumber: "34",
+    episode: "31",
+    solutionNumber: "31",
     title: "How to Test Your Stream Before Going Live",
-    description: "Run quick preflight tests so you catch issues before your audience does.",
+    description:
+      "Check cameras, scenes, and destinations safely before streaming publicly.",
     shortDescription:
-      "Run quick preflight tests so you catch issues before your audience does.",
+      "Check cameras, scenes, and destinations safely before streaming publicly.",
     category: "Workflow & Efficiency",
     tags: ["Workflow & Efficiency", "Testing"],
     popular: false,
@@ -1441,12 +1435,13 @@ const rawTutorials: Tutorial[] = [
   {
     id: "common-beginner-mistakes",
     slug: "common-beginner-mistakes-in-ecamm",
-    episode: "35",
-    solutionNumber: "35",
+    episode: "32",
+    solutionNumber: "32",
     title: "Common Beginner Mistakes in Ecamm",
-    description: "Avoid frequent setup mistakes that make new livestreams feel harder.",
+    description:
+      "Avoid the setup mistakes that frustrate most new Ecamm users.",
     shortDescription:
-      "Avoid frequent setup mistakes that make new livestreams feel harder.",
+      "Avoid the setup mistakes that frustrate most new Ecamm users.",
     category: "Workflow & Efficiency",
     tags: ["Workflow & Efficiency", "Troubleshooting"],
     popular: false,
