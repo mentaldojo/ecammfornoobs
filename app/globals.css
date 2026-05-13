@@ -348,6 +348,13 @@ button {
   letter-spacing: 0.12em;
 }
 
+.tutorial-duration {
+  color: #ddd9d0;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
 .tutorial-meta h3 {
   margin: 0;
   font-size: 1.04rem;

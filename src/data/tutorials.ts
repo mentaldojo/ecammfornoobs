@@ -47,6 +47,7 @@ export type Tutorial = {
   id: string;
   slug: string;
   episode: string;
+  duration?: string;
   solutionNumber?: string;
   title: string;
   description: string;
@@ -71,6 +72,7 @@ const rawTutorials: Tutorial[] = [
     id: "black-screen-fix",
     slug: "black-screen-fix",
     episode: "01",
+    duration: "0:56",
     title: "Black Screen Fix",
     description:
       "Fix the black preview problem by checking the right camera source.",
@@ -120,6 +122,7 @@ const rawTutorials: Tutorial[] = [
     id: "profiles-vs-scenes",
     slug: "profiles-vs-scenes",
     episode: "02",
+    duration: "0:49",
     title: "Profiles vs Scenes",
     description: "Understand the difference so your setup stays organized.",
     imageSrc: "/images/solution-images/solution-02-scenes-profiles-w.png",
@@ -170,6 +173,7 @@ const rawTutorials: Tutorial[] = [
     id: "camera-source-setup",
     slug: "add-camera-to-scene",
     episode: "03",
+    duration: "1:09",
     title: "Add a Camera to a Scene",
     description: "Add a camera to your scene so your setup is ready to use.",
     imageSrc: "/images/solution-images/solution-03-add-camera-to-scene-w.png",
@@ -221,6 +225,7 @@ const rawTutorials: Tutorial[] = [
     id: "mic-setup",
     slug: "mic-setup",
     episode: "04",
+    duration: "1:35",
     title: "Mic Setup",
     description: "Get clean audio fast with the right input and level checks.",
     imageSrc: "/images/solution-images/solution-04-amic-input-setup-w.png",
@@ -300,6 +305,7 @@ const rawTutorials: Tutorial[] = [
     id: "first-scene",
     slug: "creating-your-first-scene",
     episode: "05",
+    duration: "1:47",
     title: "Creating Your First Scene",
     description: "Build a simple scene layout you can confidently reuse.",
     imageSrc: "/images/solution-images/solution-05-scenes.png",
@@ -355,6 +361,7 @@ const rawTutorials: Tutorial[] = [
     id: "cant-see-overlay",
     slug: "why-cant-i-see-my-overlay",
     episode: "06",
+    duration: "1:48",
     title: "Why Can't I See My Overlay?",
     description:
       "Fix missing overlays by checking visibility, scene assignment, and source order.",
@@ -408,6 +415,7 @@ const rawTutorials: Tutorial[] = [
     id: "panel-missing",
     slug: "where-did-my-panel-go",
     episode: "07",
+    duration: "1:17",
     title: "Where Did My Panel Go?",
     description: "Quick fixes when Ecamm panels disappear unexpectedly.",
     imageSrc: "/images/solution-images/solution-07-missing-panel-w.png",
@@ -460,6 +468,7 @@ const rawTutorials: Tutorial[] = [
     id: "preview-vs-live",
     slug: "preview-vs-live",
     episode: "08",
+    duration: "3:06",
     title: "Preview vs Live",
     description: "Learn when to stage in Preview and when to go Live.",
     imageSrc: "/images/solution-images/solution-08-preview-vs-live-w.png",
@@ -541,6 +550,7 @@ const rawTutorials: Tutorial[] = [
     id: "global-vs-scene-overlays",
     slug: "global-vs-scene-overlays",
     episode: "09",
+    duration: "5:25",
     title: "Global vs Scene Overlays",
     description: "Choose the right overlay scope for cleaner production flow.",
     imageSrc: "/images/solution-images/solution-09-global-vs-scene-overlays-w.png",
@@ -633,6 +643,7 @@ const rawTutorials: Tutorial[] = [
     id: "countdown-timer",
     slug: "adding-a-countdown-timer",
     episode: "10",
+    duration: "3:50",
     title: "Adding a Countdown Timer",
     description: "Set up a pre-show timer to start streams with confidence.",
     imageSrc: "/images/solution-images/solution-10-adding-countdown-timer-w.png",
@@ -749,6 +760,7 @@ const rawTutorials: Tutorial[] = [
     id: "comments-on-screen",
     slug: "displaying-viewer-comments",
     episode: "11",
+    duration: "4:18",
     title: "Displaying Viewer Comments In Ecamm Live",
     description:
       "Learn how to show live YouTube comments on screen in Ecamm Live using comment overlays, placeholder styles, and auto-hide settings.",
@@ -851,6 +863,7 @@ const rawTutorials: Tutorial[] = [
     id: "interview-mode",
     slug: "interview-mode",
     episode: "12",
+    duration: "7:13",
     solutionNumber: "12",
     title: "Interview Mode",
     description:
@@ -972,6 +985,7 @@ const rawTutorials: Tutorial[] = [
     id: "go-live-to-youtube",
     slug: "how-to-go-live-to-youtube",
     episode: "13",
+    duration: "11:15",
     solutionNumber: "13",
     title: "How to Go Live in Ecamm",
     description: "Set up a reliable YouTube live destination and go live with confidence.",
@@ -1139,6 +1153,7 @@ const rawTutorials: Tutorial[] = [
     id: "screen-sharing-in-ecamm",
     slug: "screen-sharing-in-ecamm",
     episode: "14",
+    duration: "6:22",
     solutionNumber: "14",
     title: "Screen Sharing in Ecamm",
     description: "Share your screen cleanly while keeping your scene layout readable.",
