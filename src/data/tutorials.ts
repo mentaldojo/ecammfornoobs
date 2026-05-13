@@ -1271,17 +1271,112 @@ const rawTutorials: Tutorial[] = [
     id: "picture-in-picture-explained",
     slug: "picture-in-picture-explained",
     episode: "15",
+    duration: "6:13",
     solutionNumber: "15",
     title: "Picture in Picture Explained",
     description: "Build practical camera-over-content layouts for teaching and demos.",
     shortDescription:
       "Build practical camera-over-content layouts for teaching and demos.",
     category: "Going Live",
+    imageSrc: "/images/solution-images/solution-15-pictureinpicture-w.png",
+    thumbnail: "/images/solution-images/solution-15-pictureinpicture-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Ecamm Picture in Picture Explained (Beginner Layout Guide)",
+    seoDescription:
+      "Learn picture in picture in Ecamm with a calm beginner workflow: build a dedicated scene, add screen share first, place camera overlay cleanly, and keep layouts readable.",
+    relatedTutorialSlugs: [
+      "screen-sharing-in-ecamm",
+      "creating-your-first-scene",
+      "how-to-go-live-to-youtube",
+    ],
+    detailContent: {
+      problemHeading: "Picture in picture without a messy layout",
+      problemParagraphs: [
+        "Picture in picture can make your teaching look clear and professional, but beginners often feel unsure about where to start.",
+        "You might know you want your camera on screen while sharing content, but it is easy to end up covering the wrong area or making the layout feel crowded.",
+        "This walkthrough keeps things simple so you can build a clean camera-over-screen setup that viewers can follow comfortably.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "In Ecamm, picture in picture works best when screen content is your main layer and your camera is a supporting overlay. Keep the lesson content readable first, then place your camera around it.",
+      explanationSections: [
+        {
+          heading: "What picture in picture means in Ecamm",
+          paragraphs: [
+            "Picture in picture means your main content fills most of the frame, while your camera appears in a smaller box on top.",
+            "It is a practical layout for tutorials because viewers can watch what you are doing and still see your face and reactions.",
+          ],
+        },
+        {
+          heading: "Create a dedicated scene for this layout",
+          paragraphs: [
+            "Start by creating a separate scene just for picture in picture.",
+            "That keeps your normal camera scene untouched and gives you a clean place to build and test this layout without pressure.",
+          ],
+        },
+        {
+          heading: "Add the main content first",
+          paragraphs: [
+            "Add your screen share first so it becomes the main focus of the scene.",
+            "When this is in place first, it is much easier to judge what your audience can actually read before adding anything else.",
+          ],
+        },
+        {
+          heading: "Add your camera as an overlay on top",
+          paragraphs: [
+            "After your screen share is set, add your camera as an overlay layer.",
+            "This gives you full control over size and position, instead of forcing the camera to dominate the frame.",
+          ],
+        },
+        {
+          heading: "Resize and position the camera cleanly",
+          paragraphs: [
+            "Keep the camera large enough to feel personal, but small enough that it does not block menus, text, or key controls.",
+            "A corner placement is usually the safest starting point, then adjust slightly based on what app you are teaching.",
+          ],
+        },
+        {
+          heading: "Keep layouts readable above all else",
+          paragraphs: [
+            "Readability matters more than fitting every element into one scene.",
+            "If viewers cannot read the shared content, the lesson becomes frustrating. It is better to keep things simple and clear.",
+          ],
+        },
+        {
+          heading: "Switch between scenes cleanly during teaching",
+          paragraphs: [
+            "Use scene switching to move between full camera, full screen, and picture in picture layouts when needed.",
+            "This keeps your flow calm and intentional instead of trying to force one layout to do everything.",
+          ],
+        },
+      ],
+      stepsHeading: "A simple picture in picture workflow",
+      stepsIntro: "Use this order to build the layout quickly and cleanly:",
+      steps: [
+        "Create a dedicated picture in picture scene.",
+        "Add screen share as the main content source.",
+        "Add your camera as an overlay.",
+        "Resize the camera so it supports rather than dominates.",
+        "Position the camera where it avoids key content.",
+        "Check text readability before going live or recording.",
+        "Switch to this scene when you start explaining the on-screen workflow.",
+      ],
+      stepsFollowUpParagraphs: [
+        "Building the scene before your stream or recording starts prevents most beginner layout mistakes.",
+      ],
+      commonMistakeHeading: "Common beginner mistakes",
+      commonMistakeParagraphs: [
+        "A common mistake is making the camera too large and covering the exact part of the screen you are teaching.",
+        "Another is trying to build the layout in a hurry while already live. Creating a dedicated scene first makes the whole process much calmer.",
+        "If the scene feels cluttered, reduce elements and return focus to readable shared content.",
+      ],
+      closingNote:
+        "Picture in picture does not need to be complicated. Keep your screen content clear, place your camera with intention, and your layout will feel clean and easy to follow.",
+    },
     tags: ["Going Live", "Layouts"],
     popular: false,
-    status: "comingSoon",
-    articleReady: false,
-    youtubeUrl: null,
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/uFOj903qjds",
   },
   {
     id: "recording-vs-live-streaming",
