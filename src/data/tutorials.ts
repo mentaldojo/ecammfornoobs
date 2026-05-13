@@ -1145,11 +1145,112 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Share your screen cleanly while keeping your scene layout readable.",
     category: "Going Live",
+    imageSrc: "/images/solution-images/solution-14-screensharing-3.png",
+    thumbnail: "/images/solution-images/solution-14-screensharing-3.png",
+    videoAspect: "landscape",
+    seoTitle: "Screen Sharing in Ecamm (Beginner Guide to Clean Layouts)",
+    seoDescription:
+      "Learn screen sharing in Ecamm with a calm beginner workflow: dedicated scenes, monitor vs app window sharing, permission fixes, readable layouts, and avoiding mirror effects.",
+    relatedTutorialSlugs: [
+      "creating-your-first-scene",
+      "preview-vs-live",
+      "how-to-go-live-to-youtube",
+    ],
+    detailContent: {
+      problemHeading: "Screen sharing without the chaos",
+      problemParagraphs: [
+        "Screen sharing sounds simple until you try it live for the first time. Suddenly you are managing windows, scenes, camera position, and viewer readability all at once.",
+        "Most beginners are not failing because they do not know where the button is. They feel overwhelmed by what might go wrong on screen.",
+        "This guide gives you a calm, practical setup so your screen share feels clear and controlled from the start.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "In Ecamm, screen sharing works best when it lives in its own dedicated scene. Build that scene first, then share in a way that keeps the important content easy to read.",
+      explanationSections: [
+        {
+          heading: "What screen sharing means in Ecamm",
+          paragraphs: [
+            "Screen sharing in Ecamm means sending part of your computer display into your live scene as a visual source.",
+            "You can share a full monitor or a single app window. Both work, but they feel very different for your audience.",
+          ],
+        },
+        {
+          heading: "Create a dedicated screen share scene first",
+          paragraphs: [
+            "Before you start sharing, create a scene specifically for screen content. This keeps your main camera scene separate and easier to control.",
+            "A dedicated scene also reduces stress because you are not rearranging your whole show while already live.",
+          ],
+        },
+        {
+          heading: "Monitor share vs app-window share",
+          paragraphs: [
+            "Sharing a full monitor shows everything on that display. That can be useful, but it also increases the chance of showing notifications, tabs, or unrelated windows.",
+            "Sharing a single app window is often cleaner for teaching because viewers see only the tool or document you want them focused on.",
+          ],
+        },
+        {
+          heading: "Fixing black screen permission problems",
+          paragraphs: [
+            "If your share appears black, the most common cause is macOS screen recording permission not being enabled for Ecamm.",
+            "Go to macOS Privacy & Security settings, allow Screen Recording for Ecamm, then restart Ecamm if needed. Once permissions are correct, the source usually appears normally.",
+          ],
+        },
+        {
+          heading: "Build layouts for readability, not for fitting everything",
+          paragraphs: [
+            "A common beginner instinct is to squeeze everything on screen: big camera, full desktop, and multiple overlays.",
+            "In practice, readability matters more. If text is tiny, your audience cannot follow the lesson. Keep the shared content large enough to read comfortably.",
+          ],
+        },
+        {
+          heading: "Camera positioning during screen sharing",
+          paragraphs: [
+            "Keep your camera visible, but do not let it cover the exact area you are explaining.",
+            "A smaller corner camera usually works best for tutorials, especially when you need viewers to read menus, settings, or timelines.",
+          ],
+        },
+        {
+          heading: "Single monitor vs dual monitor workflows",
+          paragraphs: [
+            "On a single monitor, app-window sharing is often safer because it avoids accidental reveal of unrelated content.",
+            "With dual monitors, many creators keep notes and controls on one display and share only the dedicated presentation display. This usually feels calmer while live.",
+          ],
+        },
+        {
+          heading: "The infinite mirror effect, explained simply",
+          paragraphs: [
+            "The mirror effect happens when the shared screen includes the Ecamm preview showing the shared screen again and again.",
+            "To avoid it, share a specific app window instead of the whole display, or keep Ecamm on a different monitor that is not being shared.",
+          ],
+        },
+      ],
+      stepsHeading: "A simple screen sharing workflow",
+      stepsIntro: "Use this sequence to keep your setup clean:",
+      steps: [
+        "Create a dedicated screen share scene.",
+        "Choose whether to share a full monitor or a single app window.",
+        "If needed, enable macOS Screen Recording permissions for Ecamm.",
+        "Place and size your camera so it does not block key screen content.",
+        "Check text readability in preview before going live.",
+        "Use app-window sharing when you want cleaner focus.",
+        "Switch to the screen share scene when you are ready to teach.",
+      ],
+      stepsFollowUpParagraphs: [
+        "This routine helps you avoid last-minute panic and keeps viewers focused on what matters.",
+      ],
+      commonMistakeHeading: "Common beginner mistakes",
+      commonMistakeParagraphs: [
+        "Trying to share everything at once usually creates clutter and tiny unreadable text.",
+        "Another common issue is forgetting macOS screen permissions, which leads to a black screen and confusion.",
+        "If things feel messy, simplify: one dedicated scene, one clear shared source, and a camera position that supports the content.",
+      ],
+      closingNote:
+        "Your screen share does not need to look fancy. It needs to be clear, readable, and easy to follow. Start simple, and your confidence will build quickly.",
+    },
     tags: ["Going Live", "Screenshare"],
     popular: false,
-    status: "comingSoon",
-    articleReady: false,
-    youtubeUrl: null,
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/wT4__BhgYwQ",
   },
   {
     id: "picture-in-picture-explained",
