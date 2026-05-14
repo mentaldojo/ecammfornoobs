@@ -1797,17 +1797,114 @@ const rawTutorials: Tutorial[] = [
     id: "building-a-simple-show-layout",
     slug: "building-a-simple-show-layout",
     episode: "20",
+    duration: "6:35",
     solutionNumber: "20",
     title: "Building a Simple Show Layout",
     description: "Create a repeatable scene structure for interviews, teaching, or demos.",
     shortDescription:
       "Create a repeatable scene structure for interviews, teaching, or demos.",
     category: "Production Basics",
+    imageSrc: "/images/solution-images/solution-20-simple-showlayout-w.png",
+    thumbnail: "/images/solution-images/solution-20-simple-showlayout-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Building a Simple Show Layout in Ecamm (Beginner Scene Structure Guide)",
+    seoDescription:
+      "Learn how to organize clean reusable scenes in Ecamm: full camera, screen sharing, and picture-in-picture layouts that make switching calmer and easier to control.",
+    relatedTutorialSlugs: [
+      "creating-your-first-scene",
+      "screen-sharing-in-ecamm",
+      "picture-in-picture-explained",
+    ],
+    detailContent: {
+      problemHeading: "Build a calm show layout that is easy to control",
+      problemParagraphs: [
+        "Many beginners try to put everything into one giant scene, then wonder why livestreaming feels chaotic.",
+        "When one scene has too many jobs, it becomes hard to switch cleanly and hard to fix quickly when something goes wrong.",
+        "A simple show layout gives each scene a clear purpose so Ecamm feels calmer and easier to run.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "A good layout is not about complexity. It is about structure: clear scenes you can reuse with confidence.",
+      explanationSections: [
+        {
+          heading: "What a show layout actually means",
+          paragraphs: [
+            "A show layout is the structure of scenes you use to present your content in a consistent way.",
+            "Think of it as your basic scene setup: each scene has one role, and switching between them feels smooth.",
+          ],
+        },
+        {
+          heading: "Why beginners should avoid one giant scene",
+          paragraphs: [
+            "One giant scene often becomes cluttered with overlays, camera changes, and screen elements all at once.",
+            "That setup is stressful to manage live. Splitting scenes by purpose keeps control simple.",
+          ],
+        },
+        {
+          heading: "Separate scenes by purpose",
+          paragraphs: [
+            "Give each core moment its own scene so you are never rebuilding layouts while talking.",
+            "This keeps scene changes cleaner and helps you stay focused on teaching instead of troubleshooting.",
+          ],
+        },
+        {
+          heading: "Full camera vs screen sharing vs picture-in-picture",
+          paragraphs: [
+            "A full camera scene is useful for introductions and direct talking points.",
+            "A screen sharing scene is for showing tools or workflows clearly.",
+            "A picture-in-picture scene lets viewers see both your face and your screen when explanation and context need to happen together.",
+          ],
+        },
+        {
+          heading: "Why reusable scenes reduce stress",
+          paragraphs: [
+            "Reusable scenes mean you do the setup work once, then use the same structure across future streams and recordings.",
+            "That consistency makes setup feel easier and cuts down last-minute layout mistakes.",
+          ],
+        },
+        {
+          heading: "Keeping layouts clean and readable",
+          paragraphs: [
+            "Keep each scene focused on one job and avoid stacking too many visual elements.",
+            "If text or screen details are hard to read, simplify and prioritize clarity over decoration.",
+          ],
+        },
+        {
+          heading: "Scene switching becomes easier with structure",
+          paragraphs: [
+            "When scenes are organized clearly, switching feels smoother because you already know where each moment belongs.",
+            "That structure also makes practice faster, because you are refining a repeatable system instead of improvising every time.",
+          ],
+        },
+      ],
+      stepsHeading: "A simple beginner layout workflow",
+      stepsIntro:
+        "Use this structure to build a reusable show layout without overwhelm:",
+      steps: [
+        "Create a full camera scene for greetings and direct talk.",
+        "Create a screen sharing scene for demos and walkthroughs.",
+        "Create a picture-in-picture scene for guided explanation.",
+        "Name scenes clearly so they are easy to find quickly.",
+        "Test readability and spacing in each scene.",
+        "Build the scenes first, then switch between them normally in a short test run.",
+        "Reuse this scene set for future sessions and improve gradually.",
+      ],
+      stepsFollowUpParagraphs: [
+        "This approach keeps your workflow steady and makes Ecamm feel much more manageable.",
+      ],
+      commonMistakeHeading: "Common beginner layout mistakes",
+      commonMistakeParagraphs: [
+        "A common mistake is trying to design every possible variation before creating a working base layout.",
+        "Another is mixing camera, screen share, and too many overlays into one crowded scene.",
+        "Many beginners also rename scenes too vaguely. Clear scene names make switching faster and reduce mistakes under pressure.",
+      ],
+      closingNote:
+        "Your layout does not need to be fancy to be effective. Keep scenes purposeful, reusable, and readable, and your livestream flow will feel calmer every time.",
+    },
     tags: ["Production Basics", "Layouts"],
     popular: false,
-    status: "comingSoon",
-    articleReady: false,
-    youtubeUrl: null,
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/LeWWeKhaauE",
   },
   {
     id: "guest-placeholders-explained",
