@@ -1365,6 +1365,7 @@ const rawTutorials: Tutorial[] = [
     id: "recording-vs-live-streaming",
     slug: "recording-vs-live-streaming",
     episode: "17",
+    duration: "2:56",
     solutionNumber: "17",
     title: "Recording vs Live Streaming",
     description:
@@ -1375,6 +1376,86 @@ const rawTutorials: Tutorial[] = [
     imageSrc: "/images/solution-images/solution-17-record-vs-live-w.png",
     thumbnail: "/images/solution-images/solution-17-record-vs-live-w.png",
     videoAspect: "landscape",
+    seoTitle: "Recording vs Live Streaming in Ecamm (A Calm Beginner Decision Guide)",
+    seoDescription:
+      "Not sure whether to record or livestream first in Ecamm? This beginner guide explains when to practice privately, when to go live, and how both workflows build the same core skills.",
+    relatedTutorialSlugs: [
+      "recording-in-ecamm",
+      "preview-vs-live",
+      "how-to-go-live-to-youtube",
+    ],
+    detailContent: {
+      problemHeading: "Choosing between recording and livestreaming can feel confusing",
+      problemParagraphs: [
+        "Many beginners open Ecamm and immediately wonder, \"Should I be recording first or livestreaming first?\"",
+        "If you choose the wrong thing, it can feel like you are falling behind before you even begin.",
+        "The good news is you do not have to choose perfectly. Both paths teach useful skills, and you can start with the one that feels calmer.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Recording is usually the easiest first step for confidence, while livestreaming becomes useful once you want live interaction and community conversation.",
+      explanationSections: [
+        {
+          heading: "The pressure beginners feel around livestreaming",
+          paragraphs: [
+            "A lot of people feel pressure to go live right away because it seems like the \"real\" way to use Ecamm.",
+            "That pressure can make normal learning mistakes feel bigger than they are, especially when an audience is watching in real time.",
+          ],
+        },
+        {
+          heading: "Why recording first can be the calmer starting point",
+          paragraphs: [
+            "Recording locally lets you practice in private, which lowers stress and helps you focus on the basics.",
+            "You can test scenes, check audio, adjust your camera framing, and repeat short takes without worrying about public mistakes.",
+          ],
+        },
+        {
+          heading: "What livestreaming is best for",
+          paragraphs: [
+            "Livestreaming shines when you want live interaction, real-time comments, and a stronger sense of community.",
+            "It is a great next step once your basic Ecamm flow feels comfortable enough that you can focus on people, not just settings.",
+          ],
+        },
+        {
+          heading: "Recording and livestreaming share the same core skills",
+          paragraphs: [
+            "Both workflows rely on the same fundamentals: scene setup, microphone clarity, camera comfort, and pacing.",
+            "Time spent recording is not a detour. It is direct practice for future livestreams.",
+          ],
+        },
+        {
+          heading: "You do not need to be perfect before going live",
+          paragraphs: [
+            "A common fear is that you must become flawless in recordings before you are allowed to livestream.",
+            "In reality, progress matters more than perfection. Start where you are, improve gradually, and go live when it feels manageable.",
+          ],
+        },
+      ],
+      stepsHeading: "A calm beginner path",
+      stepsIntro:
+        "If you are unsure where to begin, this sequence keeps things simple and practical:",
+      steps: [
+        "Start by recording short private practice videos in Ecamm.",
+        "Review each recording and pick one small improvement.",
+        "Repeat the same scene and audio checks until the process feels familiar.",
+        "Practice speaking to camera until your delivery feels more natural.",
+        "Run a simple test stream setup in preview when you feel ready.",
+        "Go live with a short session and a realistic expectation of progress.",
+        "Keep improving one step at a time after each session.",
+      ],
+      stepsFollowUpParagraphs: [
+        "This path helps you build confidence without rushing.",
+        "By the time you livestream, you already know the mechanics, so your attention can move toward your audience.",
+      ],
+      commonMistakeHeading: "Common beginner misconceptions",
+      commonMistakeParagraphs: [
+        "One misconception is that recording is only for people who are \"not serious yet.\" In reality, recording is one of the fastest ways to learn Ecamm safely.",
+        "Another is that livestreaming and recording are completely different skills. They are mostly the same foundation with different audience timing.",
+        "A third is waiting for perfection before going live. Confidence grows through repetition, not through waiting.",
+      ],
+      closingNote:
+        "If you feel stuck between recording and livestreaming, start with the calmer option. Build your rhythm privately, then move into livestreaming when you feel ready to share in real time.",
+    },
     tags: ["Going Live", "Workflow"],
     popular: false,
     status: "published",
@@ -1384,6 +1465,7 @@ const rawTutorials: Tutorial[] = [
     id: "recording-in-ecamm",
     slug: "recording-in-ecamm",
     episode: "16",
+    duration: "4:11",
     solutionNumber: "16",
     title: "Recording in Ecamm for Beginners",
     description:
@@ -1394,6 +1476,100 @@ const rawTutorials: Tutorial[] = [
     imageSrc: "/images/solution-images/solution-16-record-locally-w.png",
     thumbnail: "/images/solution-images/solution-16-record-locally-w.png",
     videoAspect: "landscape",
+    seoTitle: "Recording in Ecamm for Beginners (Practice Without Going Live)",
+    seoDescription:
+      "Learn how to record in Ecamm with a calm beginner workflow: set up a simple scene, check camera and microphone, start and stop recordings, and review videos privately before livestreaming.",
+    relatedTutorialSlugs: [
+      "recording-vs-live-streaming",
+      "mic-setup",
+      "how-to-go-live-to-youtube",
+    ],
+    detailContent: {
+      problemHeading: "Start practicing in Ecamm without livestream pressure",
+      problemParagraphs: [
+        "A lot of beginners open Ecamm and feel like they need to go live right away to make progress.",
+        "That pressure can make everything feel harder than it needs to be. You start second-guessing your camera, your voice, and every button.",
+        "Recording privately first gives you space to learn the workflow calmly and build confidence before you ever broadcast to anyone.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Use recording mode as your practice room. You can test scenes, audio, and pacing safely, then review what worked and improve one small thing at a time.",
+      explanationSections: [
+        {
+          heading: "Why recording first helps beginners",
+          paragraphs: [
+            "Recording locally is less stressful than livestreaming because nothing is public while you are learning.",
+            "You can pause, restart, and try again without worrying about an audience watching mistakes in real time.",
+          ],
+        },
+        {
+          heading: "Create one simple recording scene",
+          paragraphs: [
+            "Keep your first recording setup simple: one camera, one microphone, and a clean scene.",
+            "You do not need a complex layout to practice clearly. A basic scene helps you focus on speaking and flow.",
+          ],
+        },
+        {
+          heading: "Check camera and microphone before you record",
+          paragraphs: [
+            "Before pressing record, make sure your camera preview looks right and your microphone meter is moving.",
+            "A quick check at the start prevents the most common beginner frustration: finishing a take and discovering no usable audio.",
+          ],
+        },
+        {
+          heading: "Starting and stopping recordings",
+          paragraphs: [
+            "When your scene and audio look good, start recording and talk through your segment naturally.",
+            "When you finish, stop the recording and take a moment to label the take mentally so it is easy to review.",
+          ],
+        },
+        {
+          heading: "Where recordings are saved",
+          paragraphs: [
+            "Ecamm saves recordings locally on your Mac, so your practice videos stay private and easy to access.",
+            "Knowing where files are saved removes anxiety and helps you quickly find each take for review.",
+          ],
+        },
+        {
+          heading: "Review your recording afterwards",
+          paragraphs: [
+            "Watch your recording with a learning mindset, not a self-criticism mindset.",
+            "Pick one thing to improve for the next take, like audio level, pacing, or camera framing, instead of trying to fix everything at once.",
+          ],
+        },
+        {
+          heading: "Practice without trying to be perfect",
+          paragraphs: [
+            "Your goal in early recordings is progress, not perfection.",
+            "Small repetitions inside Ecamm build real confidence, and that confidence makes your first livestream much calmer.",
+          ],
+        },
+      ],
+      stepsHeading: "A calm beginner recording workflow",
+      stepsIntro:
+        "Use this sequence whenever you want to practice or create videos privately:",
+      steps: [
+        "Open your recording profile and select your simple scene.",
+        "Confirm your camera framing and basic lighting.",
+        "Check your microphone input and level meter.",
+        "Press record and deliver your short segment.",
+        "Press stop and let Ecamm finish saving the file.",
+        "Find the recording in your local save location.",
+        "Review the take and choose one improvement for your next recording.",
+      ],
+      stepsFollowUpParagraphs: [
+        "Repeating this exact flow a few times makes Ecamm feel familiar very quickly.",
+        "By the time you move to livestreaming, most of the technical stress is already gone.",
+      ],
+      commonMistakeHeading: "Common beginner mistakes",
+      commonMistakeParagraphs: [
+        "Trying to build a full production setup before making a single recording usually creates overwhelm.",
+        "Skipping the microphone check is another common mistake and often leads to silent or unusable takes.",
+        "The biggest mindset mistake is expecting perfect delivery immediately. Treat your first recordings as practice reps, not final performances.",
+      ],
+      closingNote:
+        "Recording in Ecamm is one of the safest ways to get comfortable on camera. Keep it simple, practice privately, and let confidence build one recording at a time.",
+    },
     tags: ["Going Live", "Recording"],
     popular: false,
     status: "published",
@@ -1403,6 +1579,7 @@ const rawTutorials: Tutorial[] = [
     id: "adding-lower-thirds",
     slug: "adding-lower-thirds",
     episode: "18",
+    duration: "5:19",
     solutionNumber: "18",
     title: "Adding Lower Thirds",
     description: "Add clean name and topic labels that support your on-screen flow.",
@@ -1412,6 +1589,99 @@ const rawTutorials: Tutorial[] = [
     imageSrc: "/images/solution-images/solution-18-lowerthirds-w.png",
     thumbnail: "/images/solution-images/solution-18-lowerthirds-w.png",
     videoAspect: "landscape",
+    seoTitle: "Adding Lower Thirds in Ecamm (Clean Beginner Setup Guide)",
+    seoDescription:
+      "Learn how to create clean lower thirds in Ecamm: add text overlays, position them clearly, improve readability with simple backgrounds, and control when they appear.",
+    relatedTutorialSlugs: [
+      "why-cant-i-see-my-overlay",
+      "global-vs-scene-overlays",
+      "creating-your-first-scene",
+    ],
+    detailContent: {
+      problemHeading: "Add clean lower thirds without cluttering your layout",
+      problemParagraphs: [
+        "Lower thirds look simple when done well, but beginners often feel unsure where to start.",
+        "You want clear name and title graphics, but it is easy to make them too large, too busy, or hard to read.",
+        "This guide gives you a calm, practical way to build lower thirds that look clean and stay easy for viewers to follow.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "A good lower third is clear and quiet. It supports your content without competing with it.",
+      explanationSections: [
+        {
+          heading: "What lower thirds are and why creators use them",
+          paragraphs: [
+            "A lower third is a text graphic near the lower area of the frame, usually showing a name, role, or short topic label.",
+            "Creators use lower thirds to add context quickly so viewers can stay oriented without extra explanation.",
+          ],
+        },
+        {
+          heading: "Adding a text overlay in Ecamm",
+          paragraphs: [
+            "Start with a simple text overlay and enter only the information viewers need right now.",
+            "Keep wording short. One clear name line and one role or topic line is usually enough.",
+          ],
+        },
+        {
+          heading: "Positioning lower thirds correctly",
+          paragraphs: [
+            "Place lower thirds where they do not block your face, key interface elements, or on-screen demos.",
+            "Lower-left or lower-right positions are common, but choose the side that stays clear in your scene.",
+          ],
+        },
+        {
+          heading: "Keeping lower thirds readable",
+          paragraphs: [
+            "Use high contrast between text and background so names stay readable on different scene colors.",
+            "Avoid very thin fonts or tiny text. Readability matters more than style details.",
+          ],
+        },
+        {
+          heading: "Using simple shapes or backgrounds behind text",
+          paragraphs: [
+            "A subtle shape behind text can make lower thirds easier to read, especially over busy footage.",
+            "Keep backgrounds simple and soft. You are aiming for clarity, not decoration.",
+          ],
+        },
+        {
+          heading: "Showing and hiding lower thirds intentionally",
+          paragraphs: [
+            "Show lower thirds when they add context, then hide them once that context is clear.",
+            "Leaving them on all the time can make your layout feel crowded and less focused.",
+          ],
+        },
+        {
+          heading: "Global vs scene-specific lower thirds",
+          paragraphs: [
+            "Use global lower thirds when the same label should appear across many scenes.",
+            "Use scene-specific lower thirds when names or topics change by scene. This keeps each scene accurate and uncluttered.",
+          ],
+        },
+      ],
+      stepsHeading: "A simple lower-third workflow",
+      stepsIntro:
+        "Use this flow to create clean graphics without overthinking design:",
+      steps: [
+        "Add a text overlay for name and role.",
+        "Keep the text short and readable.",
+        "Place it in a lower corner that does not block important content.",
+        "If needed, add a soft shape behind text for contrast.",
+        "Check readability against your real scene background.",
+        "Decide whether this should be global or scene-specific.",
+        "Show and hide it intentionally during your presentation.",
+      ],
+      stepsFollowUpParagraphs: [
+        "This process keeps your layout clear while still giving viewers helpful context.",
+      ],
+      commonMistakeHeading: "Common beginner mistakes",
+      commonMistakeParagraphs: [
+        "A common mistake is adding too much text, which makes the lower third feel heavy and hard to scan.",
+        "Another is choosing low-contrast colors that disappear against your scene background.",
+        "Many beginners also leave lower thirds visible for the entire stream. Use them with intention so your screen stays clean.",
+      ],
+      closingNote:
+        "Your lower thirds do not need to be fancy. Keep them simple, readable, and purposeful, and they will make your videos feel clearer and more professional right away.",
+    },
     tags: ["Production Basics", "Overlays"],
     popular: false,
     status: "published",
@@ -1421,6 +1691,7 @@ const rawTutorials: Tutorial[] = [
     id: "how-scene-switching-works",
     slug: "how-scene-switching-works",
     episode: "19",
+    duration: "4:30",
     solutionNumber: "19",
     title: "Scene Transitions",
     description:
@@ -1431,6 +1702,92 @@ const rawTutorials: Tutorial[] = [
     imageSrc: "/images/solution-images/solution-19-scenetranitions-w.png",
     thumbnail: "/images/solution-images/solution-19-scenetranitions-w.png",
     videoAspect: "landscape",
+    seoTitle: "Scene Transitions in Ecamm (Smooth Beginner Scene Switching Guide)",
+    seoDescription:
+      "Learn scene transitions in Ecamm with a calm beginner workflow: hard cuts vs dissolves, Live Motion explained simply, and how to keep scene switching clean and natural.",
+    relatedTutorialSlugs: [
+      "creating-your-first-scene",
+      "preview-vs-live",
+      "adding-lower-thirds",
+    ],
+    detailContent: {
+      problemHeading: "Make scene changes feel smooth without overcomplicating your stream",
+      problemParagraphs: [
+        "Scene switching is one of the first things viewers notice during a stream.",
+        "When transitions feel abrupt or distracting, even good content can feel harder to follow.",
+        "The goal is not flashy effects. It is clean movement between scenes so your stream feels calm and easy to watch.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Most beginner streams look better with subtle transitions. Simple choices usually create the smoothest viewer experience.",
+      explanationSections: [
+        {
+          heading: "What scene transitions are",
+          paragraphs: [
+            "A scene transition is what viewers see between one scene and the next.",
+            "Instead of instantly jumping, Ecamm can blend or animate that change so it feels more intentional.",
+          ],
+        },
+        {
+          heading: "Hard cuts vs dissolves",
+          paragraphs: [
+            "A hard cut switches immediately. It is direct and fast, with no visual blend.",
+            "A dissolve blends one scene into the next over a short moment, which often feels softer and more natural for teaching content.",
+          ],
+        },
+        {
+          heading: "Live Motion, explained simply",
+          paragraphs: [
+            "Live Motion adds movement to scene changes, like animated transitions and dynamic visual flow.",
+            "It can look great when used with intention, but beginners should start light so motion supports the content instead of distracting from it.",
+          ],
+        },
+        {
+          heading: "How transitions affect viewer experience",
+          paragraphs: [
+            "Transitions shape pacing. Smooth changes help viewers stay oriented and follow your structure.",
+            "Overly dramatic effects can pull attention away from what you are saying and create visual noise.",
+          ],
+        },
+        {
+          heading: "Why subtle transitions usually work best",
+          paragraphs: [
+            "Subtle transitions keep your stream feeling professional without making every scene change feel like an event.",
+            "For most beginner workflows, short dissolves or clean minimal motion are more than enough.",
+          ],
+        },
+        {
+          heading: "When hard cuts still make sense",
+          paragraphs: [
+            "Hard cuts are useful when speed matters, like switching quickly to a screen share or reacting to something live.",
+            "They also work well for punchy segments where instant clarity is more important than visual softness.",
+          ],
+        },
+      ],
+      stepsHeading: "A simple transition setup workflow",
+      stepsIntro:
+        "Use this quick sequence to keep scene switching clean and beginner-safe:",
+      steps: [
+        "Choose one default transition style for your show.",
+        "Start with either a short dissolve or a clean hard cut.",
+        "Test scene switches in preview before going live.",
+        "If using Live Motion, keep animation subtle and brief.",
+        "Watch one test recording and check if transitions feel smooth or distracting.",
+        "Adjust only one transition variable at a time.",
+        "Keep the final setup simple enough to use confidently every stream.",
+      ],
+      stepsFollowUpParagraphs: [
+        "Consistency matters more than fancy effects. A stable transition style makes your stream feel more polished immediately.",
+      ],
+      commonMistakeHeading: "Common beginner mistakes",
+      commonMistakeParagraphs: [
+        "A common mistake is using too many different transition styles in one stream, which can make the show feel inconsistent.",
+        "Another is setting transition durations too long, causing the stream to feel slow and over-produced.",
+        "Many beginners also overuse heavy motion effects. If viewers notice the transition more than the content, simplify it.",
+      ],
+      closingNote:
+        "Smooth scene switching is mostly about restraint. Keep transitions simple, clean, and intentional, and your stream will feel calmer and more professional right away.",
+    },
     tags: ["Production Basics", "Scenes"],
     popular: false,
     status: "published",
