@@ -105,19 +105,28 @@ export async function POST(request: NextRequest) {
       .toLowerCase();
     const requestText = String(body.requestText ?? "").trim();
     const ecammArea = String(body.ecammArea ?? "").trim();
-    const website = String(body.website ?? "").trim();
-    const company = String(body.company ?? "").trim();
+    const honeypotA = String(body.guardianNote ?? body.website ?? "").trim();
+    const honeypotB = String(body.streamChecklist ?? body.company ?? "").trim();
     const startedAt = Number(body.startedAt ?? 0);
 
-    if (website.length > 0 || company.length > 0) {
-      return NextResponse.json({ ok: true });
+    if (honeypotA.length > 0 || honeypotB.length > 0) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "Submission blocked. Please disable autofill and try again.",
+        },
+        { status: 400 },
+      );
     }
     if (
       Number.isFinite(startedAt) &&
       startedAt > 0 &&
       Date.now() - startedAt < MIN_SUBMIT_TIME_MS
     ) {
-      return NextResponse.json({ ok: true });
+      return NextResponse.json(
+        { ok: false, error: "Please wait a few seconds before submitting." },
+        { status: 429 },
+      );
     }
 
     const clientKey = getClientKey(request);
@@ -174,7 +183,14 @@ export async function POST(request: NextRequest) {
       );
     }
     if (countUrls(requestText) > 2 || looksLikeSpam(requestText)) {
-      return NextResponse.json({ ok: true });
+      return NextResponse.json(
+        {
+          ok: false,
+          error:
+            "Request looks like spam. Remove promotional links or spam phrases and try again.",
+        },
+        { status: 400 },
+      );
     }
     if (
       isRateLimited(
@@ -196,7 +212,7 @@ export async function POST(request: NextRequest) {
     const ip = forwardedFor?.split(",")[0]?.trim() || "unknown-ip";
     const userAgent = request.headers.get("user-agent") || "unknown-ua";
 
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: toEmail,
       replyTo: email,
@@ -223,6 +239,13 @@ ${requestText}
         <p>${escapeHtml(requestText).replaceAll("\n", "<br />")}</p>
       `,
     });
+
+    if (error || !data?.id) {
+      return NextResponse.json(
+        { ok: false, error: "Email could not be sent. Please try again." },
+        { status: 502 },
+      );
+    }
 
     return NextResponse.json({ ok: true });
   } catch {

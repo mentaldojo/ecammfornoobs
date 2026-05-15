@@ -7,8 +7,8 @@ type FormState = {
   email: string;
   reason: string;
   message: string;
-  website: string;
-  company: string;
+  guardianNote: string;
+  streamChecklist: string;
   startedAt: number;
 };
 
@@ -18,8 +18,8 @@ function createInitialState(): FormState {
     email: "",
     reason: "support",
     message: "",
-    website: "",
-    company: "",
+    guardianNote: "",
+    streamChecklist: "",
     startedAt: Date.now(),
   };
 }
@@ -75,31 +75,31 @@ export default function ContactPage() {
 
       <section className="legal-block">
         <h2>Send a message</h2>
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit} autoComplete="off">
           {/* Hidden honeypot field for bot filtering */}
           <div className="contact-honeypot" aria-hidden>
-            <label htmlFor="website">Website</label>
+            <label htmlFor="guardianNote">Guardian note</label>
             <input
-              id="website"
-              name="website"
+              id="guardianNote"
+              name="guardianNote"
               tabIndex={-1}
-              autoComplete="off"
-              value={form.website}
+              autoComplete="new-password"
+              value={form.guardianNote}
               onChange={(event) =>
-                setForm((prev) => ({ ...prev, website: event.target.value }))
+                setForm((prev) => ({ ...prev, guardianNote: event.target.value }))
               }
             />
           </div>
           <div className="contact-honeypot" aria-hidden>
-            <label htmlFor="company">Company</label>
+            <label htmlFor="streamChecklist">Stream checklist</label>
             <input
-              id="company"
-              name="company"
+              id="streamChecklist"
+              name="streamChecklist"
               tabIndex={-1}
-              autoComplete="off"
-              value={form.company}
+              autoComplete="new-password"
+              value={form.streamChecklist}
               onChange={(event) =>
-                setForm((prev) => ({ ...prev, company: event.target.value }))
+                setForm((prev) => ({ ...prev, streamChecklist: event.target.value }))
               }
             />
           </div>
