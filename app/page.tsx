@@ -41,9 +41,9 @@ export default function Home() {
         </p>
 
         <div className="hero-actions">
-          <a className="btn btn-primary" href="#tutorial-library">
-            Start Learning
-          </a>
+          <Link className="btn btn-primary" href="/tutorials">
+            Browse Full Tutorial Library
+          </Link>
           <a
             className="btn btn-orange"
             href={affiliateLinks.heroCta}
