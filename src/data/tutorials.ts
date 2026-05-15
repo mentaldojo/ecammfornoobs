@@ -1917,11 +1917,99 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Use placeholders to prepare guest layouts before people join live.",
     category: "Production Basics",
+    imageSrc: "/images/solution-images/solution-21-guestplaceholders-w.png",
+    thumbnail: "/images/solution-images/solution-21-guestplaceholders-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Guest Placeholders in Ecamm (Beginner Interview Layout Guide)",
+    seoDescription:
+      "Learn how to use guest placeholders in Ecamm Interview Mode to prepare clean interview scenes before guests join, so live switching feels calm and controlled.",
+    relatedTutorialSlugs: [
+      "interview-mode",
+      "building-a-simple-show-layout",
+      "how-scene-switching-works",
+    ],
+    detailContent: {
+      problemHeading: "Prepare guest interview layouts before anyone joins",
+      problemParagraphs: [
+        "One of the most stressful beginner moments is trying to fix interview layouts while the guest is already waiting.",
+        "You are clicking, resizing, and talking at the same time, and the scene can quickly feel messy.",
+        "Guest placeholders solve this by letting you build the layout first, so your interview starts calmly.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Set up where your guest will appear before they arrive. Then, when they join, Ecamm can drop them into the spot you already prepared.",
+      explanationSections: [
+        {
+          heading: "What guest placeholders are",
+          paragraphs: [
+            "Guest placeholders are stand-in frames in Ecamm Interview Mode that reserve space for guests before they enter.",
+            "They let you design your scene early instead of rebuilding it live.",
+          ],
+        },
+        {
+          heading: "Why placeholders make interviews calmer",
+          paragraphs: [
+            "When your layout is ready in advance, you can focus on welcoming the guest instead of fixing the scene layout.",
+            "This keeps your first moments on camera cleaner and easier to follow.",
+          ],
+        },
+        {
+          heading: "Creating a simple interview scene",
+          paragraphs: [
+            "Start with a dedicated interview scene so guest layouts are separate from your solo scenes.",
+            "Keeping it separate makes switching easier and avoids accidental layout changes in other parts of your show.",
+          ],
+        },
+        {
+          heading: "Adding and positioning a guest placeholder",
+          paragraphs: [
+            "Open the Camera Switcher and locate Guest Placeholder 1.",
+            "Drag it into your interview scene, then resize and position it where you want the guest to appear.",
+          ],
+        },
+        {
+          heading: "Adding your own camera beside the placeholder",
+          paragraphs: [
+            "Place your host camera beside the guest placeholder so both frames feel balanced before the guest joins.",
+            "Check spacing so faces stay visible and avoid awkward crops.",
+          ],
+        },
+        {
+          heading: "Assigning a guest once they join",
+          paragraphs: [
+            "When the guest joins, assign them to the prepared placeholder.",
+            "Because the position is already set, the switch is cleaner and you avoid rushed live resizing.",
+          ],
+        },
+      ],
+      stepsHeading: "A simple guest placeholder workflow",
+      stepsIntro:
+        "Use this order before interviews so you are not rebuilding scenes live:",
+      steps: [
+        "Create a dedicated interview scene.",
+        "Open Camera Switcher and find Guest Placeholder 1.",
+        "Drag the placeholder into the scene.",
+        "Resize and position it where you want the guest frame.",
+        "Add and position your host camera beside it.",
+        "Check spacing and readability before the guest arrives.",
+        "Assign the guest to that placeholder once they join.",
+      ],
+      stepsFollowUpParagraphs: [
+        "This routine keeps your interview start clean and removes most last-minute layout scrambling.",
+      ],
+      commonMistakeHeading: "Common beginner mistakes",
+      commonMistakeParagraphs: [
+        "A common mistake is waiting until the guest joins before building the layout, which creates rushed on-air edits.",
+        "Another is making placeholder frames too large, leaving little room for host and overlays.",
+        "Beginners also forget to create a dedicated interview scene, then accidentally affect unrelated scenes.",
+      ],
+      closingNote:
+        "You do not need a complicated interview setup to look prepared. Build your placeholder layout first, keep it clean, and your interviews will feel much easier to run.",
+    },
     tags: ["Production Basics", "Guests"],
     popular: false,
-    status: "comingSoon",
-    articleReady: false,
-    youtubeUrl: null,
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/3Vq4ey0Iu1k",
   },
   {
     id: "showing-comments-on-screen-properly",
