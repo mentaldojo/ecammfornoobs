@@ -239,6 +239,18 @@ button {
   gap: 1rem;
 }
 
+.advanced-tutorials-shell {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(255, 196, 64, 0.6);
+}
+
+.advanced-tutorials-shell .section-kicker {
+  color: #d4b36a;
+}
+
 .section-head {
   display: grid;
   gap: 0.5rem;

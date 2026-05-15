@@ -3,6 +3,7 @@ import { TutorialCard } from "@/src/components/TutorialCard";
 
 type TutorialGridProps = {
   items: Tutorial[];
+  sectionId?: string;
   kicker?: string;
   heading?: string;
   browseHref?: string;
@@ -13,6 +14,7 @@ type TutorialGridProps = {
 
 export function TutorialGrid({
   items,
+  sectionId = "tutorial-library",
   kicker = "Tutorial Library",
   heading = "Quick answers for the exact Ecamm thing you are stuck on",
   browseHref,
@@ -26,10 +28,10 @@ export function TutorialGrid({
   );
 
   return (
-    <section id="tutorial-library" className="section-block">
+    <section id={sectionId} className="section-block">
       <div className="section-head">
         <p className="section-kicker">{kicker}</p>
-        <h2>{heading}</h2>
+        {heading ? <h2>{heading}</h2> : null}
       </div>
       <div
         className={`tutorial-grid ${

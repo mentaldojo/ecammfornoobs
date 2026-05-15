@@ -11,6 +11,14 @@ export const metadata: Metadata = {
 };
 
 export default function TutorialsPage() {
+  const advancedTutorialIds = new Set(["multistreaming-explained"]);
+  const beginnerTutorials = tutorials.filter(
+    (tutorial) => !advancedTutorialIds.has(tutorial.id),
+  );
+  const advancedTutorials = tutorials.filter((tutorial) =>
+    advancedTutorialIds.has(tutorial.id),
+  );
+
   return (
     <main className="library-page">
       <nav className="tutorial-breadcrumbs" aria-label="Library navigation">
@@ -38,7 +46,18 @@ export default function TutorialsPage() {
         </div>
       </header>
 
-      <TutorialGrid items={tutorials} />
+      <TutorialGrid items={beginnerTutorials} sectionId="tutorial-library" />
+
+      {advancedTutorials.length > 0 ? (
+        <div className="advanced-tutorials-shell">
+          <TutorialGrid
+            items={advancedTutorials}
+            sectionId="advanced-tutorials"
+            kicker="ADVANCED TUTORIALS"
+            heading=""
+          />
+        </div>
+      ) : null}
     </main>
   );
 }
