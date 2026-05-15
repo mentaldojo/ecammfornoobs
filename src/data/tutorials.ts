@@ -2007,6 +2007,7 @@ const rawTutorials: Tutorial[] = [
         "You do not need a complicated interview setup to look prepared. Build your placeholder layout first, keep it clean, and your interviews will feel much easier to run.",
     },
     tags: ["Production Basics", "Guests"],
+    duration: "5:22",
     popular: false,
     status: "published",
     youtubeUrl: "https://www.youtube.com/embed/3Vq4ey0Iu1k",
@@ -2021,11 +2022,100 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Display comments cleanly without overwhelming your layout.",
     category: "Production Basics",
+    imageSrc: "/images/solution-images/solution-22-showcomments-w.png",
+    thumbnail: "/images/solution-images/solution-22-showcomments-w.png",
+    videoAspect: "landscape",
+    seoTitle: "Showing Viewer Comments in Ecamm (Beginner Clean Layout Guide)",
+    seoDescription:
+      "Learn how to show viewer comments in Ecamm without cluttering your scene. A calm beginner guide to dragging comments on screen, using placeholders, and keeping layouts readable.",
+    relatedTutorialSlugs: [
+      "displaying-viewer-comments",
+      "adding-lower-thirds",
+      "building-a-simple-show-layout",
+    ],
+    detailContent: {
+      problemHeading: "Show viewer comments without making your scene feel messy",
+      problemParagraphs: [
+        "Many beginners want to show comments on screen but worry the layout will get cluttered fast.",
+        "A few comments in the wrong spot can cover your face, your demo, or important on-screen text.",
+        "The good news is Ecamm makes this manageable once you use a simple comment workflow.",
+      ],
+      keyIdeaHeading: "The key idea",
+      keyIdeaText:
+        "Treat comments like a scene element you place deliberately, not something you drop randomly during a busy live moment.",
+      explanationSections: [
+        {
+          heading: "How comments work in Ecamm",
+          paragraphs: [
+            "When comments come in from your live destination, they appear inside Ecamm so you can choose which ones to show.",
+            "You stay in control. Comments only go on screen when you send or drag them into your scene.",
+          ],
+        },
+        {
+          heading: "Dragging comments onto the scene",
+          paragraphs: [
+            "A simple way to start is dragging a comment directly onto the scene where you want it to appear.",
+            "This helps you learn placement quickly because you can see right away whether that spot works.",
+          ],
+        },
+        {
+          heading: "What comment placeholders are",
+          paragraphs: [
+            "Comment placeholders are reserved spots where comments appear using a consistent style and position.",
+            "They help your layout stay clean because each new comment lands in the same spot and style.",
+          ],
+        },
+        {
+          heading: "Positioning comments cleanly",
+          paragraphs: [
+            "Place comments where they support the scene instead of blocking the main focus, like your camera frame or demo area.",
+            "Most beginners get better results by keeping comments near an edge with enough space around them.",
+          ],
+        },
+        {
+          heading: "Keeping comments readable",
+          paragraphs: [
+            "Resize comment elements so text is easy to read but not oversized.",
+            "If comments feel loud on screen, reduce visual clutter around them and keep spacing consistent.",
+          ],
+        },
+        {
+          heading: "Using comments during livestreams and Q&A",
+          paragraphs: [
+            "Comments work best when you bring them in at the right moment, especially during Q&A.",
+            "Show one comment, respond, then clear or replace it so the scene stays focused and easy to follow.",
+          ],
+        },
+      ],
+      stepsHeading: "A simple comment display workflow",
+      stepsIntro:
+        "Here is a simple flow that keeps comments useful and your layout clear:",
+      steps: [
+        "Open your comments source in Ecamm and make sure incoming comments are showing.",
+        "Drag a sample comment onto your scene so you can quickly test placement.",
+        "Set up or adjust a comment placeholder so comments appear in a consistent spot.",
+        "Resize the comment element so it is easy to read without taking over the frame.",
+        "Keep comments away from faces, screen shares, and important on-screen text.",
+        "During live Q&A, show one comment, respond, then move to the next.",
+        "Take one last look at spacing on your main scene before you start.",
+      ],
+      stepsFollowUpParagraphs: [
+        "After a little setup, showing comments feels much calmer and easier to manage live.",
+      ],
+      commonMistakeHeading: "Common beginner mistakes",
+      commonMistakeParagraphs: [
+        "A common mistake is dropping comments in the center of the scene where they block key content.",
+        "Another is resizing comments too large, which pulls attention away from the host and makes the frame feel crowded.",
+        "Beginners also often show too many comments in a row without clearing, which makes the stream feel cluttered.",
+      ],
+      closingNote:
+        "You do not need a complicated setup to use comments well. Keep placement simple, keep readability high, and your livestream will feel cleaner and easier to follow.",
+    },
     tags: ["Production Basics", "Engagement"],
+    duration: "4:34",
     popular: false,
-    status: "comingSoon",
-    articleReady: false,
-    youtubeUrl: null,
+    status: "published",
+    youtubeUrl: "https://www.youtube.com/embed/hsYkIyhDx18",
   },
   {
     id: "reusing-scenes-and-templates",
