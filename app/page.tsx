@@ -28,10 +28,6 @@ export default function Home() {
   return (
     <main className="home-page">
       <section className="hero">
-        <div className="hero-label-row">
-          <p className="mono-label">YOUTUBE SHORTS SERIES</p>
-        </div>
-
         <h1 className="hero-title">
           Ecamm
           <br />
