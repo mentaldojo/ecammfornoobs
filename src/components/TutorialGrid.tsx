@@ -26,6 +26,10 @@ export function TutorialGrid({
     (a, b) =>
       Number(a.solutionNumber ?? a.episode) - Number(b.solutionNumber ?? b.episode),
   );
+  const imageSizes =
+    desktopColumns === 3
+      ? "(max-width: 739px) 100vw, (max-width: 879px) 50vw, 33vw"
+      : "(max-width: 739px) 100vw, (max-width: 879px) 50vw, 25vw";
 
   return (
     <section id={sectionId} className="section-block">
@@ -38,8 +42,13 @@ export function TutorialGrid({
           desktopColumns === 3 ? "tutorial-grid-desktop-three" : ""
         }`}
       >
-        {orderedItems.map((tutorial) => (
-          <TutorialCard key={tutorial.id} tutorial={tutorial} />
+        {orderedItems.map((tutorial, index) => (
+          <TutorialCard
+            key={tutorial.id}
+            tutorial={tutorial}
+            prioritizeImage={index === 0}
+            imageSizes={imageSizes}
+          />
         ))}
       </div>
       {browseHref && browseLabel ? (

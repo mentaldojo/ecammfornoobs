@@ -345,6 +345,11 @@ button {
   align-items: end;
 }
 
+.tutorial-thumb-image {
+  object-fit: contain;
+  object-position: center;
+}
+
 .tutorial-thumb-coming-soon {
   position: absolute;
   left: 50%;
