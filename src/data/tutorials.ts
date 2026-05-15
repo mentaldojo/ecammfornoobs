@@ -76,7 +76,7 @@ const rawTutorials: Tutorial[] = [
     title: "Black Screen Fix",
     description:
       "Fix the black preview problem by checking the right camera source.",
-    imageSrc: "/images/solution-images/solution-01-w-black-screen.png",
+    imageSrc: "/images/solution-images/solution-01-w-black-screen.webp",
     videoAspect: "landscape",
     seoTitle: "Ecamm Black Screen Fix (No Camera Showing? Do This)",
     seoDescription:
@@ -125,7 +125,7 @@ const rawTutorials: Tutorial[] = [
     duration: "0:49",
     title: "Profiles vs Scenes",
     description: "Understand the difference so your setup stays organized.",
-    imageSrc: "/images/solution-images/solution-02-scenes-profiles-w.png",
+    imageSrc: "/images/solution-images/solution-02-scenes-profiles-w.webp",
     videoAspect: "landscape",
     seoTitle: "Ecamm Profiles vs Scenes (Why This Confuses Everyone)",
     seoDescription:
@@ -176,7 +176,7 @@ const rawTutorials: Tutorial[] = [
     duration: "1:09",
     title: "Add a Camera to a Scene",
     description: "Add a camera to your scene so your setup is ready to use.",
-    imageSrc: "/images/solution-images/solution-03-add-camera-to-scene-w.png",
+    imageSrc: "/images/solution-images/solution-03-add-camera-to-scene-w.webp",
     videoAspect: "landscape",
     seoTitle: "How to Add a Camera to a Scene in Ecamm",
     seoDescription:
@@ -228,7 +228,7 @@ const rawTutorials: Tutorial[] = [
     duration: "1:35",
     title: "Mic Setup",
     description: "Get clean audio fast with the right input and level checks.",
-    imageSrc: "/images/solution-images/solution-04-amic-input-setup-w.png",
+    imageSrc: "/images/solution-images/solution-04-amic-input-setup-w.webp",
     videoAspect: "landscape",
     seoTitle: "Ecamm Mic Setup (No Audio? Add Your Microphone Fast)",
     seoDescription:
@@ -308,7 +308,7 @@ const rawTutorials: Tutorial[] = [
     duration: "1:47",
     title: "Creating Your First Scene",
     description: "Build a simple scene layout you can confidently reuse.",
-    imageSrc: "/images/solution-images/solution-05-scenes.png",
+    imageSrc: "/images/solution-images/solution-05-scenes.webp",
     videoAspect: "landscape",
     seoTitle: "Create Your First Scene in Ecamm (Beginner Step-by-Step Guide)",
     seoDescription:
@@ -365,7 +365,7 @@ const rawTutorials: Tutorial[] = [
     title: "Why Can't I See My Overlay?",
     description:
       "Fix missing overlays by checking visibility, scene assignment, and source order.",
-    imageSrc: "/images/solution-images/solution-06-overlays-w.png",
+    imageSrc: "/images/solution-images/solution-06-overlays-w.webp",
     videoAspect: "landscape",
     seoTitle: "Ecamm Overlay Not Showing? Fix It Fast",
     seoDescription:
@@ -418,7 +418,7 @@ const rawTutorials: Tutorial[] = [
     duration: "1:17",
     title: "Where Did My Panel Go?",
     description: "Quick fixes when Ecamm panels disappear unexpectedly.",
-    imageSrc: "/images/solution-images/solution-07-missing-panel-w.png",
+    imageSrc: "/images/solution-images/solution-07-missing-panel-w.webp",
     videoAspect: "landscape",
     seoTitle: "Ecamm Panel Missing? Get It Back Fast",
     seoDescription:
@@ -471,7 +471,7 @@ const rawTutorials: Tutorial[] = [
     duration: "3:06",
     title: "Preview vs Live",
     description: "Learn when to stage in Preview and when to go Live.",
-    imageSrc: "/images/solution-images/solution-08-preview-vs-live-w.png",
+    imageSrc: "/images/solution-images/solution-08-preview-vs-live-w.webp",
     videoAspect: "landscape",
     seoTitle: "Ecamm Preview vs Live Mode Explained (What Publish Actually Does)",
     seoDescription:
@@ -553,7 +553,7 @@ const rawTutorials: Tutorial[] = [
     duration: "5:25",
     title: "Global vs Scene Overlays",
     description: "Choose the right overlay scope for cleaner production flow.",
-    imageSrc: "/images/solution-images/solution-09-global-vs-scene-overlays-w.png",
+    imageSrc: "/images/solution-images/solution-09-global-vs-scene-overlays-w.webp",
     videoAspect: "landscape",
     seoTitle:
       "Ecamm Overlays Explained (Global, Scene & Background Overlays)",
@@ -646,7 +646,7 @@ const rawTutorials: Tutorial[] = [
     duration: "3:50",
     title: "Adding a Countdown Timer",
     description: "Set up a pre-show timer to start streams with confidence.",
-    imageSrc: "/images/solution-images/solution-10-adding-countdown-timer-w.png",
+    imageSrc: "/images/solution-images/solution-10-adding-countdown-timer-w.webp",
     videoAspect: "landscape",
     seoTitle: "How to Add a Countdown Timer in Ecamm",
     seoDescription:
@@ -764,7 +764,7 @@ const rawTutorials: Tutorial[] = [
     title: "Displaying Viewer Comments In Ecamm Live",
     description:
       "Learn how to show live YouTube comments on screen in Ecamm Live using comment overlays, placeholder styles, and auto-hide settings.",
-    imageSrc: "/images/solution-images/solution-11-display-comments-w.png",
+    imageSrc: "/images/solution-images/solution-11-display-comments-w.webp",
     videoAspect: "landscape",
     seoTitle: "Displaying Viewer Comments In Ecamm Live",
     seoDescription:
@@ -871,8 +871,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Bring guests into Ecamm safely using invite links, the green room, and clear on-screen control before they go live.",
     category: "Production Basics",
-    imageSrc: "/images/solution-images/solution-12-interview-mode-beginers-w.png",
-    thumbnail: "/images/solution-images/solution-12-interview-mode-beginers-w.png",
+    imageSrc: "/images/solution-images/solution-12-interview-mode-beginers-w.webp",
+    thumbnail: "/images/solution-images/solution-12-interview-mode-beginers-w.webp",
     videoAspect: "landscape",
     seoTitle: "Ecamm Interview Mode for Beginners (Calm Guest Workflow)",
     seoDescription:
@@ -992,8 +992,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Set up a reliable YouTube live destination and go live with confidence.",
     category: "Going Live",
-    imageSrc: "/images/solution-images/solution-13-goliveinecamm-w.png",
-    thumbnail: "/images/solution-images/solution-13-goliveinecamm-w.png",
+    imageSrc: "/images/solution-images/solution-13-goliveinecamm-w.webp",
+    thumbnail: "/images/solution-images/solution-13-goliveinecamm-w.webp",
     videoAspect: "landscape",
     seoTitle: "How to Go Live in Ecamm (Beginner-Safe YouTube Workflow)",
     seoDescription:
@@ -1143,8 +1143,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Share your screen cleanly while keeping your scene layout readable.",
     category: "Going Live",
-    imageSrc: "/images/solution-images/solution-14-screensharing-3.png",
-    thumbnail: "/images/solution-images/solution-14-screensharing-3.png",
+    imageSrc: "/images/solution-images/solution-14-screensharing-3.webp",
+    thumbnail: "/images/solution-images/solution-14-screensharing-3.webp",
     videoAspect: "landscape",
     seoTitle: "Screen Sharing in Ecamm (Beginner Guide to Clean Layouts)",
     seoDescription:
@@ -1261,8 +1261,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Build practical camera-over-content layouts for teaching and demos.",
     category: "Going Live",
-    imageSrc: "/images/solution-images/solution-15-pictureinpicture-w.png",
-    thumbnail: "/images/solution-images/solution-15-pictureinpicture-w.png",
+    imageSrc: "/images/solution-images/solution-15-pictureinpicture-w.webp",
+    thumbnail: "/images/solution-images/solution-15-pictureinpicture-w.webp",
     videoAspect: "landscape",
     seoTitle: "Ecamm Picture in Picture Explained (Beginner Layout Guide)",
     seoDescription:
@@ -1373,8 +1373,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Understand when to record privately and when livestreaming makes sense.",
     category: "Going Live",
-    imageSrc: "/images/solution-images/solution-17-record-vs-live-w.png",
-    thumbnail: "/images/solution-images/solution-17-record-vs-live-w.png",
+    imageSrc: "/images/solution-images/solution-17-record-vs-live-w.webp",
+    thumbnail: "/images/solution-images/solution-17-record-vs-live-w.webp",
     videoAspect: "landscape",
     seoTitle: "Recording vs Live Streaming in Ecamm (A Calm Beginner Decision Guide)",
     seoDescription:
@@ -1473,8 +1473,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Record locally in Ecamm so you can practice and create content without livestream pressure.",
     category: "Going Live",
-    imageSrc: "/images/solution-images/solution-16-record-locally-w.png",
-    thumbnail: "/images/solution-images/solution-16-record-locally-w.png",
+    imageSrc: "/images/solution-images/solution-16-record-locally-w.webp",
+    thumbnail: "/images/solution-images/solution-16-record-locally-w.webp",
     videoAspect: "landscape",
     seoTitle: "Recording in Ecamm for Beginners (Practice Without Going Live)",
     seoDescription:
@@ -1586,8 +1586,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Add clean name and topic labels that support your on-screen flow.",
     category: "Production Basics",
-    imageSrc: "/images/solution-images/solution-18-lowerthirds-w.png",
-    thumbnail: "/images/solution-images/solution-18-lowerthirds-w.png",
+    imageSrc: "/images/solution-images/solution-18-lowerthirds-w.webp",
+    thumbnail: "/images/solution-images/solution-18-lowerthirds-w.webp",
     videoAspect: "landscape",
     seoTitle: "Adding Lower Thirds in Ecamm (Clean Beginner Setup Guide)",
     seoDescription:
@@ -1699,8 +1699,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Understand how transitions and scene changes shape your livestream flow.",
     category: "Production Basics",
-    imageSrc: "/images/solution-images/solution-19-scenetranitions-w.png",
-    thumbnail: "/images/solution-images/solution-19-scenetranitions-w.png",
+    imageSrc: "/images/solution-images/solution-19-scenetranitions-w.webp",
+    thumbnail: "/images/solution-images/solution-19-scenetranitions-w.webp",
     videoAspect: "landscape",
     seoTitle: "Scene Transitions in Ecamm (Smooth Beginner Scene Switching Guide)",
     seoDescription:
@@ -1804,8 +1804,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Create a repeatable scene structure for interviews, teaching, or demos.",
     category: "Production Basics",
-    imageSrc: "/images/solution-images/solution-20-simple-showlayout-w.png",
-    thumbnail: "/images/solution-images/solution-20-simple-showlayout-w.png",
+    imageSrc: "/images/solution-images/solution-20-simple-showlayout-w.webp",
+    thumbnail: "/images/solution-images/solution-20-simple-showlayout-w.webp",
     videoAspect: "landscape",
     seoTitle: "Building a Simple Show Layout in Ecamm (Beginner Scene Structure Guide)",
     seoDescription:
@@ -1917,8 +1917,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Use placeholders to prepare guest layouts before people join live.",
     category: "Production Basics",
-    imageSrc: "/images/solution-images/solution-21-guestplaceholders-w.png",
-    thumbnail: "/images/solution-images/solution-21-guestplaceholders-w.png",
+    imageSrc: "/images/solution-images/solution-21-guestplaceholders-w.webp",
+    thumbnail: "/images/solution-images/solution-21-guestplaceholders-w.webp",
     videoAspect: "landscape",
     seoTitle: "Guest Placeholders in Ecamm (Beginner Interview Layout Guide)",
     seoDescription:
@@ -2022,8 +2022,8 @@ const rawTutorials: Tutorial[] = [
     shortDescription:
       "Display comments cleanly without overwhelming your layout.",
     category: "Production Basics",
-    imageSrc: "/images/solution-images/solution-22-showcomments-w.png",
-    thumbnail: "/images/solution-images/solution-22-showcomments-w.png",
+    imageSrc: "/images/solution-images/solution-22-showcomments-w.webp",
+    thumbnail: "/images/solution-images/solution-22-showcomments-w.webp",
     videoAspect: "landscape",
     seoTitle: "Showing Viewer Comments in Ecamm (Beginner Clean Layout Guide)",
     seoDescription:
