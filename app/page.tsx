@@ -96,6 +96,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-links">
           <Link href="/tutorials">Tutorials</Link>
+          <Link href="/tutorial-request">Request a Tutorial</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy</Link>

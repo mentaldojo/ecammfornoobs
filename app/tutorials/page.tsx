@@ -58,6 +58,21 @@ export default function TutorialsPage() {
           />
         </div>
       ) : null}
+
+      <section className="tutorial-request-cta" aria-label="Request a tutorial">
+        <div className="section-head">
+          <h2>Still stuck on something in Ecamm?</h2>
+        </div>
+        <p>
+          Browse the library first. If you still cannot find the answer, request a
+          tutorial and we may add it to the roadmap.
+        </p>
+        <div>
+          <Link href="/tutorial-request" className="btn btn-primary">
+            Request a Tutorial
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
