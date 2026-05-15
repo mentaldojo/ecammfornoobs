@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Tutorial Library | Ecamm for Noobs",
   description:
     "Browse the Ecamm for Noobs tutorial library for quick, practical Ecamm and Ecamm Live solutions.",
+  alternates: {
+    canonical: "/tutorials",
+  },
 };
 
 export default function TutorialsPage() {

@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     "",
     "/tutorials",
+    "/tutorial-request",
     "/about",
     "/contact",
     "/privacy",

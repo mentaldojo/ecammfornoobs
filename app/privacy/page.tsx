@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Ecamm for Noobs",
   description:
     "Read the Ecamm for Noobs Privacy Policy, including data handling, cookies, affiliate links, and your privacy rights.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {

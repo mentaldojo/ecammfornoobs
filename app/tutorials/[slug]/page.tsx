@@ -3,12 +3,24 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { affiliateLinks } from "@/src/data/affiliateLinks";
 import { getTutorialBySlug, tutorials } from "@/src/data/tutorials";
+import { getSiteUrl, toAbsoluteUrl } from "@/src/lib/seo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ecammfornoobs.com";
+const SITE_URL = getSiteUrl();
 
 type TutorialPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+function normalizeYouTubeWatchUrl(url: string) {
+  if (url.includes("youtube.com/embed/")) {
+    const videoId = url.split("youtube.com/embed/")[1]?.split(/[?&]/)[0];
+    if (videoId) {
+      return `https://www.youtube.com/watch?v=${videoId}`;
+    }
+  }
+
+  return url;
+}
 
 export async function generateStaticParams() {
   return tutorials.map((tutorial) => ({ slug: tutorial.slug }));
@@ -24,6 +36,14 @@ export async function generateMetadata({
     return {
       title: "Tutorial Not Found | Ecamm for Noobs",
       description: "The requested tutorial could not be found.",
+      robots: {
+        index: false,
+        follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
+      },
     };
   }
 
@@ -35,6 +55,16 @@ export async function generateMetadata({
   return {
     title: metadataTitle,
     description: metadataDescription,
+    alternates: {
+      canonical: `/tutorials/${tutorial.slug}`,
+    },
+    robots:
+      tutorial.status === "comingSoon"
+        ? {
+            index: false,
+            follow: true,
+          }
+        : undefined,
     openGraph: {
       title: tutorial.seoTitle ?? `${tutorial.title} | Ecamm for Noobs`,
       description: metadataDescription,
@@ -71,8 +101,64 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
           )
           .slice(0, 3);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tutorials",
+        item: `${SITE_URL}/tutorials`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: tutorial.title,
+        item: `${SITE_URL}/tutorials/${tutorial.slug}`,
+      },
+    ],
+  };
+
+  const videoSchema =
+    !isComingSoon && tutorial.youtubeUrl
+      ? {
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          name: tutorial.title,
+          description: tutorial.seoDescription ?? tutorial.description,
+          url: `${SITE_URL}/tutorials/${tutorial.slug}`,
+          embedUrl: tutorial.youtubeUrl,
+          thumbnailUrl: tutorial.imageSrc
+            ? [toAbsoluteUrl(tutorial.imageSrc)]
+            : undefined,
+          isFamilyFriendly: true,
+          inLanguage: "en",
+          potentialAction: {
+            "@type": "WatchAction",
+            target: normalizeYouTubeWatchUrl(tutorial.youtubeUrl),
+          },
+        }
+      : null;
+
   return (
     <main className="tutorial-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {videoSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+        />
+      ) : null}
       <nav className="tutorial-breadcrumbs" aria-label="Tutorial navigation">
         <Link href="/tutorials" className="btn btn-secondary">
           Back to Tutorials

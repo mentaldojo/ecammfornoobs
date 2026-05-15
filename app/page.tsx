@@ -1,10 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { PhaseRoadmap } from "@/src/components/PhaseRoadmap";
 import { ToolsTeaser } from "@/src/components/ToolsTeaser";
 import { TutorialGrid } from "@/src/components/TutorialGrid";
 import { affiliateLinks } from "@/src/data/affiliateLinks";
 import { publishedTutorials } from "@/src/data/tutorials";
+
+export const metadata: Metadata = {
+  title: "Ecamm for Noobs | Quick Ecamm Tutorials",
+  description:
+    "Ecamm for Noobs is a beginner-friendly YouTube Shorts tutorial library for learning Ecamm one problem at a time.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   const featuredTutorials = [...publishedTutorials]

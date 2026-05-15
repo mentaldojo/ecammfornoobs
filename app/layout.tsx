@@ -2,9 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { getOrganizationSchema, getSiteUrl, getWebsiteSchema } from "@/src/lib/seo";
 
 const GA_MEASUREMENT_ID = "G-KK0BVBSCT5";
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ecammfornoobs.com";
+const SITE_URL = getSiteUrl();
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = JSON.stringify(getOrganizationSchema());
+  const websiteSchema = JSON.stringify(getWebsiteSchema());
+
   return (
     <html
       lang="en"
@@ -53,6 +57,16 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
+        <script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: organizationSchema }}
+        />
+        <script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: websiteSchema }}
+        />
         {children}
       </body>
     </html>

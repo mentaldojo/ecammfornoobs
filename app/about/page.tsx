@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "About | Ecamm for Noobs",
   description:
     "Learn what Ecamm for Noobs is about, who it serves, and how this tutorial library helps beginners stream with confidence.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Terms of Use | Ecamm for Noobs",
   description:
     "Read the Terms of Use for Ecamm for Noobs, including acceptable use, digital product terms, refunds, and legal limitations.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {

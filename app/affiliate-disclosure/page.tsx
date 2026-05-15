@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Affiliate Disclosure | Ecamm for Noobs",
   description:
     "Read how affiliate links work on Ecamm for Noobs and how commissions support tutorial creation.",
+  alternates: {
+    canonical: "/affiliate-disclosure",
+  },
 };
 
 export default function AffiliateDisclosurePage() {

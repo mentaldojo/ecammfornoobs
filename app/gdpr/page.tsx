@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "GDPR Notice | Ecamm for Noobs",
   description:
     "GDPR notice for Ecamm for Noobs visitors in the EEA/UK, including legal bases, rights, and data transfer information.",
+  alternates: {
+    canonical: "/gdpr",
+  },
 };
 
 export default function GdprPage() {

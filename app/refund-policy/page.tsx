@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Refund Policy | Ecamm for Noobs",
   description:
     "Read the Ecamm for Noobs refund policy for digital products, including the 7-day refund window and eligibility terms.",
+  alternates: {
+    canonical: "/refund-policy",
+  },
 };
 
 export default function RefundPolicyPage() {
