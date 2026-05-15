@@ -10,6 +10,7 @@ type TutorialGridProps = {
   browseLabel?: string;
   browseVariant?: "default" | "orange";
   desktopColumns?: 3 | 4;
+  prioritizeFirstImage?: boolean;
 };
 
 export function TutorialGrid({
@@ -21,6 +22,7 @@ export function TutorialGrid({
   browseLabel,
   browseVariant = "default",
   desktopColumns = 4,
+  prioritizeFirstImage = false,
 }: TutorialGridProps) {
   const orderedItems = [...items].sort(
     (a, b) =>
@@ -46,7 +48,7 @@ export function TutorialGrid({
           <TutorialCard
             key={tutorial.id}
             tutorial={tutorial}
-            prioritizeImage={index === 0}
+            prioritizeImage={prioritizeFirstImage && index === 0}
             imageSizes={imageSizes}
           />
         ))}

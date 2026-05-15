@@ -49,7 +49,11 @@ export default function TutorialsPage() {
         </div>
       </header>
 
-      <TutorialGrid items={beginnerTutorials} sectionId="tutorial-library" />
+      <TutorialGrid
+        items={beginnerTutorials}
+        sectionId="tutorial-library"
+        prioritizeFirstImage
+      />
 
       {advancedTutorials.length > 0 ? (
         <div className="advanced-tutorials-shell">
